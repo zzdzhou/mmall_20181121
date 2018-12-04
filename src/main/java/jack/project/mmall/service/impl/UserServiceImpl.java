@@ -1,5 +1,6 @@
 package jack.project.mmall.service.impl;
 
+import jack.project.mmall.common.Constants;
 import jack.project.mmall.common.ServerResponse;
 import jack.project.mmall.dao.UserRepo;
 import jack.project.mmall.entity.User;
@@ -44,11 +45,16 @@ public class UserServiceImpl implements IUserService {
     }
 
     @Override
-    public ServerResponse<User> register(User user) {
-        int res = userRepo.countByUsername(user.getUsername());
-        if (res > 0) {
+    public ServerResponse<Integer> register(User user) {
+        int count = userRepo.countByUsername(user.getUsername());
+        if (count > 0) {
             return ServerResponse.createByErrorMsg("用户名已存在");
         }
+        count = userRepo.countByEmail(user.getEmail());
+        if (count > 0) {
+            return ServerResponse.createByErrorMsg("邮箱已存在");
+        }
+        user.setRole(Constants.role.ROLE_CUSTOMMER);
         user.setPassword(MD5Util.MD5EncodeUtf(user.getPassword()));
         userRepo.save(user);
         return null;

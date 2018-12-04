@@ -19,5 +19,6 @@ public interface UserRepo extends Repository<User, Integer> {
 
     User save(User user);
 
+    int countByEmail(String email);
 
 }

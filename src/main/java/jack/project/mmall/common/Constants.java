@@ -12,4 +12,9 @@ public class Constants {
 
     public static final String CURRENT_USER = "currentUser";
 
+    public interface role {
+        int ROLE_CUSTOMMER = 1;
+        int ROLE_ADMIN = 0;
+    }
+
 }
