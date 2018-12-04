@@ -14,4 +14,6 @@ import jack.project.mmall.entity.User;
 public interface IUserService {
 
     ServerResponse<User> login(String username, String password);
+
+    ServerResponse<User> register(User user);
 }
