@@ -19,8 +19,12 @@ import org.springframework.stereotype.Service;
 @Service("iUserService")
 public class UserServiceImpl implements IUserService {
 
-    @Autowired
     private UserRepo userRepo;
+
+    @Autowired
+    public UserServiceImpl(UserRepo userRepo) {
+        this.userRepo = userRepo;
+    }
 
     @Override
     public ServerResponse<User> login(String username, String password) {

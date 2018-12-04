@@ -55,6 +55,10 @@ public class ServerResponse<T> implements Serializable {
         return this.msg;
     }
 
+    public T getData() {
+        return this.data;
+    }
+
     public static <T> ServerResponse<T> createBySuccess() {
         return new ServerResponse<T>(ResponseCode.SUCCESS.getCode());
     }
