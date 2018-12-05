@@ -1,5 +1,7 @@
 package jack.project.mmall.entity;
 
+import org.hibernate.validator.constraints.UniqueElements;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
@@ -20,6 +22,7 @@ public class User {
     private int id;
 
     @NotNull
+    @UniqueElements
     private String username;
 
     @NotNull

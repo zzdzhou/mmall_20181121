@@ -16,4 +16,8 @@ public interface IUserService {
     ServerResponse<User> login(String username, String password);
 
     ServerResponse<Integer> register(User user);
+
+    ServerResponse<Boolean> checkValid(String value, String type);
+
+    ServerResponse<String> getQuestion(String username);
 }

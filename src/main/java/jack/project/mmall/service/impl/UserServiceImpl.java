@@ -6,10 +6,11 @@ import jack.project.mmall.dao.UserRepo;
 import jack.project.mmall.entity.User;
 import jack.project.mmall.service.IUserService;
 import jack.project.mmall.util.MD5Util;
-import javafx.print.PaperSource;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.Optional;
 
 /**
  * Theme:
@@ -31,8 +32,8 @@ public class UserServiceImpl implements IUserService {
 
     @Override
     public ServerResponse<User> login(String username, String password) {
-        int resultCount = userRepo.countByUsername(username);
-        if (resultCount == 0) {
+        int count = userRepo.countByUsername(username);
+        if (count == 0) {
             return ServerResponse.createByErrorMsg("用户名不存在");
         }
         password = MD5Util.MD5EncodeUtf(password);
@@ -56,8 +57,45 @@ public class UserServiceImpl implements IUserService {
         }
         user.setRole(Constants.role.ROLE_CUSTOMMER);
         user.setPassword(MD5Util.MD5EncodeUtf(user.getPassword()));
-        userRepo.save(user);
-        return null;
+        int customerNumber = userRepo.save(user);
+        return ServerResponse.createBySuccess(customerNumber);
     }
 
+    @Override
+    public ServerResponse<Boolean> checkValid(String value, String type) {
+        int count;
+        if (Constants.EMAIL.equals(type)) {
+            count = userRepo.countByEmail(value);
+            if (count == 0) {
+                return ServerResponse.createBySuccess("用户名不存在", false);
+            }
+        } else if (Constants.USERNAME.equals(type)) {
+            count = userRepo.countByUsername(value);
+            if (count == 0) {
+                return ServerResponse.createBySuccess("邮箱不存在", false);
+            }
+        } else {
+            return ServerResponse.createByErrorMsg("type参数错误");
+        }
+        return ServerResponse.createBySuccess("用户存在", true);
+    }
+
+    public ServerResponse<String> getQuestion(String username) {
+        ServerResponse<Boolean> result = checkValid(username, Constants.USERNAME);
+        if (result.getData()) {
+            String question = userRepo.getQuestionByUsername(username);
+            if (StringUtils.isNotEmpty(question)) {
+                return ServerResponse.createBySuccess(question);
+            }
+            return ServerResponse.createByErrorMsg("该用户没有设置忘记密码问题");
+        }
+        return ServerResponse.createByErrorMsg("用户名不存在");
+    }
+
+    public ServerResponse<String> checkAnswer(String username, String question, String answer) {
+        int count = userRepo.countByUsername(username);
+        if (count == 0) {
+
+        }
+    }
 }
