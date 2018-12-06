@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
+import java.util.UUID;
 
 /**
  * Theme:
@@ -32,27 +33,28 @@ public class UserServiceImpl implements IUserService {
 
     @Override
     public ServerResponse<User> login(String username, String password) {
-        int count = userRepo.countByUsername(username);
-        if (count == 0) {
+        Optional<User> optUser = userRepo.getByUsername(username);
+        if (!optUser.isPresent()) {
             return ServerResponse.createByErrorMsg("用户名不存在");
         }
         password = MD5Util.MD5EncodeUtf(password);
-        User user = userRepo.findByUsernameAndPassword(username, password);
-        if (user == null) {
+        optUser = userRepo.findByUsernameAndPassword(username, password);
+        if (!optUser.isPresent()) {
             return ServerResponse.createByErrorMsg("密码错误");
         }
+        User user = optUser.get();
         user.setPassword(StringUtils.EMPTY);
         return ServerResponse.createBySuccess("登录成功", user);
     }
 
     @Override
     public ServerResponse<Integer> register(User user) {
-        int count = userRepo.countByUsername(user.getUsername());
-        if (count > 0) {
+        Optional<User> optUser = userRepo.getByUsername(user.getUsername());
+        if (optUser.isPresent()) {
             return ServerResponse.createByErrorMsg("用户名已存在");
         }
-        count = userRepo.countByEmail(user.getEmail());
-        if (count > 0) {
+        optUser = userRepo.getByEmail(user.getEmail());
+        if (optUser.isPresent()) {
             return ServerResponse.createByErrorMsg("邮箱已存在");
         }
         user.setRole(Constants.role.ROLE_CUSTOMMER);
@@ -63,15 +65,15 @@ public class UserServiceImpl implements IUserService {
 
     @Override
     public ServerResponse<Boolean> checkValid(String value, String type) {
-        int count;
-        if (Constants.EMAIL.equals(type)) {
-            count = userRepo.countByEmail(value);
-            if (count == 0) {
+        Optional<User> optUser = null;
+        if (Constants.USERNAME.equals(type)) {
+            optUser = userRepo.getByUsername(value);
+            if (!optUser.isPresent()) {
                 return ServerResponse.createBySuccess("用户名不存在", false);
             }
-        } else if (Constants.USERNAME.equals(type)) {
-            count = userRepo.countByUsername(value);
-            if (count == 0) {
+        } else if (Constants.EMAIL.equals(type)) {
+            optUser = userRepo.getByEmail(value);
+            if (!optUser.isPresent()) {
                 return ServerResponse.createBySuccess("邮箱不存在", false);
             }
         } else {
@@ -93,9 +95,24 @@ public class UserServiceImpl implements IUserService {
     }
 
     public ServerResponse<String> checkAnswer(String username, String question, String answer) {
-        int count = userRepo.countByUsername(username);
-        if (count == 0) {
-
+        Optional<User> optUser = userRepo.getByUsername(username);
+        if (!optUser.isPresent()) {
+            return ServerResponse.createByErrorMsg("用户名不存在");
         }
+        User user = optUser.get();
+        if (StringUtils.isEmpty(user.getQuestion())) {
+            return ServerResponse.createByErrorMsg("该用户没有设置忘记密码的问题");
+        } else if (!user.getQuestion().equals(question)) {
+            return ServerResponse.createByErrorMsg("问题不正确");
+        }
+        if (user.getAnswer() == null || !user.getAnswer().equals(answer)) {
+            return ServerResponse.createByErrorMsg("答案不正确");
+        }
+        String token = UUID.randomUUID().toString();
+        return ServerResponse.createBySuccess("答案正确");
+    }
+
+    public static void main(String[] args) {
+        System.out.println(UUID.randomUUID().toString());
     }
 }

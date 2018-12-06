@@ -18,13 +18,13 @@ import java.util.Optional;
  */
 public interface UserRepo extends Repository<User, Integer> {
 
-    User getByUsername(String username);
+    Optional<User> getByUsername(String username);
 
-    User findByUsernameAndPassword(String username, String password);
+    Optional<User> findByUsernameAndPassword(String username, String password);
 
     int save(User user);
 
-    int countByEmail(String email);
+    Optional<User> getByEmail(String email);
 
     @Query(value = "select u.question from User u where u.username = :username", nativeQuery = false)
     String getQuestionByUsername(String username);
