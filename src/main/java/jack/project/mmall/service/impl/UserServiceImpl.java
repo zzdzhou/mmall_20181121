@@ -2,6 +2,7 @@ package jack.project.mmall.service.impl;
 
 import jack.project.mmall.common.Constants;
 import jack.project.mmall.common.ServerResponse;
+import jack.project.mmall.common.TokenCache;
 import jack.project.mmall.dao.UserRepo;
 import jack.project.mmall.entity.User;
 import jack.project.mmall.service.IUserService;
@@ -37,7 +38,7 @@ public class UserServiceImpl implements IUserService {
         if (!optUser.isPresent()) {
             return ServerResponse.createByErrorMsg("用户名不存在");
         }
-        password = MD5Util.MD5EncodeUtf(password);
+        password = MD5Util.encodeUTF8(password);
         optUser = userRepo.findByUsernameAndPassword(username, password);
         if (!optUser.isPresent()) {
             return ServerResponse.createByErrorMsg("密码错误");
@@ -58,14 +59,14 @@ public class UserServiceImpl implements IUserService {
             return ServerResponse.createByErrorMsg("邮箱已存在");
         }
         user.setRole(Constants.role.ROLE_CUSTOMMER);
-        user.setPassword(MD5Util.MD5EncodeUtf(user.getPassword()));
+        user.setPassword(MD5Util.encodeUTF8(user.getPassword()));
         int customerNumber = userRepo.save(user);
         return ServerResponse.createBySuccess(customerNumber);
     }
 
     @Override
     public ServerResponse<Boolean> checkValid(String value, String type) {
-        Optional<User> optUser = null;
+        Optional<User> optUser;
         if (Constants.USERNAME.equals(type)) {
             optUser = userRepo.getByUsername(value);
             if (!optUser.isPresent()) {
@@ -109,10 +110,30 @@ public class UserServiceImpl implements IUserService {
             return ServerResponse.createByErrorMsg("答案不正确");
         }
         String token = UUID.randomUUID().toString();
-        return ServerResponse.createBySuccess("答案正确");
+        TokenCache.add(TokenCache.TOKEN_PREFIX + username, token);
+        return ServerResponse.createBySuccess(token);
     }
 
     public static void main(String[] args) {
         System.out.println(UUID.randomUUID().toString());
     }
+
+    public ServerResponse<String> resetPasswordForget(String username, String newPassword, String token) {
+        // check if username exists or not
+        Optional<User> userOpt = userRepo.getByUsername(username);
+        if (!userOpt.isPresent()) {
+            return ServerResponse.createByErrorMsg("User %s doesn't exist");
+        }
+        // check token
+        // reset password if token is valid
+        String cachedToken = TokenCache.get(TokenCache.TOKEN_PREFIX + username);
+        if (token != null && StringUtils.equals(token, cachedToken)) {
+            User user = userOpt.get();
+            user.setPassword(MD5Util.encodeUTF8(newPassword));
+            userRepo.save(user);
+            return ServerResponse.createBySuccessMsg("密码重置成功");
+        }
+        return ServerResponse.createByErrorMsg("token 无效或过期");
+    }
+
 }

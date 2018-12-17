@@ -73,6 +73,12 @@ public class UserController {
 
     @PostMapping("/resetpassword/answer")
     public ServerResponse<String> checkAnswer(String username, String question, String answer) {
-        return null;
+        return userService.checkAnswer(username, question, answer);
     }
+
+    @PostMapping("/resetpassword/forget")
+    public ServerResponse<String> resetPasswordForget(String username, String newPassword, String token) {
+        return userService.resetPasswordForget(username, newPassword, token);
+    }
+
 }

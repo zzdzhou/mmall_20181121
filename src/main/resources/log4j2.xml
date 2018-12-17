@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration strict="true" packages="jack.project.mmall">
+
+    <Appenders>
+        <Appender name="STOUT" type="Console">
+            <Layout type="PatternLayout" pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %p %l - %m%n"/>
+        </Appender>
+    </Appenders>
+
+    <Loggers>
+        <Root level="INFO">
+            <AppenderRef ref="STOUT"/>
+        </Root>
+        <logger name="jack.project.mmall.common.TokenCache" level="DEBUG" additivity="false">
+            <AppenderRef ref="STOUT"/>
+        </logger>
+    </Loggers>
+</Configuration>

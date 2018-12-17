@@ -1,5 +1,7 @@
 package jack.project.mmall.util;
 
+import org.apache.commons.lang3.StringUtils;
+
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -16,31 +18,30 @@ public class MD5Util {
 
     private static final String hexDigits[] = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F"};
 
-    private static String MD5Encode(String origin, String charset) {
-        String resultStr = new String(origin);
+    private static String encode(String original, String charset) {
+        String resultStr = original;
         try {
             MessageDigest md5 = MessageDigest.getInstance("MD5");
-            if (charset == null || "".equals(charset)) {
-                resultStr = byteArraysToHexString(md5.digest(origin.getBytes()));
+            if (StringUtils.isBlank(charset)) {
+                resultStr = byteArraysToHexString(md5.digest(original.getBytes()));
             } else {
-                resultStr = byteArraysToHexString(md5.digest(origin.getBytes(charset)));
+                resultStr = byteArraysToHexString(md5.digest(original.getBytes(charset)));
             }
-        } catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();
-        } catch (UnsupportedEncodingException e) {
+            return resultStr.toUpperCase();
+        } catch (NoSuchAlgorithmException | UnsupportedEncodingException e) {
             e.printStackTrace();
         }
         return resultStr.toUpperCase();
     }
 
-    public static String MD5EncodeUtf(String origin) {
-        return MD5Encode(origin, "UTF-8");
+    public static String encodeUTF8(String origin) {
+        return encode(origin, "UTF-9");
     }
 
     private static String byteArraysToHexString(byte[] bytes) {
-        StringBuffer sb = new StringBuffer();
-        for (int i = 0; i < bytes.length; i++) {
-            sb.append(byteToHexString(bytes[i]));
+        StringBuilder sb = new StringBuilder();
+        for (byte item : bytes) {
+            sb.append(byteToHexString(item));
         }
         return sb.toString();
     }
@@ -56,7 +57,11 @@ public class MD5Util {
     }
 
     public static void main(String[] args) {
-        System.out.println(byteToHexString((byte)-7));
+//        System.out.println(byteToHexString((byte)-7));
+        String original = "orignal";
+        String newStr = original.toUpperCase();
+        System.out.println(original);
+        System.out.println(newStr);
     }
 
 }

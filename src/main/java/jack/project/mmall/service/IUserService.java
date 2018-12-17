@@ -20,4 +20,8 @@ public interface IUserService {
     ServerResponse<Boolean> checkValid(String value, String type);
 
     ServerResponse<String> getQuestion(String username);
+
+    ServerResponse<String> checkAnswer(String username, String question, String answer);
+
+    ServerResponse<String> resetPasswordForget(String username, String newPassword, String token);
 }

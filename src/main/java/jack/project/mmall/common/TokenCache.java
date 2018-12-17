@@ -1,10 +1,11 @@
 package jack.project.mmall.common;
 
 
-import ch.qos.logback.core.util.TimeUtil;
 import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
@@ -19,6 +20,9 @@ import java.util.concurrent.TimeUnit;
  */
 public class TokenCache {
 
+    private static final Logger logger = LogManager.getLogger(TokenCache.class);
+
+    public static final String TOKEN_PREFIX = "token_";
 
     private static LoadingCache<String, String> localCache = CacheBuilder
             .newBuilder()
@@ -33,17 +37,21 @@ public class TokenCache {
                 }
             });
 
-    public void add(String key, String value) {
+    public static void add(String key, String value) {
         localCache.put(key, value);
     }
 
-    public String get(String key) {
+    public static String get(String key) {
         try {
             return localCache.get(key);
         } catch (ExecutionException e) {
-            e.printStackTrace();
+            logger.error("Loading cache error: ", e);
         }
         return null;
+    }
+
+    public static void main(String[] args) {
+        logger.info("Loading cache");
     }
 
 
