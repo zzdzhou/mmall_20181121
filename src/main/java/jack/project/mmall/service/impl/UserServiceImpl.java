@@ -6,11 +6,13 @@ import jack.project.mmall.common.TokenCache;
 import jack.project.mmall.dao.UserRepo;
 import jack.project.mmall.entity.User;
 import jack.project.mmall.service.IUserService;
+import jack.project.mmall.util.BeanUtils;
 import jack.project.mmall.util.MD5Util;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -134,6 +136,27 @@ public class UserServiceImpl implements IUserService {
             return ServerResponse.createBySuccessMsg("密码重置成功");
         }
         return ServerResponse.createByErrorMsg("token 无效或过期");
+    }
+
+    public ServerResponse<String> resetPassword(User user, String oldPassword, String newPassword) {
+        Optional<User> userOpt = userRepo.getByIdAndPassword(user.getId(), MD5Util.encodeUTF8(oldPassword));
+        if (userOpt.isPresent()) {
+            user.setPassword(MD5Util.encodeUTF8(newPassword));
+            userRepo.save(user);
+            return ServerResponse.createBySuccessMsg("密码修改成功");
+        }
+        return ServerResponse.createByErrorMsg("旧密码错误");
+    }
+
+    public ServerResponse<User> updateUser(User currentUser, User newUser) {
+        try {
+            BeanUtils.copySpecifedProperties(currentUser, new String[]{"username", "email", "phone", "question", "answer"}, newUser);
+        } catch (InvocationTargetException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
 }

@@ -33,6 +33,8 @@ public interface UserRepo extends Repository<User, Integer> {
 
     Optional<User> getUserByUsernameAndQuestionAndAnswer(String username, String question, String answer);
 
+    Optional<User> getByIdAndPassword(int id, String password);
+
 
 
 }

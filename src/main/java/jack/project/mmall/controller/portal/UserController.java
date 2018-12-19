@@ -81,4 +81,23 @@ public class UserController {
         return userService.resetPasswordForget(username, newPassword, token);
     }
 
+    @PostMapping("/resetPassword")
+    public ServerResponse<String> resetPassword(HttpSession httpSession, String username, String oldPassword, String newPassword) {
+        User user = (User) httpSession.getAttribute(Constants.CURRENT_USER);
+        if (user == null) {
+            return ServerResponse.createByErrorMsg("用户未登录");
+        }
+        return userService.resetPassword(user, oldPassword, newPassword);
+    }
+
+    @PostMapping("/updateUser")
+    public ServerResponse<User> updateUser(HttpSession httpSession, User user) {
+        User currentUser = (User) httpSession.getAttribute(Constants.CURRENT_USER);
+        if (currentUser == null) {
+            return ServerResponse.createByErrorMsg("用户未登录");
+        }
+        user.setId(currentUser.getId());
+        return null;
+    }
+
 }
