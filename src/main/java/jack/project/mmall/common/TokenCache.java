@@ -4,6 +4,8 @@ package jack.project.mmall.common;
 import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -21,6 +23,8 @@ import java.util.concurrent.TimeUnit;
 public class TokenCache {
 
     private static final Logger logger = LogManager.getLogger(TokenCache.class);
+
+    private static final Log log = LogFactory.getLog(TokenCache.class);
 
     public static final String TOKEN_PREFIX = "token_";
 
@@ -52,6 +56,7 @@ public class TokenCache {
 
     public static void main(String[] args) {
         logger.info("Loading cache");
+        log.debug("Loading cache");
     }
 
 
