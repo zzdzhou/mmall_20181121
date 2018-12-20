@@ -6,13 +6,12 @@ import jack.project.mmall.common.TokenCache;
 import jack.project.mmall.dao.UserRepo;
 import jack.project.mmall.entity.User;
 import jack.project.mmall.service.IUserService;
-import jack.project.mmall.util.BeanUtils;
 import jack.project.mmall.util.MD5Util;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.lang.reflect.InvocationTargetException;
+import java.time.LocalDateTime;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -62,7 +61,7 @@ public class UserServiceImpl implements IUserService {
         }
         user.setRole(Constants.role.ROLE_CUSTOMMER);
         user.setPassword(MD5Util.encodeUTF8(user.getPassword()));
-        int customerNumber = userRepo.save(user);
+        int customerNumber = userRepo.save(user).getId();
         return ServerResponse.createBySuccess(customerNumber);
     }
 
@@ -149,14 +148,52 @@ public class UserServiceImpl implements IUserService {
     }
 
     public ServerResponse<User> updateUser(User currentUser, User newUser) {
-        try {
-            BeanUtils.copySpecifedProperties(currentUser, new String[]{"username", "email", "phone", "question", "answer"}, newUser);
-        } catch (InvocationTargetException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
+        String email = newUser.getEmail();
+        String phone = newUser.getPhone();
+        String question = newUser.getQuestion();
+        String answer = newUser.getAnswer();
+
+        if (email != null && !StringUtils.equals(currentUser.getEmail(), email)) {
+            if (checkValid(email, Constants.EMAIL).getData()) {
+                return ServerResponse.createByErrorMsg(String.format("邮箱 %s 已存在", email));
+            } else {
+                currentUser.setEmail(email);
+            }
         }
-        return null;
+        if (phone != null) {
+            currentUser.setPhone(phone);
+        }
+        if (question != null) {
+            currentUser.setQuestion(question);
+        }
+        if (answer != null) {
+            currentUser.setAnswer(answer);
+        }
+        currentUser.setUpdateTime(LocalDateTime.now());
+        User user = userRepo.save(currentUser);
+        if (user != null) {
+            return ServerResponse.createBySuccess(user);
+        }
+        return ServerResponse.createByErrorMsg("更新失败");
+
+    }
+
+    public ServerResponse<User> getUserDetails(int userId) {
+        Optional<User> optUser = userRepo.getById(userId);
+        if (optUser.isPresent()) {
+            User user = optUser.get();
+            user.setPassword(null);
+            return ServerResponse.createBySuccess(user);
+        }
+        return ServerResponse.createByErrorMsg("用户不存在");
+    }
+
+    public ServerResponse<User> loginBackend(String username, String password) {
+        ServerResponse<User> response = this.login(username, password);
+        if (response.isSuccessful() && Constants.role.ROLE_ADMIN != response.getData().getRole()) {
+            return ServerResponse.createByErrorMsg("不是管理员，无法登陆");
+        }
+        return response;
     }
 
 }

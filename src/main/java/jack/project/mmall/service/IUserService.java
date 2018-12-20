@@ -26,4 +26,11 @@ public interface IUserService {
     ServerResponse<String> resetPasswordForget(String username, String newPassword, String token);
 
     ServerResponse<String> resetPassword(User user, String oldPassword, String newPassword);
+
+    ServerResponse<User> updateUser(User currentUser, User newUser);
+
+    ServerResponse<User> getUserDetails(int userId);
+
+    // backend service
+    ServerResponse<User> loginBackend(String username, String password);
 }

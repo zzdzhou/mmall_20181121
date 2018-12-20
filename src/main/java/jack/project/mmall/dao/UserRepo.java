@@ -18,13 +18,13 @@ import java.util.Optional;
  */
 public interface UserRepo extends Repository<User, Integer> {
 
-//    Optional<User> getById(int id);
+    Optional<User> getById(int id);
 
     Optional<User> getByUsername(String username);
 
     Optional<User> findByUsernameAndPassword(String username, String password);
 
-    int save(User user);
+    User save(User user);
 
     Optional<User> getByEmail(String email);
 

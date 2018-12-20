@@ -57,13 +57,22 @@ public class UserController {
         return userService.checkValid(value, type);
     }
 
-    @GetMapping("/userInfo")
+    @GetMapping("/getUserInfo")
     public ServerResponse<User> getUserInfo(HttpSession httpSession) {
         User user = (User) httpSession.getAttribute(Constants.CURRENT_USER);
         if (user == null) {
             return ServerResponse.createByErrorMsg("用户未登录，无法获取当前用户信息！");
         }
         return ServerResponse.createBySuccess(user);
+    }
+
+    @GetMapping("/getUserDetails")
+    public ServerResponse<User> getUserDetails(HttpSession httpSession) {
+        User user = (User) httpSession.getAttribute(Constants.CURRENT_USER);
+        if (user == null) {
+            return ServerResponse.createByErrorMsg("用户未登录，无法获取当前用户信息！");
+        }
+        return userService.getUserDetails(user.getId());
     }
 
     @PostMapping("/resetpassword/question")
@@ -90,14 +99,31 @@ public class UserController {
         return userService.resetPassword(user, oldPassword, newPassword);
     }
 
+    /**
+     * 1. 只能更新 参数 user 中不为 null 的 email， phone, question, answer 字段
+     * 2. 验证 email 是否已存在
+     * 3. 注意更新 updateTime
+     * 4. 必须先登录，才能更新用户信息
+     * 5. 保证修改的是当前登录的用户的信息，而非其他用户
+     * @param httpSession
+     * @param user
+     * @return
+     */
     @PostMapping("/updateUser")
     public ServerResponse<User> updateUser(HttpSession httpSession, User user) {
         User currentUser = (User) httpSession.getAttribute(Constants.CURRENT_USER);
+        // 必须先登录，才能修改用户信息
+        // Q: 如何保证修改的是当前登录的用户的信息，而非其他用户？
+        // A: userService.updateUser(currentUser, user) --> userRepo.save(currentUser); currentUser.id 始终没有改变
         if (currentUser == null) {
             return ServerResponse.createByErrorMsg("用户未登录");
         }
-        user.setId(currentUser.getId());
-        return null;
+        ServerResponse<User> response = userService.updateUser(currentUser, user);
+        if (response.isSuccessful()) {
+            httpSession.setAttribute(Constants.CURRENT_USER, response.getData());
+        }
+        return response;
     }
+
 
 }
