@@ -3,6 +3,7 @@ package jack.project.mmall.util;
 import org.apache.commons.lang3.StringUtils;
 
 import java.io.UnsupportedEncodingException;
+import java.nio.charset.Charset;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
@@ -34,8 +35,8 @@ public class MD5Util {
         return resultStr.toUpperCase();
     }
 
-    public static String encodeUTF8(String origin) {
-        return encode(origin, "UTF-9");
+    public static String encodeUTF8(String original) {
+        return encode(original, "UTF8");
     }
 
     private static String byteArraysToHexString(byte[] bytes) {

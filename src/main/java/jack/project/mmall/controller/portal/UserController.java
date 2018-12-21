@@ -6,10 +6,7 @@ import jack.project.mmall.entity.User;
 import jack.project.mmall.service.IUserService;
 import org.apache.tomcat.util.bcel.Const;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpSession;
 
@@ -32,7 +29,7 @@ public class UserController {
         this.userService = userService;
     }
 
-    @PostMapping("/login")
+    @PostMapping(value = "/login", consumes = "application/json", produces = "application/json")
     public ServerResponse<User> login(String username, String password, HttpSession httpSession) {
         ServerResponse<User> res = userService.login(username, password);
         if (res.isSuccessful()) {
@@ -41,23 +38,23 @@ public class UserController {
         return res;
     }
 
-    @GetMapping("/logout")
+    @GetMapping(value = "/logout", consumes = "application/json", produces = "application/json")
     public ServerResponse<String> logout(HttpSession httpSession) {
         httpSession.removeAttribute(Constants.CURRENT_USER);
         return ServerResponse.createBySuccess();
     }
 
-    @PostMapping("/register")
-    public ServerResponse<Integer> register(User user) {
+    @PostMapping(value = "/register", consumes = "application/json", produces = "application/json")
+    public ServerResponse<Integer> register(@RequestBody User user) {
         return userService.register(user);
     }
 
-    @PostMapping("/isValid")
+    @PostMapping(value = "/isValid", consumes = "application/json", produces = "application/json")
     public ServerResponse<Boolean> checkValid(String value, String type) {
         return userService.checkValid(value, type);
     }
 
-    @GetMapping("/getUserInfo")
+    @GetMapping(value = "/getUserInfo", consumes = "application/json", produces = "application/json")
     public ServerResponse<User> getUserInfo(HttpSession httpSession) {
         User user = (User) httpSession.getAttribute(Constants.CURRENT_USER);
         if (user == null) {
@@ -66,7 +63,7 @@ public class UserController {
         return ServerResponse.createBySuccess(user);
     }
 
-    @GetMapping("/getUserDetails")
+    @GetMapping(value = "/getUserDetails", consumes = "application/json", produces = "application/json")
     public ServerResponse<User> getUserDetails(HttpSession httpSession) {
         User user = (User) httpSession.getAttribute(Constants.CURRENT_USER);
         if (user == null) {
@@ -75,22 +72,22 @@ public class UserController {
         return userService.getUserDetails(user.getId());
     }
 
-    @PostMapping("/resetpassword/question")
+    @PostMapping(value = "/resetpassword/question", consumes = "application/json", produces = "application/json")
     public ServerResponse<String> getQuestion(String username) {
         return userService.getQuestion(username);
     }
 
-    @PostMapping("/resetpassword/answer")
+    @PostMapping(value = "/resetpassword/answer", consumes = "application/json", produces = "application/json")
     public ServerResponse<String> checkAnswer(String username, String question, String answer) {
         return userService.checkAnswer(username, question, answer);
     }
 
-    @PostMapping("/resetpassword/forget")
+    @PostMapping(value = "/resetpassword/forget", consumes = "application/json", produces = "application/json")
     public ServerResponse<String> resetPasswordForget(String username, String newPassword, String token) {
         return userService.resetPasswordForget(username, newPassword, token);
     }
 
-    @PostMapping("/resetPassword")
+    @PostMapping(value = "/resetPassword", consumes = "application/json", produces = "application/json")
     public ServerResponse<String> resetPassword(HttpSession httpSession, String username, String oldPassword, String newPassword) {
         User user = (User) httpSession.getAttribute(Constants.CURRENT_USER);
         if (user == null) {
@@ -109,7 +106,7 @@ public class UserController {
      * @param user
      * @return
      */
-    @PostMapping("/updateUser")
+    @PostMapping(value = "/updateUser", consumes = "application/json", produces = "application/json")
     public ServerResponse<User> updateUser(HttpSession httpSession, User user) {
         User currentUser = (User) httpSession.getAttribute(Constants.CURRENT_USER);
         // 必须先登录，才能修改用户信息

@@ -61,6 +61,8 @@ public class UserServiceImpl implements IUserService {
         }
         user.setRole(Constants.role.ROLE_CUSTOMMER);
         user.setPassword(MD5Util.encodeUTF8(user.getPassword()));
+        user.setCreateTime(LocalDateTime.now());
+        user.setUpdateTime(user.getCreateTime());
         int customerNumber = userRepo.save(user).getId();
         return ServerResponse.createBySuccess(customerNumber);
     }
