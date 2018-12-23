@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpSession;
+import java.util.Map;
 
 /**
  * Theme:
@@ -50,7 +51,9 @@ public class UserController {
     }
 
     @PostMapping(value = "/isValid", consumes = "application/json", produces = "application/json")
-    public ServerResponse<Boolean> checkValid(String value, String type) {
+    public ServerResponse<Boolean> checkValid(@RequestBody Map<String, String> model) {
+        String value = model.get("value");
+        String type = model.get("type");
         return userService.checkValid(value, type);
     }
 
@@ -72,17 +75,17 @@ public class UserController {
         return userService.getUserDetails(user.getId());
     }
 
-    @PostMapping(value = "/resetpassword/question", consumes = "application/json", produces = "application/json")
-    public ServerResponse<String> getQuestion(String username) {
-        return userService.getQuestion(username);
+    @PostMapping(value = "/forgetPassword/question", consumes = "application/json", produces = "application/json")
+    public ServerResponse<String> getQuestion(@RequestBody Map<String, String> model) {
+        return userService.getQuestion(model.get("username"));
     }
 
-    @PostMapping(value = "/resetpassword/answer", consumes = "application/json", produces = "application/json")
+    @PostMapping(value = "/forgetPassword/answer", consumes = "application/json", produces = "application/json")
     public ServerResponse<String> checkAnswer(String username, String question, String answer) {
         return userService.checkAnswer(username, question, answer);
     }
 
-    @PostMapping(value = "/resetpassword/forget", consumes = "application/json", produces = "application/json")
+    @PostMapping(value = "/forgetPassword/reset", consumes = "application/json", produces = "application/json")
     public ServerResponse<String> resetPasswordForget(String username, String newPassword, String token) {
         return userService.resetPasswordForget(username, newPassword, token);
     }

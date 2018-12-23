@@ -4,7 +4,6 @@ import jack.project.mmall.entity.User;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.Repository;
 import org.springframework.data.repository.query.Param;
-import org.springframework.lang.Nullable;
 
 import java.util.Optional;
 
@@ -28,10 +27,10 @@ public interface UserRepo extends Repository<User, Integer> {
 
     Optional<User> getByEmail(String email);
 
-    @Query(value = "select u.question from User u where u.username = :username", nativeQuery = false)
-    String getQuestionByUsername(String username);
+    @Query(value = "select u.question from User u where u.username = :username")
+    String getQuestionByUsername(@Param("username") String username);
 
-    Optional<User> getUserByUsernameAndQuestionAndAnswer(String username, String question, String answer);
+//    Optional<User> getUserByUsernameAndQuestionAndAnswer(String username, String question, String answer);
 
     Optional<User> getByIdAndPassword(int id, String password);
 

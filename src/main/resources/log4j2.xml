@@ -3,8 +3,7 @@
 
     <Appenders>
         <Appender name="STOUT" type="Console">
-            <Layout type="PatternLayout"
-                    pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} %5p{WARN=Warning, DEBUG=Debug, ERROR=Error, TRACE=Trace, INFO=Info} [%t] %C{1}.java #%M():%L --- %m%n"/>
+            <Layout type="PatternLayout" pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} %p [%t] %C{1}.java #%M():%L --- %m%n"/>
         </Appender>
     </Appenders>
 
