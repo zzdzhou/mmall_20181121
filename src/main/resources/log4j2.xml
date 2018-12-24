@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration strict="true" packages="jack.project.mmall">
+    <properties>
+        <property name="basePath">C:/Users/D1M/Desktop/daily/logging</property>
+        <property name="filePattern">${basePath}/mmal_logs.%d{yyyy-MM-dd}.%i.log</property>
+    </properties>
 
     <Appenders>
         <Appender name="STOUT" type="Console">
+            <Layout type="PatternLayout" pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} %p [%t] %C{1}.java #%M():%L --- %m%n"/>
+        </Appender>
+        <Appender name="File" type="RollingFile" filePattern="${filePattern}" append="true">
+            <Policies>
+                <SizeBasedTriggeringPolicy size="10MB"/>
+            </Policies>
             <Layout type="PatternLayout" pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} %p [%t] %C{1}.java #%M():%L --- %m%n"/>
         </Appender>
     </Appenders>
@@ -10,9 +20,9 @@
     <Loggers>
         <Root level="INFO">
             <AppenderRef ref="STOUT"/>
+            <AppenderRef ref="File"/>
         </Root>
-        <logger name="jack.project.mmall.common.TokenCache" level="DEBUG" additivity="false">
-            <AppenderRef ref="STOUT"/>
+        <logger name="jack.project.mmall.common.TokenCache" level="DEBUG" additivity="true">
         </logger>
     </Loggers>
 </Configuration>
