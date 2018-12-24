@@ -35,6 +35,9 @@ public class UserServiceImpl implements IUserService {
 
     @Override
     public ServerResponse<User> login(String username, String password) {
+        if (StringUtils.isEmpty(username) || StringUtils.isEmpty(password)) {
+            return ServerResponse.createByErrorMsg("参数错误");
+        }
         Optional<User> optUser = userRepo.getByUsername(username);
         if (!optUser.isPresent()) {
             return ServerResponse.createByErrorMsg("用户名不存在");
@@ -45,7 +48,8 @@ public class UserServiceImpl implements IUserService {
             return ServerResponse.createByErrorMsg("密码错误");
         }
         User user = optUser.get();
-        user.setPassword(StringUtils.EMPTY);
+        user.setPassword(null);
+        user.setAnswer(null);
         return ServerResponse.createBySuccess("登录成功", user);
     }
 
@@ -134,6 +138,7 @@ public class UserServiceImpl implements IUserService {
             User user = userOpt.get();
             user.setPassword(MD5Util.encodeUTF8(newPassword));
             userRepo.save(user);
+            TokenCache.remove(TokenCache.TOKEN_PREFIX + username);
             return ServerResponse.createBySuccessMsg("密码重置成功");
         }
         return ServerResponse.createByErrorMsg("token 无效或过期");

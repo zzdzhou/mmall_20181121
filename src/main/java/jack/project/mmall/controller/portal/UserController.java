@@ -4,7 +4,7 @@ import jack.project.mmall.common.Constants;
 import jack.project.mmall.common.ServerResponse;
 import jack.project.mmall.entity.User;
 import jack.project.mmall.service.IUserService;
-import org.apache.tomcat.util.bcel.Const;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -31,8 +31,8 @@ public class UserController {
     }
 
     @PostMapping(value = "/login", consumes = "application/json", produces = "application/json")
-    public ServerResponse<User> login(String username, String password, HttpSession httpSession) {
-        ServerResponse<User> res = userService.login(username, password);
+    public ServerResponse<User> login(@RequestBody Map<String, String> model, HttpSession httpSession) {
+        ServerResponse<User> res = userService.login(model.get("username"), model.get("password"));
         if (res.isSuccessful()) {
             httpSession.setAttribute(Constants.CURRENT_USER, res.getData());
         }
@@ -52,9 +52,7 @@ public class UserController {
 
     @PostMapping(value = "/isValid", consumes = "application/json", produces = "application/json")
     public ServerResponse<Boolean> checkValid(@RequestBody Map<String, String> model) {
-        String value = model.get("value");
-        String type = model.get("type");
-        return userService.checkValid(value, type);
+        return userService.checkValid(model.get("value"), model.get("type"));
     }
 
     @GetMapping(value = "/getUserInfo", consumes = "application/json", produces = "application/json")
@@ -81,22 +79,22 @@ public class UserController {
     }
 
     @PostMapping(value = "/forgetPassword/answer", consumes = "application/json", produces = "application/json")
-    public ServerResponse<String> checkAnswer(String username, String question, String answer) {
-        return userService.checkAnswer(username, question, answer);
+    public ServerResponse<String> checkAnswer(@RequestBody Map<String, String> model) {
+        return userService.checkAnswer(model.get("username"), model.get("question"), model.get("answer"));
     }
 
     @PostMapping(value = "/forgetPassword/reset", consumes = "application/json", produces = "application/json")
-    public ServerResponse<String> resetPasswordForget(String username, String newPassword, String token) {
-        return userService.resetPasswordForget(username, newPassword, token);
+    public ServerResponse<String> resetPasswordForget(@RequestBody Map<String, String> model) {
+        return userService.resetPasswordForget(model.get("username"), model.get("newPassword"), model.get("token"));
     }
 
     @PostMapping(value = "/resetPassword", consumes = "application/json", produces = "application/json")
-    public ServerResponse<String> resetPassword(HttpSession httpSession, String username, String oldPassword, String newPassword) {
+    public ServerResponse<String> resetPassword(HttpSession httpSession, @RequestBody Map<String, String> model) {
         User user = (User) httpSession.getAttribute(Constants.CURRENT_USER);
         if (user == null) {
             return ServerResponse.createByErrorMsg("用户未登录");
         }
-        return userService.resetPassword(user, oldPassword, newPassword);
+        return userService.resetPassword(user, model.get("username"), model.get("newPassword"));
     }
 
     /**
@@ -110,7 +108,7 @@ public class UserController {
      * @return
      */
     @PostMapping(value = "/updateUser", consumes = "application/json", produces = "application/json")
-    public ServerResponse<User> updateUser(HttpSession httpSession, User user) {
+    public ServerResponse<User> updateUser(HttpSession httpSession, @RequestBody User user) {
         User currentUser = (User) httpSession.getAttribute(Constants.CURRENT_USER);
         // 必须先登录，才能修改用户信息
         // Q: 如何保证修改的是当前登录的用户的信息，而非其他用户？

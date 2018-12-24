@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration strict="true" packages="jack.project.mmall">
     <properties>
-        <property name="basePath">C:/Users/D1M/Desktop/daily/logging</property>
+        <property name="basePath">logging</property>
         <property name="filePattern">${basePath}/mmal_logs.%d{yyyy-MM-dd}.%i.log</property>
     </properties>
 

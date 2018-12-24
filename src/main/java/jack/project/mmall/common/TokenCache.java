@@ -47,11 +47,16 @@ public class TokenCache {
 
     public static String get(String key) {
         try {
-            return localCache.get(key);
+            // todo
+            return localCache.get(key);  //com.google.common.cache.CacheLoader$InvalidCacheLoadException: CacheLoader returned null for key token_Jack.
         } catch (ExecutionException e) {
             log.error("Loading cache error: ", e);
         }
         return null;
+    }
+
+    public static void remove(String key) {
+        localCache.invalidate(key);
     }
 
     public static void main(String[] args) {
