@@ -8,6 +8,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.util.Map;
 
@@ -35,14 +36,20 @@ public class UserController {
         ServerResponse<User> res = userService.login(model.get("username"), model.get("password"));
         if (res.isSuccessful()) {
             httpSession.setAttribute(Constants.CURRENT_USER, res.getData());
+//            httpSession.setMaxInactiveInterval();
         }
         return res;
     }
 
     @GetMapping(value = "/logout", consumes = "application/json", produces = "application/json")
-    public ServerResponse<String> logout(HttpSession httpSession) {
-        httpSession.removeAttribute(Constants.CURRENT_USER);
+    public ServerResponse<String> logout(HttpServletRequest request) {
+        //httpSession.removeAttribute(Constants.CURRENT_USER);
+        HttpSession session = request.getSession(false);
+        if (session != null) {
+            session.invalidate();
+        }
         return ServerResponse.createBySuccess();
+
     }
 
     @PostMapping(value = "/register", consumes = "application/json", produces = "application/json")
