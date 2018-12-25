@@ -134,7 +134,7 @@ public class UserServiceImpl implements IUserService {
         // check token
         // reset password if token is valid
         String cachedToken = TokenCache.get(TokenCache.TOKEN_PREFIX + username);
-        if (token != null && StringUtils.equals(token, cachedToken)) {
+        if (token != null && !StringUtils.EMPTY.equals(cachedToken) && StringUtils.equals(token, cachedToken)) {
             User user = userOpt.get();
             user.setPassword(MD5Util.encodeUTF8(newPassword));
             userRepo.save(user);
@@ -155,6 +155,14 @@ public class UserServiceImpl implements IUserService {
     }
 
     public ServerResponse<User> updateUser(User currentUser, User newUser) {
+        Optional<User> userOpt = userRepo.getById(currentUser.getId());
+        if (!userOpt.isPresent()) {
+            ServerResponse.createByErrorMsg("当前 User 不存在: " + currentUser.getId());
+        }
+        currentUser = userOpt.get();
+        if (newUser.getUsername() != null) {
+            return ServerResponse.createByErrorMsg("username 无法更新");
+        }
         String email = newUser.getEmail();
         String phone = newUser.getPhone();
         String question = newUser.getQuestion();
@@ -177,9 +185,11 @@ public class UserServiceImpl implements IUserService {
             currentUser.setAnswer(answer);
         }
         currentUser.setUpdateTime(LocalDateTime.now());
-        User user = userRepo.save(currentUser);
-        if (user != null) {
-            return ServerResponse.createBySuccess(user);
+        currentUser = userRepo.save(currentUser);
+        currentUser.setPassword(null);
+        currentUser.setAnswer(null);
+        if (currentUser != null) {
+            return ServerResponse.createBySuccess(currentUser);
         }
         return ServerResponse.createByErrorMsg("更新失败");
 

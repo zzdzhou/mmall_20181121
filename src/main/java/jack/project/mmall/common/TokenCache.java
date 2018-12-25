@@ -4,6 +4,7 @@ package jack.project.mmall.common;
 import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
@@ -37,7 +38,7 @@ public class TokenCache {
                 // 默认数据加载实现，当调用get()没有对应的key时，就返回这个
                 @Override
                 public String load(String key) throws Exception {
-                    return null;
+                    return StringUtils.EMPTY;
                 }
             });
 
