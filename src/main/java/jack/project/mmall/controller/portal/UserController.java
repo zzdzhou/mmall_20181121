@@ -4,7 +4,8 @@ import jack.project.mmall.common.Constants;
 import jack.project.mmall.common.ServerResponse;
 import jack.project.mmall.entity.User;
 import jack.project.mmall.service.IUserService;
-import org.apache.commons.lang3.StringUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -24,6 +25,8 @@ import java.util.Map;
 @RequestMapping("/user")
 public class UserController {
 
+    private static final Logger logger = LoggerFactory.getLogger(UserController.class);
+
     private IUserService userService;
 
     @Autowired
@@ -36,7 +39,8 @@ public class UserController {
         ServerResponse<User> res = userService.login(model.get("username"), model.get("password"));
         if (res.isSuccessful()) {
             httpSession.setAttribute(Constants.CURRENT_USER, res.getData());
-//            httpSession.setMaxInactiveInterval();
+//            httpSession.setMaxInactiveInterval(5);
+            logger.info("http session timeout: {}", httpSession.getMaxInactiveInterval());
         }
         return res;
     }
