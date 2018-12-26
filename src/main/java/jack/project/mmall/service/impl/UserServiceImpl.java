@@ -5,9 +5,11 @@ import jack.project.mmall.common.ServerResponse;
 import jack.project.mmall.common.TokenCache;
 import jack.project.mmall.dao.UserRepo;
 import jack.project.mmall.entity.User;
+import jack.project.mmall.pojo.UserResponse;
 import jack.project.mmall.service.IUserService;
 import jack.project.mmall.util.MD5Util;
 import org.apache.commons.lang3.StringUtils;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -34,7 +36,7 @@ public class UserServiceImpl implements IUserService {
     }
 
     @Override
-    public ServerResponse<User> login(String username, String password) {
+    public ServerResponse<UserResponse> login(String username, String password) {
         if (StringUtils.isEmpty(username) || StringUtils.isEmpty(password)) {
             return ServerResponse.createByErrorMsg("参数错误");
         }
@@ -47,10 +49,9 @@ public class UserServiceImpl implements IUserService {
         if (!optUser.isPresent()) {
             return ServerResponse.createByErrorMsg("密码错误");
         }
-        User user = optUser.get();
-        user.setPassword(null);
-        user.setAnswer(null);
-        return ServerResponse.createBySuccess("登录成功", user);
+        UserResponse userResponse = new UserResponse();
+        BeanUtils.copyProperties(optUser.get(), userResponse);
+        return ServerResponse.createBySuccess("登录成功", userResponse);
     }
 
     @Override
@@ -144,9 +145,10 @@ public class UserServiceImpl implements IUserService {
         return ServerResponse.createByErrorMsg("token 无效或过期");
     }
 
-    public ServerResponse<String> resetPassword(User user, String oldPassword, String newPassword) {
-        Optional<User> userOpt = userRepo.getByIdAndPassword(user.getId(), MD5Util.encodeUTF8(oldPassword));
+    public ServerResponse<String> resetPassword(int userId, String oldPassword, String newPassword) {
+        Optional<User> userOpt = userRepo.getByIdAndPassword(userId, MD5Util.encodeUTF8(oldPassword));
         if (userOpt.isPresent()) {
+            User user = userOpt.get();
             user.setPassword(MD5Util.encodeUTF8(newPassword));
             userRepo.save(user);
             return ServerResponse.createBySuccessMsg("密码修改成功");
@@ -154,12 +156,12 @@ public class UserServiceImpl implements IUserService {
         return ServerResponse.createByErrorMsg("旧密码错误");
     }
 
-    public ServerResponse<User> updateUser(User currentUser, User newUser) {
-        Optional<User> userOpt = userRepo.getById(currentUser.getId());
+    public ServerResponse<UserResponse> updateUser(int userId, User newUser) {
+        Optional<User> userOpt = userRepo.getById(userId);
         if (!userOpt.isPresent()) {
-            ServerResponse.createByErrorMsg("当前 User 不存在: " + currentUser.getId());
+            ServerResponse.createByErrorMsg("当前 User 不存在: " + userId);
         }
-        currentUser = userOpt.get();
+        User currentUser = userOpt.get();
         if (newUser.getUsername() != null) {
             return ServerResponse.createByErrorMsg("username 无法更新");
         }
@@ -186,27 +188,27 @@ public class UserServiceImpl implements IUserService {
         }
         currentUser.setUpdateTime(LocalDateTime.now());
         currentUser = userRepo.save(currentUser);
-        currentUser.setPassword(null);
-        currentUser.setAnswer(null);
         if (currentUser != null) {
-            return ServerResponse.createBySuccess(currentUser);
+            UserResponse userResponse = new UserResponse();
+            BeanUtils.copyProperties(currentUser, userResponse);
+            return ServerResponse.createBySuccess(userResponse);
         }
         return ServerResponse.createByErrorMsg("更新失败");
 
     }
 
-    public ServerResponse<User> getUserDetails(int userId) {
+    public ServerResponse<UserResponse> getUserDetails(int userId) {
         Optional<User> optUser = userRepo.getById(userId);
         if (optUser.isPresent()) {
-            User user = optUser.get();
-            user.setPassword(null);
-            return ServerResponse.createBySuccess(user);
+            UserResponse userResponse = new UserResponse();
+            org.springframework.beans.BeanUtils.copyProperties(optUser.get(), userResponse);
+            return ServerResponse.createBySuccess(userResponse);
         }
         return ServerResponse.createByErrorMsg("用户不存在");
     }
 
-    public ServerResponse<User> loginBackend(String username, String password) {
-        ServerResponse<User> response = this.login(username, password);
+    public ServerResponse<UserResponse> loginBackend(String username, String password) {
+        ServerResponse<UserResponse> response = this.login(username, password);
         if (response.isSuccessful() && Constants.role.ROLE_ADMIN != response.getData().getRole()) {
             return ServerResponse.createByErrorMsg("不是管理员，无法登陆");
         }

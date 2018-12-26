@@ -3,6 +3,7 @@ package jack.project.mmall.controller.portal;
 import jack.project.mmall.common.Constants;
 import jack.project.mmall.common.ServerResponse;
 import jack.project.mmall.entity.User;
+import jack.project.mmall.pojo.UserResponse;
 import jack.project.mmall.service.IUserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -35,8 +36,8 @@ public class UserController {
     }
 
     @PostMapping(value = "/login", consumes = "application/json", produces = "application/json")
-    public ServerResponse<User> login(@RequestBody Map<String, String> model, HttpSession httpSession) {
-        ServerResponse<User> res = userService.login(model.get("username"), model.get("password"));
+    public ServerResponse<UserResponse> login(@RequestBody Map<String, String> model, HttpSession httpSession) {
+        ServerResponse<UserResponse> res = userService.login(model.get("username"), model.get("password"));
         if (res.isSuccessful()) {
             httpSession.setAttribute(Constants.CURRENT_USER, res.getData());
 //            httpSession.setMaxInactiveInterval(5);
@@ -52,7 +53,7 @@ public class UserController {
         if (session != null) {
             session.invalidate();
         }
-        return ServerResponse.createBySuccess();
+        return ServerResponse.createBySuccess("退出登录成功");
 
     }
 
@@ -67,21 +68,21 @@ public class UserController {
     }
 
     @GetMapping(value = "/getUserInfo", consumes = "application/json", produces = "application/json")
-    public ServerResponse<User> getUserInfo(HttpSession httpSession) {
-        User user = (User) httpSession.getAttribute(Constants.CURRENT_USER);
-        if (user == null) {
+    public ServerResponse<UserResponse> getUserInfo(HttpSession httpSession) {
+        UserResponse userResponse = (UserResponse) httpSession.getAttribute(Constants.CURRENT_USER);
+        if (userResponse == null) {
             return ServerResponse.createByErrorMsg("用户未登录，无法获取当前用户信息！");
         }
-        return ServerResponse.createBySuccess(user);
+        return ServerResponse.createBySuccess(userResponse);
     }
 
     @GetMapping(value = "/getUserDetails", consumes = "application/json", produces = "application/json")
-    public ServerResponse<User> getUserDetails(HttpSession httpSession) {
-        User user = (User) httpSession.getAttribute(Constants.CURRENT_USER);
-        if (user == null) {
+    public ServerResponse<UserResponse> getUserDetails(HttpSession httpSession) {
+        UserResponse userResponse = (UserResponse) httpSession.getAttribute(Constants.CURRENT_USER);
+        if (userResponse == null) {
             return ServerResponse.createByErrorMsg("用户未登录，无法获取当前用户信息！");
         }
-        return userService.getUserDetails(user.getId());
+        return userService.getUserDetails(userResponse.getId());
     }
 
     @PostMapping(value = "/forgetPassword/question", consumes = "application/json", produces = "application/json")
@@ -101,11 +102,11 @@ public class UserController {
 
     @PostMapping(value = "/resetPassword", consumes = "application/json", produces = "application/json")
     public ServerResponse<String> resetPassword(HttpSession httpSession, @RequestBody Map<String, String> model) {
-        User user = (User) httpSession.getAttribute(Constants.CURRENT_USER);
-        if (user == null) {
+        UserResponse userResponse = (UserResponse) httpSession.getAttribute(Constants.CURRENT_USER);
+        if (userResponse == null) {
             return ServerResponse.createByErrorMsg("用户未登录");
         }
-        return userService.resetPassword(user, model.get("username"), model.get("newPassword"));
+        return userService.resetPassword(userResponse.getId(), model.get("oldPassword"), model.get("newPassword"));
     }
 
     /**
@@ -119,20 +120,19 @@ public class UserController {
      * @return
      */
     @PostMapping(value = "/updateUser", consumes = "application/json", produces = "application/json")
-    public ServerResponse<User> updateUser(HttpSession httpSession, @RequestBody User user) {
-        User currentUser = (User) httpSession.getAttribute(Constants.CURRENT_USER);
+    public ServerResponse<UserResponse> updateUser(HttpSession httpSession, @RequestBody User user) {
+        UserResponse currentUser = (UserResponse) httpSession.getAttribute(Constants.CURRENT_USER);
         // 必须先登录，才能修改用户信息
         // Q: 如何保证修改的是当前登录的用户的信息，而非其他用户？
         // A: userService.updateUser(currentUser, user) --> userRepo.save(currentUser); currentUser.id 始终没有改变
         if (currentUser == null) {
             return ServerResponse.createByErrorMsg("用户未登录");
         }
-        ServerResponse<User> response = userService.updateUser(currentUser, user);
+        ServerResponse<UserResponse> response = userService.updateUser(currentUser.getId(), user);
         if (response.isSuccessful()) {
             httpSession.setAttribute(Constants.CURRENT_USER, response.getData());
         }
         return response;
     }
-
 
 }
