@@ -3,7 +3,6 @@ package jack.project.mmall.controller.backend;
 import jack.project.mmall.common.Constants;
 import jack.project.mmall.common.ServerResponse;
 import jack.project.mmall.entity.User;
-import jack.project.mmall.pojo.UserResponse;
 import jack.project.mmall.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -32,8 +31,8 @@ public class UserAdminController {
     }
 
     @PostMapping("/loginAdmin")
-    public ServerResponse<UserResponse> loginAdmin(HttpSession httpSession, String username, String password) {
-        ServerResponse<UserResponse> response = userService.loginBackend(username, password);
+    public ServerResponse<User> loginAdmin(HttpSession httpSession, String username, String password) {
+        ServerResponse<User> response = userService.loginBackend(username, password);
         if (response.isSuccessful()) {
             httpSession.setAttribute(Constants.CURRENT_USER, response.getData());
         }

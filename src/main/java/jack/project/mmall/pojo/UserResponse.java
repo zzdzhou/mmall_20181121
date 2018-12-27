@@ -14,9 +14,12 @@ import java.time.LocalDateTime;
  * 用来代替 User，在以下情况下 1/ 返回给前端的 User; 2/ session 中的User;
  * 与 User 相比， 删除 password, answer 字段
  *
+ * replaced by {@link jack.project.mmall.service.impl.UserServiceImpl#getReturnedUser(jack.project.mmall.entity.User)}
+ *
  * @author Zhengde ZHOU
  * Created on 2018-12-26
  */
+/*
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class UserResponse {
 
@@ -104,3 +107,4 @@ public class UserResponse {
         this.updateTime = updateTime;
     }
 }
+*/

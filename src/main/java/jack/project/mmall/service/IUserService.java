@@ -2,7 +2,6 @@ package jack.project.mmall.service;
 
 import jack.project.mmall.common.ServerResponse;
 import jack.project.mmall.entity.User;
-import jack.project.mmall.pojo.UserResponse;
 
 /**
  * Theme:
@@ -14,7 +13,7 @@ import jack.project.mmall.pojo.UserResponse;
  */
 public interface IUserService {
 
-    ServerResponse<UserResponse> login(String username, String password);
+    ServerResponse<User> login(String username, String password);
 
     ServerResponse<Integer> register(User user);
 
@@ -28,10 +27,10 @@ public interface IUserService {
 
     ServerResponse<String> resetPassword(int userId, String oldPassword, String newPassword);
 
-    ServerResponse<UserResponse> updateUser(int userId, User newUser);
+    ServerResponse<User> updateUser(int userId, User newUser);
 
-    ServerResponse<UserResponse> getUserDetails(int userId);
+    ServerResponse<User> getUserDetails(int userId);
 
     // backend service
-    ServerResponse<UserResponse> loginBackend(String username, String password);
+    ServerResponse<User> loginBackend(String username, String password);
 }
