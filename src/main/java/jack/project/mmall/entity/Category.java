@@ -23,8 +23,8 @@ public class Category {
 
     private String name;
 
-    @Enumerated(EnumType.ORDINAL)
-    private Status status;
+//    @Enumerated(EnumType.ORDINAL)
+    private boolean status;
 
     @Column(name = "sort_order")
     private int sortOrder;
@@ -62,11 +62,11 @@ public class Category {
         this.name = name;
     }
 
-    public Status getStatus() {
+    public boolean getStatus() {
         return status;
     }
 
-    public void setStatus(Status status) {
+    public void setStatus(boolean status) {
         this.status = status;
     }
 
@@ -94,8 +94,8 @@ public class Category {
         this.updateTime = updateTime;
     }
 
-    public static enum Status {
+    /*public static enum Status {
         USED, NOT_USED
-    }
+    }*/
 
 }

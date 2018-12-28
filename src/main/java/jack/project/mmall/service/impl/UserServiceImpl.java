@@ -24,7 +24,7 @@ import java.util.UUID;
  * @author Zhengde ZHOU
  * Created on 2018-12-01
  */
-@Service("iUserService")
+@Service
 public class UserServiceImpl implements IUserService {
 
     private UserRepo userRepo;

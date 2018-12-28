@@ -1,6 +1,7 @@
 package jack.project.mmall.controller.backend;
 
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -15,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/category")
 public class CategoryAdminController {
 
-    public void addCategory(String name, int parentId) {
+    public void addCategory(@RequestParam String name, @RequestParam int parentId) {
 
     }
 
