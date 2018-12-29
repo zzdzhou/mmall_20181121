@@ -33,4 +33,7 @@ public interface IUserService {
 
     // backend service
     ServerResponse<User> loginBackend(String username, String password);
+
+    // tool methods
+    boolean isAdminRole(int userId);
 }

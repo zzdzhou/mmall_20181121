@@ -40,7 +40,9 @@ public class User {
 
     private String answer;
 
-    private int role;
+    @NotNull
+    @Enumerated
+    private Role role;
 
     @Column(name = "create_time")
     @NotNull
@@ -110,11 +112,11 @@ public class User {
         this.answer = answer;
     }
 
-    public int getRole() {
+    public Role getRole() {
         return role;
     }
 
-    public void setRole(int role) {
+    public void setRole(Role role) {
         this.role = role;
     }
 
@@ -132,5 +134,9 @@ public class User {
 
     public void setUpdateTime(LocalDateTime updateTime) {
         this.updateTime = updateTime;
+    }
+
+    public static enum Role {
+        ADMIN, USER
     }
 }

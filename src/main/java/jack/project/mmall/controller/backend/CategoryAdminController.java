@@ -5,6 +5,7 @@ import jack.project.mmall.common.ServerResponse;
 import jack.project.mmall.entity.Category;
 import jack.project.mmall.entity.User;
 import jack.project.mmall.service.ICategoryService;
+import jack.project.mmall.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -27,16 +28,21 @@ public class CategoryAdminController {
 
     private ICategoryService categoryService;
 
+    private IUserService userService;
+
     @Autowired
-    public CategoryAdminController(ICategoryService categoryService) {
+    public CategoryAdminController(ICategoryService categoryService, IUserService userService) {
         this.categoryService = categoryService;
+        this.userService = userService;
     }
 
     @GetMapping("/add")
     public ServerResponse<Category> addCategory(@RequestParam String name, @RequestParam int parentId, HttpSession session) {
         User user = (User) session.getAttribute(Constants.CURRENT_USER);
-        if (user != null) {
-
+        if (user == null) {
+            return ServerResponse.createByErrorMsg("用户未登陆");
+        } else if (!userService.isAdminRole(user.getId())) {
+            return ServerResponse.createByErrorMsg("请使用管理员账号登陆");
         }
         return categoryService.addCategory(name, parentId);
     }

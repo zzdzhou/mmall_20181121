@@ -14,9 +14,4 @@ public class Constants {
     public static final String EMAIL = "email";
     public static final String USERNAME = "username";
 
-    public interface role {
-        int ROLE_CUSTOMMER = 1;
-        int ROLE_ADMIN = 0;
-    }
-
 }

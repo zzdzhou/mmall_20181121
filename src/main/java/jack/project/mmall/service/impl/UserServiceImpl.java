@@ -61,7 +61,7 @@ public class UserServiceImpl implements IUserService {
         if (optUser.isPresent()) {
             return ServerResponse.createByErrorMsg("邮箱已存在");
         }
-        user.setRole(Constants.role.ROLE_CUSTOMMER);
+        user.setRole(User.Role.USER);
         user.setPassword(MD5Util.encodeUTF8(user.getPassword()));
         user.setCreateTime(LocalDateTime.now());
         user.setUpdateTime(user.getCreateTime());
@@ -156,11 +156,11 @@ public class UserServiceImpl implements IUserService {
     public ServerResponse<User> updateUser(int userId, User newUser) {
         Optional<User> userOpt = userRepo.getById(userId);
         if (!userOpt.isPresent()) {
-            ServerResponse.createByErrorMsg("当前 User 不存在: " + userId);
+            return ServerResponse.createByErrorMsg("当前 User 不存在: " + userId);
         }
         User currentUser = userOpt.get();
         if (newUser.getUsername() != null) {
-            return ServerResponse.createByErrorMsg("username 无法更新");
+            return ServerResponse.createByErrorMsg("不能更改 username");
         }
         String email = newUser.getEmail();
         String phone = newUser.getPhone();
@@ -189,7 +189,6 @@ public class UserServiceImpl implements IUserService {
             return ServerResponse.createBySuccess(getReturnedUser(currentUser));
         }
         return ServerResponse.createByErrorMsg("更新失败");
-
     }
 
     public ServerResponse<User> getUserDetails(int userId) {
@@ -197,16 +196,13 @@ public class UserServiceImpl implements IUserService {
         if (optUser.isPresent()) {
             return ServerResponse.createBySuccess(getReturnedUser(optUser.get()));
         }
-
-       /* optUser.map(user -> {
-            return ServerResponse.createBySuccess(getReturnedUser(user));
-        });*/
+//        optUser.ifPresent(user -> ServerResponse.createBySuccess(getReturnedUser(user)));
         return ServerResponse.createByErrorMsg("用户不存在");
     }
 
     public ServerResponse<User> loginBackend(String username, String password) {
         ServerResponse<User> response = this.login(username, password);
-        if (response.isSuccessful() && Constants.role.ROLE_ADMIN != response.getData().getRole()) {
+        if (response.isSuccessful() && !isAdminRole(response.getData().getId())) {
             return ServerResponse.createByErrorMsg("不是管理员，无法登陆");
         }
         return response;
@@ -220,6 +216,12 @@ public class UserServiceImpl implements IUserService {
         String[] ignoredProperties = {"password", "answer"};
         BeanUtils.copyProperties(user, returnedUser, ignoredProperties);
         return returnedUser;
+    }
+
+    // ------------------- public tools -------------------------------------------------------------------------------------
+    public boolean isAdminRole(int userId) {
+        Optional<User> userOpt = userRepo.getById(userId);
+        return userOpt.filter(user -> User.Role.ADMIN.equals(user.getRole())).isPresent();
     }
 
 }
