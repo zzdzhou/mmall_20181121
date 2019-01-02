@@ -29,10 +29,10 @@ public class CategoryServiceImpl implements ICategoryService {
     }
 
     public ServerResponse<Category> addCategory(String name, Integer parentId) {
-        if (StringUtils.isBlank(name) || parentId == null) {
+        if (StringUtils.isBlank(name)) {
             return ServerResponse.createByErrorMsg("参数错误");
         }
-        if (parentId != 0) {
+        if (parentId != null) {
             Optional<Category> parentOpt = categoryRepo.getById(parentId);
             if (!parentOpt.isPresent()) {
                 return ServerResponse.createByErrorMsg(String.format("parent category %d 不存在", parentId));
@@ -47,6 +47,11 @@ public class CategoryServiceImpl implements ICategoryService {
             return ServerResponse.createByErrorMsg("添加失败");
         }
         return ServerResponse.createBySuccess(result);
+    }
+
+    public ServerResponse<Category> updateCategoryName(String oldName, String newName) {
+//        categoryRepo.getById()
+        return null;
     }
 
 }

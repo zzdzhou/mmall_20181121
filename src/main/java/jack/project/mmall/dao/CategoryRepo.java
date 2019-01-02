@@ -11,5 +11,7 @@ public interface CategoryRepo extends Repository<Category, Integer> {
 
     Category save(Category category);
 
+    Category getByName(String name);
+
 
 }

@@ -37,7 +37,7 @@ public class CategoryAdminController {
     }
 
     @GetMapping("/add")
-    public ServerResponse<Category> addCategory(@RequestParam String name, @RequestParam int parentId, HttpSession session) {
+    public ServerResponse<Category> addCategory(@RequestParam String name, @RequestParam(required = false) int parentId, HttpSession session) {
         ServerResponse isAdmin = UserAdminController.checkAdminRole(session, userService);
         if (!isAdmin.isSuccessful()) {
             return isAdmin;
