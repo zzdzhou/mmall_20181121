@@ -38,13 +38,20 @@ public class CategoryAdminController {
 
     @GetMapping("/add")
     public ServerResponse<Category> addCategory(@RequestParam String name, @RequestParam int parentId, HttpSession session) {
-        User user = (User) session.getAttribute(Constants.CURRENT_USER);
-        if (user == null) {
-            return ServerResponse.createByErrorMsg("用户未登陆");
-        } else if (!userService.isAdminRole(user.getId())) {
-            return ServerResponse.createByErrorMsg("请使用管理员账号登陆");
+        ServerResponse isAdmin = UserAdminController.checkAdminRole(session, userService);
+        if (!isAdmin.isSuccessful()) {
+            return isAdmin;
         }
         return categoryService.addCategory(name, parentId);
+    }
+
+    @GetMapping("/update")
+    public ServerResponse<Category> updateCategoryName(HttpSession session, @RequestParam String oldName, @RequestParam String newName) {
+        ServerResponse isAdmin = UserAdminController.checkAdminRole(session, userService);
+        if (!isAdmin.isSuccessful()) {
+            return isAdmin;
+        }
+        return null;
     }
 
 }

@@ -1,6 +1,7 @@
 package jack.project.mmall.controller.backend;
 
 import jack.project.mmall.common.Constants;
+import jack.project.mmall.common.ResponseCode;
 import jack.project.mmall.common.ServerResponse;
 import jack.project.mmall.entity.User;
 import jack.project.mmall.service.IUserService;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpSession;
+import javax.validation.constraints.Null;
 
 /**
  * Theme:
@@ -37,5 +39,16 @@ public class UserAdminController {
             httpSession.setAttribute(Constants.CURRENT_USER, response.getData());
         }
         return response;
+    }
+
+
+    public static ServerResponse checkAdminRole(HttpSession session, IUserService userService) {
+        User user = (User) session.getAttribute(Constants.CURRENT_USER);
+        if (user == null) {
+            return ServerResponse.createByError(ResponseCode.NEED_LOGIN.getCode(), "用户未登陆");
+        } else if (!userService.isAdminRole(user.getId())) {
+            return ServerResponse.createByError(ResponseCode.ERROR.getCode(), "请使用管理员账号登陆");
+        }
+        return ServerResponse.createBySuccess();
     }
 }

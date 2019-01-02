@@ -136,7 +136,7 @@ public class User {
         this.updateTime = updateTime;
     }
 
-    public static enum Role {
+    public enum Role {
         ADMIN, USER
     }
 }
