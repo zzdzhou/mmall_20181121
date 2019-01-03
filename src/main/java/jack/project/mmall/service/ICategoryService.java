@@ -7,4 +7,6 @@ public interface ICategoryService {
 
     ServerResponse<Category> addCategory(String name, Integer parentId);
 
+    ServerResponse<Category> updateCategoryName(Integer categoryId, String newName);
+
 }

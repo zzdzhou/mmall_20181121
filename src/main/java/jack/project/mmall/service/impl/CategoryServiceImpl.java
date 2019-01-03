@@ -8,6 +8,8 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import static jack.project.mmall.common.ResponseCode.*;
+
 import java.util.Optional;
 
 /**
@@ -49,9 +51,17 @@ public class CategoryServiceImpl implements ICategoryService {
         return ServerResponse.createBySuccess(result);
     }
 
-    public ServerResponse<Category> updateCategoryName(String oldName, String newName) {
-//        categoryRepo.getById()
-        return null;
+    public ServerResponse<Category> updateCategoryName(Integer categoryId, String newName) {
+        if (categoryId == null || StringUtils.isBlank(newName)) {
+            return ServerResponse.createByResponseCode(ILLEGAL_ARGUMENT);
+        }
+        Optional<Category> categoryOpt = categoryRepo.getById(categoryId);
+        if (!categoryOpt.isPresent()) {
+            return ServerResponse.createByErrorMsg(String.format("Category %d 不存在", categoryId));
+        }
+        Category category = categoryOpt.get();
+        category.setName(newName);
+        return ServerResponse.createBySuccess(categoryRepo.save(category));
     }
 
 }

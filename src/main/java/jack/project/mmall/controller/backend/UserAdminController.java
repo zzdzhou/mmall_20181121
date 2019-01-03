@@ -47,7 +47,7 @@ public class UserAdminController {
         if (user == null) {
             return ServerResponse.createByError(ResponseCode.NEED_LOGIN.getCode(), "用户未登陆");
         } else if (!userService.isAdminRole(user.getId())) {
-            return ServerResponse.createByErrorMsg("请使用管理员账号登陆");
+            return ServerResponse.createByErrorMsg("需要管理员权限");
         }
         return ServerResponse.createBySuccess();
     }

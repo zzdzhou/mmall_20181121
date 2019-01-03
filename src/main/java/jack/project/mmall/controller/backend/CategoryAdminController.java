@@ -37,21 +37,22 @@ public class CategoryAdminController {
     }
 
     @GetMapping("/add")
-    public ServerResponse<Category> addCategory(@RequestParam String name, @RequestParam(required = false) int parentId, HttpSession session) {
+    public ServerResponse<Category> addCategory(
+            @RequestParam String name, @RequestParam(required = false) Integer parentId, HttpSession session) {
         ServerResponse isAdmin = UserAdminController.checkAdminRole(session, userService);
         if (!isAdmin.isSuccessful()) {
-            return isAdmin;
+            return ServerResponse.createByError(isAdmin.getCode(), isAdmin.getMsg());
         }
         return categoryService.addCategory(name, parentId);
     }
 
     @GetMapping("/update")
-    public ServerResponse<Category> updateCategoryName(HttpSession session, @RequestParam String oldName, @RequestParam String newName) {
+    public ServerResponse<Category> updateCategoryName(HttpSession session, @RequestParam Integer categoryId, @RequestParam String newName) {
         ServerResponse isAdmin = UserAdminController.checkAdminRole(session, userService);
         if (!isAdmin.isSuccessful()) {
-            return isAdmin;
+            return ServerResponse.createByError(isAdmin.getCode(), isAdmin.getMsg());
         }
-        return null;
+        return categoryService.updateCategoryName(categoryId, newName);
     }
 
 }

@@ -13,5 +13,4 @@ public interface CategoryRepo extends Repository<Category, Integer> {
 
     Category getByName(String name);
 
-
 }
