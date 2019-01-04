@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpSession;
+import java.util.List;
 
 /**
  * Theme:
@@ -53,6 +54,15 @@ public class CategoryAdminController {
             return ServerResponse.createByError(isAdmin.getCode(), isAdmin.getMsg());
         }
         return categoryService.updateCategoryName(categoryId, newName);
+    }
+
+    @GetMapping("/get_children")
+    public ServerResponse<List<Category>> getChildrenCategories(HttpSession session, Integer parentId) {
+        ServerResponse isAdmin = UserAdminController.checkAdminRole(session, userService);
+        if (!isAdmin.isSuccessful()) {
+            return ServerResponse.createByError(isAdmin.getCode(), isAdmin.getMsg());
+        }
+        return categoryService.getChildrenCategories(parentId);
     }
 
 }

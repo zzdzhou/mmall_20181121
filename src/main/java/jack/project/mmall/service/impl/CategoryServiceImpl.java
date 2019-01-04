@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import static jack.project.mmall.common.ResponseCode.*;
 
+import java.util.List;
 import java.util.Optional;
 
 /**
@@ -62,6 +63,16 @@ public class CategoryServiceImpl implements ICategoryService {
         Category category = categoryOpt.get();
         category.setName(newName);
         return ServerResponse.createBySuccess(categoryRepo.save(category));
+    }
+
+    public ServerResponse<List<Category>> getChildrenCategories(Integer parentId) {
+        List<Category> returnedList;
+        if (parentId == null) {
+            returnedList = categoryRepo.getAllByParentIdIsNull();
+        } else {
+            returnedList = categoryRepo.getAllByParentId(parentId);
+        }
+        return ServerResponse.createBySuccess(returnedList);
     }
 
 }
