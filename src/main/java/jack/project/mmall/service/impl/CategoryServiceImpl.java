@@ -4,14 +4,17 @@ import jack.project.mmall.common.ServerResponse;
 import jack.project.mmall.dao.CategoryRepo;
 import jack.project.mmall.entity.Category;
 import jack.project.mmall.service.ICategoryService;
+import javafx.scene.effect.SepiaTone;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import static jack.project.mmall.common.ResponseCode.*;
 
+import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
 /**
  * Theme:
@@ -65,7 +68,7 @@ public class CategoryServiceImpl implements ICategoryService {
         return ServerResponse.createBySuccess(categoryRepo.save(category));
     }
 
-    public ServerResponse<List<Category>> getChildrenCategories(Integer parentId) {
+    public ServerResponse<List<Category>> getPrimaryChildCategories(Integer parentId) {
         List<Category> returnedList;
         if (parentId == null) {
             returnedList = categoryRepo.getAllByParentIdIsNull();
@@ -73,6 +76,16 @@ public class CategoryServiceImpl implements ICategoryService {
             returnedList = categoryRepo.getAllByParentId(parentId);
         }
         return ServerResponse.createBySuccess(returnedList);
+    }
+
+    private Set<Category> getAllChildCategories(Integer parentId) {
+        HashSet<Category> categories = new HashSet<>();
+        Optional<Category> categoryOpt = categoryRepo.getById(parentId);
+        if (categoryOpt.isPresent()) {
+            categories.add(categoryOpt.get());
+        }
+        ServerResponse<List<Category>> primaryChildCategories = getPrimaryChildCategories(parentId);
+
     }
 
 }
