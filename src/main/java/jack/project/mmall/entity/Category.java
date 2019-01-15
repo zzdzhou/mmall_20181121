@@ -23,7 +23,9 @@ public class Category {
 
     private String name;
 
-//    @Enumerated(EnumType.ORDINAL)
+    /**
+     * true 表示 used, false 表示已弃用
+     */
     private boolean status;
 
     @Column(name = "sort_order")
