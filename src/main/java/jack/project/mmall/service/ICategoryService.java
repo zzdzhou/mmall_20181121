@@ -4,6 +4,7 @@ import jack.project.mmall.common.ServerResponse;
 import jack.project.mmall.entity.Category;
 
 import java.util.List;
+import java.util.Set;
 
 public interface ICategoryService {
 
@@ -11,5 +12,8 @@ public interface ICategoryService {
 
     ServerResponse<Category> updateCategoryName(Integer categoryId, String newName);
 
-    ServerResponse<List<Category>> getChildrenCategories(Integer parentId);
+    ServerResponse<List<Category>> getChildCategories(Integer parentId);
+
+    ServerResponse<Set<Integer>> getCategoryIdAndAllChildCategoryIds(Integer parentId);
+
 }

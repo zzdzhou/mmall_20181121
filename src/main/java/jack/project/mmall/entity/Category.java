@@ -16,10 +16,10 @@ public class Category {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+    private Integer id;
 
     @Column(name = "parent_id")
-    private int parentId;
+    private Integer parentId;
 
     private String name;
 
@@ -38,19 +38,19 @@ public class Category {
     public Category() {
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
-    public int getParentId() {
+    public Integer getParentId() {
         return parentId;
     }
 
-    public void setParentId(int parentId) {
+    public void setParentId(Integer parentId) {
         this.parentId = parentId;
     }
 
@@ -98,4 +98,20 @@ public class Category {
         USED, NOT_USED
     }*/
 
+    @Override
+    public int hashCode() {
+        return id != null ? id.hashCode() : 0;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || getClass() != obj.getClass()) {
+            return false;
+        }
+        Category obj1 = (Category) obj;
+        return id == null? obj1.id == null: id.equals(obj1.id);
+    }
 }

@@ -1,19 +1,15 @@
 package jack.project.mmall.controller.backend;
 
-import jack.project.mmall.common.Constants;
 import jack.project.mmall.common.ServerResponse;
 import jack.project.mmall.entity.Category;
-import jack.project.mmall.entity.User;
 import jack.project.mmall.service.ICategoryService;
 import jack.project.mmall.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpSession;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Theme:
@@ -56,13 +52,22 @@ public class CategoryAdminController {
         return categoryService.updateCategoryName(categoryId, newName);
     }
 
-    @GetMapping("/get_children")
+    @GetMapping("/get_child_category")
     public ServerResponse<List<Category>> getChildrenCategories(HttpSession session, Integer parentId) {
         ServerResponse isAdmin = UserAdminController.checkAdminRole(session, userService);
         if (!isAdmin.isSuccessful()) {
             return ServerResponse.createByError(isAdmin.getCode(), isAdmin.getMsg());
         }
-        return categoryService.getChildrenCategories(parentId);
+        return categoryService.getChildCategories(parentId);
+    }
+
+    @PostMapping("/get_all_child_categories")
+    public ServerResponse<Set<Integer>> getCategoryIdAndAllChildCategoryIds(HttpSession session, @RequestParam Integer parentId) {
+        ServerResponse isAdmin = UserAdminController.checkAdminRole(session, userService);
+        if (!isAdmin.isSuccessful()) {
+            return ServerResponse.createByError(isAdmin.getCode(), isAdmin.getMsg());
+        }
+        return categoryService.getCategoryIdAndAllChildCategoryIds(parentId);
     }
 
 }
