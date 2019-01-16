@@ -119,7 +119,7 @@ public class CategoryServiceImpl implements ICategoryService {
         // 递归算法一定要有一个退出的条件. 查找自己点，若没有自己点，就退出
         List<Category> allByParentId = categoryRepo.getAllByParentId(parentId);
         for (Category item : allByParentId) {
-            getCategoryAndAllChildCategories(item.getId());
+            categories.addAll(getCategoryAndAllChildCategories(item.getId()));
         }
         return categories;
     }
