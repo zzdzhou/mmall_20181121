@@ -2,6 +2,7 @@ package jack.project.mmall.entity;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.Set;
 
 /**
  * Theme:
@@ -36,6 +37,9 @@ public class Category {
 
     @Column(name = "update_time")
     private LocalDateTime updateTime;
+
+    @OneToMany
+    private Set<Product> products;
 
     public Category() {
     }
