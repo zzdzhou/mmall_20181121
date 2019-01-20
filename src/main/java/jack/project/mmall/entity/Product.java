@@ -16,10 +16,11 @@ public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+    private Integer id;
 
-    @Column(name = "category_id")
-    private int categoryId;
+    @ManyToOne
+    @JoinColumn(name = "category_id")
+    private Category category;
 
     private String subtitle;
 
@@ -47,20 +48,20 @@ public class Product {
 
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
-    public int getCategoryId() {
-        return categoryId;
+    public Category getCategory() {
+        return category;
     }
 
-    public void setCategoryId(int categoryId) {
-        this.categoryId = categoryId;
+    public void setCategory(Category category) {
+        this.category = category;
     }
 
     public String getSubtitle() {
@@ -146,6 +147,17 @@ public class Product {
 
         public int getCode() {
             return code;
+        }
+
+        public static Status resolve(Integer code) {
+            if (code != null) {
+                for (Status item : values()) {
+                    if (item.code == code) {
+                        return item;
+                    }
+                }
+            }
+            return null;
         }
 
     }

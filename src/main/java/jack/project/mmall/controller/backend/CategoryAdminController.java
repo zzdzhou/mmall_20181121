@@ -20,7 +20,7 @@ import java.util.Set;
  * Created on 2018-12-27
  */
 @RestController
-@RequestMapping("/category")
+@RequestMapping("/admin/category")
 public class CategoryAdminController {
 
     private ICategoryService categoryService;

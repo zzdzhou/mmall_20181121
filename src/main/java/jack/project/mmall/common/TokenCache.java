@@ -48,7 +48,6 @@ public class TokenCache {
 
     public static String get(String key) {
         try {
-            // todo
             return localCache.get(key);  //com.google.common.cache.CacheLoader$InvalidCacheLoadException: CacheLoader returned null for key token_Jack.
         } catch (ExecutionException e) {
             log.error("Loading cache error: ", e);

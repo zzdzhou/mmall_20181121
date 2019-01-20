@@ -38,7 +38,7 @@ public class Category {
     @Column(name = "update_time")
     private LocalDateTime updateTime;
 
-    @OneToMany
+    @OneToMany(mappedBy = "category")
     private Set<Product> products;
 
     public Category() {
@@ -68,7 +68,7 @@ public class Category {
         this.name = name;
     }
 
-    public boolean getStatus() {
+    public boolean isStatus() {
         return status;
     }
 
@@ -98,6 +98,10 @@ public class Category {
 
     public void setUpdateTime(LocalDateTime updateTime) {
         this.updateTime = updateTime;
+    }
+
+    public Set<Product> getProducts() {
+        return products;
     }
 
     /*public static enum Status {

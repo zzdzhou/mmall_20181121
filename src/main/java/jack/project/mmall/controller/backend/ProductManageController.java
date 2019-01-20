@@ -1,0 +1,54 @@
+package jack.project.mmall.controller.backend;
+
+import jack.project.mmall.common.ServerResponse;
+import jack.project.mmall.entity.Product;
+import jack.project.mmall.service.IProductService;
+import jack.project.mmall.service.IUserService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import javax.servlet.http.HttpSession;
+
+/**
+ * Theme:
+ * <p>
+ * Description:
+ *
+ * @author Zhengde ZHOU
+ * Created on 2019-01-19
+ */
+@RestController
+@RequestMapping("/admin/product")
+public class ProductManageController {
+
+    private IUserService userService;
+
+    private IProductService productService;
+
+    @Autowired
+    public ProductManageController(IUserService userService, IProductService productService) {
+        this.userService = userService;
+        this.productService = productService;
+    }
+
+    @PostMapping("/save_update")
+    public ServerResponse<Product> saveOrUpdateProduct(HttpSession session, @RequestBody Product product,
+                                                       @RequestParam(required = false, defaultValue = "0") Boolean updateAllFields) {
+        ServerResponse isAdmin = UserAdminController.checkAdminRole(session, userService);
+        if (!isAdmin.isSuccessful()) {
+            return ServerResponse.createByError(isAdmin.getCode(), isAdmin.getMsg());
+        }
+        return productService.saveOrUpdateProduct(product, updateAllFields);
+    }
+
+    @GetMapping("/status")
+    public ServerResponse<Product> setProductStatus(HttpSession session, @RequestParam Integer productId, @RequestParam Integer status) {
+        ServerResponse isAdmin = UserAdminController.checkAdminRole(session, userService);
+        if (!isAdmin.isSuccessful()) {
+            return ServerResponse.createByError(isAdmin.getCode(), isAdmin.getMsg());
+        }
+        return productService.setProductStatus(productId, status);
+    }
+
+
+}
