@@ -4,6 +4,7 @@ import jack.project.mmall.common.ServerResponse;
 import jack.project.mmall.entity.Product;
 import jack.project.mmall.service.IProductService;
 import jack.project.mmall.service.IUserService;
+import jack.project.mmall.vo.ProductVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -50,5 +51,9 @@ public class ProductManageController {
         return productService.setProductStatus(productId, status);
     }
 
+    @GetMapping("/product_details")
+    public ServerResponse<ProductVO> getProductDetatil(@RequestParam Integer productId) {
+        return productService.getProductDetail(productId);
+    }
 
 }

@@ -1,6 +1,6 @@
-package jack.project.mmall.entity;
+package jack.project.mmall.vo;
 
-import javax.persistence.*;
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 /**
@@ -9,46 +9,27 @@ import java.time.LocalDateTime;
  * Description:
  *
  * @author Zhengde ZHOU
- * Created on 2019-01-17
+ * Created on 2019-01-23
  */
-@Entity
-public class Product {
+public class ProductVO {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
-
-    @ManyToOne
-    @JoinColumn(name = "category_id")
-    private Category category;
-
+    private Integer categoryId;
     private String name;
-
     private String subtitle;
-
-    @Column(name = "main_image")
     private String mainImage;
-
-    @Column(name = "sub_images")
     private String subImages;
-
     private String detail;
-
-    private double price;
-
+    private BigDecimal price;
     private int stock;
-
     private int status;
-
-    @Column(name = "create_time")
     private LocalDateTime createTime;
-
-    @Column(name = "update_time")
     private LocalDateTime updateTime;
 
-    public Product() {
+    /* properties */
 
-    }
+    private String imageHost;
+    private Integer parentCategoryId;
 
     public Integer getId() {
         return id;
@@ -58,12 +39,12 @@ public class Product {
         this.id = id;
     }
 
-    public Category getCategory() {
-        return category;
+    public Integer getCategoryId() {
+        return categoryId;
     }
 
-    public void setCategory(Category category) {
-        this.category = category;
+    public void setCategoryId(Integer categoryId) {
+        this.categoryId = categoryId;
     }
 
     public String getName() {
@@ -106,11 +87,11 @@ public class Product {
         this.detail = detail;
     }
 
-    public double getPrice() {
+    public BigDecimal getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(BigDecimal price) {
         this.price = price;
     }
 
@@ -146,30 +127,20 @@ public class Product {
         this.updateTime = updateTime;
     }
 
-    public enum Status {
-        SELLABLE(1), NOTSELLABLE(2), DELETED(3);
+    public String getImageHost() {
+        return imageHost;
+    }
 
-        private int code;
+    public void setImageHost(String imageHost) {
+        this.imageHost = imageHost;
+    }
 
-        Status(int code) {
-            this.code = code;
-        }
+    public Integer getParentCategoryId() {
+        return parentCategoryId;
+    }
 
-        public int getCode() {
-            return code;
-        }
-
-        public static Status resolve(Integer code) {
-            if (code != null) {
-                for (Status item : values()) {
-                    if (item.code == code) {
-                        return item;
-                    }
-                }
-            }
-            return null;
-        }
-
+    public void setParentCategoryId(Integer parentCategoryId) {
+        this.parentCategoryId = parentCategoryId;
     }
 
 }

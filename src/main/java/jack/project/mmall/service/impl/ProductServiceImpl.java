@@ -1,15 +1,15 @@
 package jack.project.mmall.service.impl;
 
-import com.mysql.fabric.Server;
 import jack.project.mmall.common.ResponseCode;
 import jack.project.mmall.common.ServerResponse;
 import jack.project.mmall.dao.ProductRepo;
 import jack.project.mmall.entity.Product;
 import jack.project.mmall.service.IProductService;
 import jack.project.mmall.util.BeanUtils;
+import jack.project.mmall.vo.ProductVO;
 import org.apache.commons.lang3.StringUtils;
-import org.hibernate.procedure.ProcedureOutputs;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
@@ -25,6 +25,9 @@ import java.util.Optional;
  */
 @Service
 public class ProductServiceImpl implements IProductService {
+
+    @Value("${ftp.server.ip}")
+    private String imageHost;
 
     private ProductRepo productRepo;
 
@@ -78,5 +81,26 @@ public class ProductServiceImpl implements IProductService {
             return ServerResponse.createByError(ResponseCode.ILLEGAL_ARGUMENT.getCode(), "productId 不存在");
         }
         return ServerResponse.createByError(ResponseCode.ILLEGAL_ARGUMENT.getCode(), "参数 productId 不能为空");
+    }
+
+    public ServerResponse<ProductVO> getProductDetail(Integer productId) {
+        Optional<Product> byId = productRepo.getById(productId);
+        if (!byId.isPresent()) {
+            return ServerResponse.createByError(ResponseCode.ILLEGAL_ARGUMENT.getCode(), "Product id 不存在");
+        }
+        ProductVO productVO = assembleProductVOFromProduct(byId.get());
+        return ServerResponse.createBySuccess(productVO);
+    }
+
+    // --------------------- private -------------------------------
+
+    private ProductVO assembleProductVOFromProduct(Product product) {
+        ProductVO productVO = new ProductVO();
+        org.springframework.beans.BeanUtils.copyProperties(product, productVO);
+        productVO.setCategoryId(product.getCategory().getId());
+
+        productVO.setImageHost(this.imageHost);
+        productVO.setParentCategoryId(product.getCategory().getParentId().getId());
+        return productVO;
     }
 }

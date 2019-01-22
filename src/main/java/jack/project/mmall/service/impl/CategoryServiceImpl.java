@@ -37,15 +37,15 @@ public class CategoryServiceImpl implements ICategoryService {
         if (StringUtils.isBlank(name)) {
             return ServerResponse.createByErrorMsg("参数错误");
         }
-        if (parentId != null) {
-            Optional<Category> parentOpt = categoryRepo.getById(parentId);
-            if (!parentOpt.isPresent()) {
-                return ServerResponse.createByErrorMsg(String.format("parent category %d 不存在", parentId));
-            }
+//        if (parentId != null) {
+        Optional<Category> parentOpt = categoryRepo.getById(parentId);
+        if (!parentOpt.isPresent()) {
+            return ServerResponse.createByErrorMsg(String.format("parent category %d 不存在", parentId));
         }
+//        }
         Category category = new Category();
         category.setName(name);
-        category.setParentId(parentId);
+        category.setParentId(parentOpt.get());
         category.setStatus(true);
         Category result = categoryRepo.save(category);
         if (result == null) {
