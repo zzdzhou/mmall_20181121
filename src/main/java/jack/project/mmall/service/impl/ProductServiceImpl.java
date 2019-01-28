@@ -56,36 +56,40 @@ public class ProductServiceImpl implements IProductService {
             }
 
             // if !productRepo.getById(productVO.getId()).isPresent(), 需要验证 productVO.getCategoryId()
-            // if productRepo.getById(productVO.getId()).isPresent() && productVO.getCategoryId() == null,
+            // if productRepo.getById(productVO.getId()).isPresent() && updateAllFields, 需要验证 productVO.getCategoryId()
+            // if productRepo.getById(productVO.getId()).isPresent() && !updateAllFields && productVO.getCategoryId() == null, 不需验证 productVO.getCategoryId()
+
             Optional<Category> categoryOpt = categoryRepo.getById(productVO.getCategoryId());
-            if (!categoryOpt.isPresent()) {
-                return ServerResponse.createByErrorMsg("categoryId 不存在");
+            if ( !(productRepo.getById(productVO.getId()).isPresent() && !updateAllFields && productVO.getCategoryId() == null) ) {
+                if (!categoryOpt.isPresent()) {
+                    return ServerResponse.createByErrorMsg("categoryId 不存在");
+                }
             }
             product.setCategory(categoryOpt.get());
 
             String[] ignoredProperties = {"createTime", "updateTime"};
-            if (productRepo.getById(productVO.getId()).isPresent() && !updateAllFields) {
+            if (productRepo.getById(productVO.getId()).isPresent()) {
                 // update
-                BeanUtils.copyPropertiesExceptNull(productVO, product, ignoredProperties);
-                product.setUpdateTime(LocalDateTime.now());
+                /*BeanUtils.copyPropertiesExceptNull(productVO, product, ignoredProperties);
+                product.setUpdateTime(LocalDateTime.now());*/
 
-                /*if (updateAllFields) {
+                if (updateAllFields) {
                     org.springframework.beans.BeanUtils.copyProperties(productVO, product, ignoredProperties);
                 } else {
                     BeanUtils.copyPropertiesExceptNull(productVO, product, ignoredProperties);
                 }
-                product.setUpdateTime(LocalDateTime.now());*/
+                product.setUpdateTime(LocalDateTime.now());
             } else {
-                org.springframework.beans.BeanUtils.copyProperties(productVO, product, ignoredProperties);
+                /*org.springframework.beans.BeanUtils.copyProperties(productVO, product, ignoredProperties);
                 if (productRepo.getById(productVO.getId()).isPresent()) {
                     product.setUpdateTime(LocalDateTime.now());
                 } else {
                     product.setCreateTime(LocalDateTime.now());
-                }
+                }*/
 
                 // save
-                /*org.springframework.beans.BeanUtils.copyProperties(productVO, product, ignoredProperties);
-                product.setCreateTime(LocalDateTime.now());*/
+                org.springframework.beans.BeanUtils.copyProperties(productVO, product, ignoredProperties);
+                product.setCreateTime(LocalDateTime.now());
             }
             Product saved = productRepo.save(product);
             if (saved != null) {
