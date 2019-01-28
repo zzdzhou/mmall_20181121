@@ -1,0 +1,80 @@
+2019-01-24 07:03:53.441 INFO [main] StartupInfoLogger.java #logStarting():50 --- Starting MmallApp on DESKTOP-J5BAIP9 with PID 15972 (C:\Users\zzd16\Desktop\mmall_20181121\target\classes started by Zhengde.ZHOU in C:\Users\zzd16\Desktop\mmall_20181121)
+2019-01-24 07:03:53.441 INFO [main] SpringApplication.java #logStartupProfileInfo():656 --- The following profiles are active: local
+2019-01-24 07:03:53.504 INFO [main] AbstractApplicationContext.java #prepareRefresh():589 --- Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@75c9e76b: startup date [Thu Jan 24 07:03:53 CST 2019]; root of context hierarchy
+2019-01-24 07:03:54.970 INFO [main] PostProcessorRegistrationDelegate$BeanPostProcessorChecker.java #postProcessAfterInitialization():328 --- Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$76004c74] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-24 07:03:55.586 INFO [main] TomcatWebServer.java #initialize():91 --- Tomcat initialized with port(s): 8080 (http)
+2019-01-24 07:03:55.601 INFO [main] DirectJDKLog.java #log():180 --- Initializing ProtocolHandler ["http-nio-8080"]
+2019-01-24 07:03:55.617 INFO [main] DirectJDKLog.java #log():180 --- Starting service [Tomcat]
+2019-01-24 07:03:55.617 INFO [main] DirectJDKLog.java #log():180 --- Starting Servlet Engine: Apache Tomcat/8.5.28
+2019-01-24 07:03:55.617 INFO [localhost-startStop-1] DirectJDKLog.java #log():180 --- The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Software\Java\jdk1.8.0_151\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Docker\Docker\Resources\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\ProgramData\Oracle\Java\javapath;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Software\Git\cmd;C:\Program Files\MySQL\MySQL Utilities 1.6\;"C:\Software\Java\jdk1.8.0_151\bin;";C:\Software\unzip\apache-maven-3.3.9\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Software\nodejs\;C:\Software\nodejs\;C:\Software\PuTTY\;C:\Users\zzd16\AppData\Local\Microsoft\WindowsApps;C:\Users\zzd16\AppData\Roaming\npm;C:\Users\zzd16\AppData\Local\GitHubDesktop\bin;.]
+2019-01-24 07:03:55.914 INFO [localhost-startStop-1] DirectJDKLog.java #log():180 --- Initializing Spring embedded WebApplicationContext
+2019-01-24 07:03:55.914 INFO [localhost-startStop-1] ServletWebServerApplicationContext.java #prepareWebApplicationContext():285 --- Root WebApplicationContext: initialization completed in 2426 ms
+2019-01-24 07:03:56.302 INFO [localhost-startStop-1] ServletRegistrationBean.java #addRegistration():185 --- Servlet dispatcherServlet mapped to [/]
+2019-01-24 07:03:56.317 INFO [localhost-startStop-1] AbstractFilterRegistrationBean.java #configure():243 --- Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-01-24 07:03:56.317 INFO [localhost-startStop-1] AbstractFilterRegistrationBean.java #configure():243 --- Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-01-24 07:03:56.317 INFO [localhost-startStop-1] AbstractFilterRegistrationBean.java #configure():243 --- Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-01-24 07:03:56.317 INFO [localhost-startStop-1] AbstractFilterRegistrationBean.java #configure():243 --- Mapping filter: 'requestContextFilter' to: [/*]
+2019-01-24 07:03:56.880 INFO [main] HikariDataSource.java #getConnection():110 --- HikariPool-1 - Starting...
+2019-01-24 07:03:57.461 INFO [main] HikariDataSource.java #getConnection():123 --- HikariPool-1 - Start completed.
+2019-01-24 07:03:57.586 INFO [main] LocalContainerEntityManagerFactoryBean.java #createNativeEntityManagerFactory():361 --- Building JPA container EntityManagerFactory for persistence unit 'default'
+2019-01-24 07:03:57.617 INFO [main] LogHelper.java #logPersistenceUnitInformation():31 --- HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-01-24 07:03:57.898 INFO [main] Version.java #logVersion():45 --- HHH000412: Hibernate Core {5.2.14.Final}
+2019-01-24 07:03:57.898 INFO [main] Environment.java #<clinit>():213 --- HHH000206: hibernate.properties not found
+2019-01-24 07:03:58.020 INFO [main] JavaReflectionManager.java #<clinit>():66 --- HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2019-01-24 07:03:58.444 INFO [main] Dialect.java #<init>():157 --- HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-01-24 07:03:58.947 WARN [main] AbstractApplicationContext.java #refresh():557 --- Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory
+2019-01-24 07:03:58.947 INFO [main] HikariDataSource.java #close():381 --- HikariPool-1 - Shutdown initiated...
+2019-01-24 07:03:58.963 INFO [main] HikariDataSource.java #close():383 --- HikariPool-1 - Shutdown completed.
+2019-01-24 07:03:58.963 INFO [main] DirectJDKLog.java #log():180 --- Stopping service [Tomcat]
+2019-01-24 07:03:59.003 INFO [main] ConditionEvaluationReportLoggingListener.java #logAutoConfigurationReport():101 --- 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-01-24 07:03:59.069 ERROR [main] SpringApplication.java #reportFailure():833 --- Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1710) ~[spring-beans-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:583) ~[spring-beans-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:502) ~[spring-beans-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:312) ~[spring-beans-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228) ~[spring-beans-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:310) ~[spring-beans-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1085) ~[spring-context-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:858) ~[spring-context-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549) ~[spring-context-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140) ~[spring-boot-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) [spring-boot-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:388) [spring-boot-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327) [spring-boot-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1246) [spring-boot-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1234) [spring-boot-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at jack.project.mmall.MmallApp.main(MmallApp.java:29) [classes/:?]
+Caused by: javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.persistenceException(EntityManagerFactoryBuilderImpl.java:970) ~[hibernate-core-5.2.14.Final.jar:5.2.14.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:895) ~[hibernate-core-5.2.14.Final.jar:5.2.14.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:57) ~[spring-orm-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:388) ~[spring-orm-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:377) ~[spring-orm-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1769) ~[spring-beans-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1706) ~[spring-beans-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	... 16 more
+Caused by: org.hibernate.MappingException: Could not determine type for: jack.project.mmall.entity.Category, at table: category, for columns: [org.hibernate.mapping.Column(parent_id)]
+	at org.hibernate.mapping.SimpleValue.getType(SimpleValue.java:455) ~[hibernate-core-5.2.14.Final.jar:5.2.14.Final]
+	at org.hibernate.mapping.SimpleValue.isValid(SimpleValue.java:422) ~[hibernate-core-5.2.14.Final.jar:5.2.14.Final]
+	at org.hibernate.mapping.Property.isValid(Property.java:226) ~[hibernate-core-5.2.14.Final.jar:5.2.14.Final]
+	at org.hibernate.mapping.PersistentClass.validate(PersistentClass.java:597) ~[hibernate-core-5.2.14.Final.jar:5.2.14.Final]
+	at org.hibernate.mapping.RootClass.validate(RootClass.java:265) ~[hibernate-core-5.2.14.Final.jar:5.2.14.Final]
+	at org.hibernate.boot.internal.MetadataImpl.validate(MetadataImpl.java:329) ~[hibernate-core-5.2.14.Final.jar:5.2.14.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:459) ~[hibernate-core-5.2.14.Final.jar:5.2.14.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:892) ~[hibernate-core-5.2.14.Final.jar:5.2.14.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:57) ~[spring-orm-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:388) ~[spring-orm-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:377) ~[spring-orm-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1769) ~[spring-beans-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1706) ~[spring-beans-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	... 16 more

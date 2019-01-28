@@ -8,7 +8,7 @@ import java.util.Optional;
 
 public interface CategoryRepo extends Repository<Category, Integer> {
 
-    Optional<Category> getById(int id);
+    Optional<Category> getById(Integer id);
 
     Category save(Category category);
 

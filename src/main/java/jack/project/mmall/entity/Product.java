@@ -1,6 +1,7 @@
 package jack.project.mmall.entity;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 /**
@@ -34,7 +35,7 @@ public class Product {
 
     private String detail;
 
-    private double price;
+    private BigDecimal price;
 
     private int stock;
 
@@ -106,11 +107,11 @@ public class Product {
         this.detail = detail;
     }
 
-    public double getPrice() {
+    public BigDecimal getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(BigDecimal price) {
         this.price = price;
     }
 

@@ -45,7 +45,7 @@ public class CategoryServiceImpl implements ICategoryService {
 //        }
         Category category = new Category();
         category.setName(name);
-        category.setParentId(parentOpt.get());
+        category.setParentId(parentOpt.get().getId());
         category.setStatus(true);
         Category result = categoryRepo.save(category);
         if (result == null) {

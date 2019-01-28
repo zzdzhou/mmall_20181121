@@ -20,7 +20,7 @@ public class Category {
     private Integer id;
 
     @Column(name = "parent_id")
-    private Category parentId;
+    private Integer parentId;
 
     private String name;
 
@@ -52,11 +52,11 @@ public class Category {
         this.id = id;
     }
 
-    public Category getParentId() {
+    public Integer getParentId() {
         return parentId;
     }
 
-    public void setParentId(Category parentId) {
+    public void setParentId(Integer parentId) {
         this.parentId = parentId;
     }
 

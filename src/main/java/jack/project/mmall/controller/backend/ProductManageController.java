@@ -33,17 +33,17 @@ public class ProductManageController {
     }
 
     @PostMapping("/save_update")
-    public ServerResponse<Product> saveOrUpdateProduct(HttpSession session, @RequestBody Product product,
+    public ServerResponse<ProductVO> saveOrUpdateProduct(HttpSession session, @RequestBody ProductVO productVo,
                                                        @RequestParam(required = false, defaultValue = "0") Boolean updateAllFields) {
         ServerResponse isAdmin = UserAdminController.checkAdminRole(session, userService);
         if (!isAdmin.isSuccessful()) {
             return ServerResponse.createByError(isAdmin.getCode(), isAdmin.getMsg());
         }
-        return productService.saveOrUpdateProduct(product, updateAllFields);
+        return productService.saveOrUpdateProduct(productVo, updateAllFields);
     }
 
     @GetMapping("/status")
-    public ServerResponse<Product> setProductStatus(HttpSession session, @RequestParam Integer productId, @RequestParam Integer status) {
+    public ServerResponse<ProductVO> setProductStatus(HttpSession session, @RequestParam Integer productId, @RequestParam Integer status) {
         ServerResponse isAdmin = UserAdminController.checkAdminRole(session, userService);
         if (!isAdmin.isSuccessful()) {
             return ServerResponse.createByError(isAdmin.getCode(), isAdmin.getMsg());
@@ -55,5 +55,7 @@ public class ProductManageController {
     public ServerResponse<ProductVO> getProductDetatil(@RequestParam Integer productId) {
         return productService.getProductDetail(productId);
     }
+
+
 
 }

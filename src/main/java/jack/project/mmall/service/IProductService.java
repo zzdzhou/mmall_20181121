@@ -14,9 +14,9 @@ import jack.project.mmall.vo.ProductVO;
  */
 public interface IProductService {
 
-    ServerResponse<Product> saveOrUpdateProduct(Product product, boolean updateAllFields);
+    ServerResponse<ProductVO> saveOrUpdateProduct(ProductVO productVo, boolean updateAllFields);
 
-    ServerResponse<Product> setProductStatus(Integer productId, Integer status);
+    ServerResponse<ProductVO> setProductStatus(Integer productId, Integer status);
 
     ServerResponse<ProductVO> getProductDetail(Integer productId);
 

@@ -2,12 +2,15 @@ package jack.project.mmall.service.impl;
 
 import jack.project.mmall.common.ResponseCode;
 import jack.project.mmall.common.ServerResponse;
+import jack.project.mmall.dao.CategoryRepo;
 import jack.project.mmall.dao.ProductRepo;
+import jack.project.mmall.entity.Category;
 import jack.project.mmall.entity.Product;
 import jack.project.mmall.service.IProductService;
 import jack.project.mmall.util.BeanUtils;
 import jack.project.mmall.vo.ProductVO;
 import org.apache.commons.lang3.StringUtils;
+import org.springframework.beans.factory.BeanClassLoaderAware;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -29,41 +32,71 @@ public class ProductServiceImpl implements IProductService {
     @Value("${ftp.server.ip}")
     private String imageHost;
 
+    private CategoryRepo categoryRepo;
+
     private ProductRepo productRepo;
 
     @Autowired
-    public ProductServiceImpl(ProductRepo productRepo) {
+    public ProductServiceImpl(CategoryRepo categoryRepo, ProductRepo productRepo) {
+        this.categoryRepo = categoryRepo;
         this.productRepo = productRepo;
     }
 
-    public ServerResponse<Product> saveOrUpdateProduct(Product product, boolean updateAllFields) {
-        if (product != null) {
-            if (StringUtils.isNotBlank(product.getSubImages())) {
-                String[] split = product.getSubImages().split(",");
+    public ServerResponse<ProductVO> saveOrUpdateProduct(ProductVO productVO, boolean updateAllFields) {
+        if (productVO != null) {
+            if (StringUtils.isNotBlank(productVO.getSubImages())) {
+                String[] split = productVO.getSubImages().split(",");
                 if (split.length > 0) {
-                    product.setMainImage(split[0]);
+                    productVO.setMainImage(split[0]);
                 }
             }
-            Product save = new Product();
-            if (productRepo.getById(product.getId()).isPresent()) {
+            Product product = new Product();
+            if (productRepo.getById(productVO.getId()).isPresent() && !updateAllFields && productVO.getCategoryId() != null) {
+
+            }
+
+            // if !productRepo.getById(productVO.getId()).isPresent(), 需要验证 productVO.getCategoryId()
+            // if productRepo.getById(productVO.getId()).isPresent() && productVO.getCategoryId() == null,
+            Optional<Category> categoryOpt = categoryRepo.getById(productVO.getCategoryId());
+            if (!categoryOpt.isPresent()) {
+                return ServerResponse.createByErrorMsg("categoryId 不存在");
+            }
+            product.setCategory(categoryOpt.get());
+
+            String[] ignoredProperties = {"createTime", "updateTime"};
+            if (productRepo.getById(productVO.getId()).isPresent() && !updateAllFields) {
                 // update
-                if (updateAllFields) {
-                    save = product;
+                BeanUtils.copyPropertiesExceptNull(productVO, product, ignoredProperties);
+                product.setUpdateTime(LocalDateTime.now());
+
+                /*if (updateAllFields) {
+                    org.springframework.beans.BeanUtils.copyProperties(productVO, product, ignoredProperties);
                 } else {
-                    BeanUtils.copyPropertiesExceptNull(product, save, new String[]{"createTime", "updateTime"});
+                    BeanUtils.copyPropertiesExceptNull(productVO, product, ignoredProperties);
                 }
-                save.setUpdateTime(LocalDateTime.now());
+                product.setUpdateTime(LocalDateTime.now());*/
             } else {
+                org.springframework.beans.BeanUtils.copyProperties(productVO, product, ignoredProperties);
+                if (productRepo.getById(productVO.getId()).isPresent()) {
+                    product.setUpdateTime(LocalDateTime.now());
+                } else {
+                    product.setCreateTime(LocalDateTime.now());
+                }
+
                 // save
-                save = product;
-                save.setCreateTime(LocalDateTime.now());
+                /*org.springframework.beans.BeanUtils.copyProperties(productVO, product, ignoredProperties);
+                product.setCreateTime(LocalDateTime.now());*/
             }
-            return ServerResponse.createBySuccess(productRepo.save(product));
+            Product saved = productRepo.save(product);
+            if (saved != null) {
+                return ServerResponse.createBySuccess(assembleProductVOFromProduct(saved));
+            }
+            return ServerResponse.createByErrorMsg("保存或更新失败");
         }
         return ServerResponse.createByErrorMsg("参数不能为空");
     }
 
-    public ServerResponse<Product> setProductStatus(Integer productId, Integer status) {
+    public ServerResponse<ProductVO> setProductStatus(Integer productId, Integer status) {
         if (productId != null) {
             Optional<Product> productOpt = productRepo.getById(productId);
             if (productOpt.isPresent()) {
@@ -74,7 +107,7 @@ public class ProductServiceImpl implements IProductService {
                 product.setStatus(status);
                 Product updated = productRepo.save(product);
                 if (updated != null) {
-                    return ServerResponse.createBySuccess(updated);
+                    return ServerResponse.createBySuccess(assembleProductVOFromProduct(updated));
                 }
                 return ServerResponse.createByErrorMsg("更新失败");
             }
@@ -100,7 +133,7 @@ public class ProductServiceImpl implements IProductService {
         productVO.setCategoryId(product.getCategory().getId());
 
         productVO.setImageHost(this.imageHost);
-        productVO.setParentCategoryId(product.getCategory().getParentId().getId());
+        productVO.setParentCategoryId(product.getCategory().getParentId());
         return productVO;
     }
 }
