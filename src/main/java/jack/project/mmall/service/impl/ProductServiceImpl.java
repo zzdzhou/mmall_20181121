@@ -44,35 +44,31 @@ public class ProductServiceImpl implements IProductService {
 
     public ServerResponse<ProductVO> saveOrUpdateProduct(ProductVO productVO, boolean updateAllFields) {
         if (productVO != null) {
+            Product product = new Product();
+
+            // if !productRepo.getById(productVO.getId()).isPresent(), 需要验证 productVO.getCategoryId()
+            // if productRepo.getById(productVO.getId()).isPresent() && updateAllFields, 需要验证 productVO.getCategoryId()
+            // if productRepo.getById(productVO.getId()).isPresent() && !updateAllFields && productVO.getCategoryId() == null, 不需验证 productVO.getCategoryId()
+            Optional<Category> categoryOpt = categoryRepo.getById(productVO.getCategoryId());
+            if (!(productRepo.getById(productVO.getId()).isPresent() && !updateAllFields && productVO.getCategoryId() == null)) {
+                if (!categoryOpt.isPresent()) {
+                    return ServerResponse.createByErrorMsg("categoryId 不存在");
+                }
+                product.setCategory(categoryOpt.get());
+            }
+
             if (StringUtils.isNotBlank(productVO.getSubImages())) {
                 String[] split = productVO.getSubImages().split(",");
                 if (split.length > 0) {
                     productVO.setMainImage(split[0]);
                 }
             }
-            Product product = new Product();
-            if (productRepo.getById(productVO.getId()).isPresent() && !updateAllFields && productVO.getCategoryId() != null) {
-
-            }
-
-            // if !productRepo.getById(productVO.getId()).isPresent(), 需要验证 productVO.getCategoryId()
-            // if productRepo.getById(productVO.getId()).isPresent() && updateAllFields, 需要验证 productVO.getCategoryId()
-            // if productRepo.getById(productVO.getId()).isPresent() && !updateAllFields && productVO.getCategoryId() == null, 不需验证 productVO.getCategoryId()
-
-            Optional<Category> categoryOpt = categoryRepo.getById(productVO.getCategoryId());
-            if ( !(productRepo.getById(productVO.getId()).isPresent() && !updateAllFields && productVO.getCategoryId() == null) ) {
-                if (!categoryOpt.isPresent()) {
-                    return ServerResponse.createByErrorMsg("categoryId 不存在");
-                }
-            }
-            product.setCategory(categoryOpt.get());
 
             String[] ignoredProperties = {"createTime", "updateTime"};
-            if (productRepo.getById(productVO.getId()).isPresent()) {
+            Optional<Product> existOpt = productRepo.getById(productVO.getId());
+            if (existOpt.isPresent()) {
                 // update
-                /*BeanUtils.copyPropertiesExceptNull(productVO, product, ignoredProperties);
-                product.setUpdateTime(LocalDateTime.now());*/
-
+                product = existOpt.get();
                 if (updateAllFields) {
                     org.springframework.beans.BeanUtils.copyProperties(productVO, product, ignoredProperties);
                 } else {
@@ -80,13 +76,6 @@ public class ProductServiceImpl implements IProductService {
                 }
                 product.setUpdateTime(LocalDateTime.now());
             } else {
-                /*org.springframework.beans.BeanUtils.copyProperties(productVO, product, ignoredProperties);
-                if (productRepo.getById(productVO.getId()).isPresent()) {
-                    product.setUpdateTime(LocalDateTime.now());
-                } else {
-                    product.setCreateTime(LocalDateTime.now());
-                }*/
-
                 // save
                 org.springframework.beans.BeanUtils.copyProperties(productVO, product, ignoredProperties);
                 product.setCreateTime(LocalDateTime.now());
@@ -127,6 +116,11 @@ public class ProductServiceImpl implements IProductService {
         }
         ProductVO productVO = assembleProductVOFromProduct(byId.get());
         return ServerResponse.createBySuccess(productVO);
+    }
+
+    public ServerResponse getProductList(Integer pageNum, Integer pageSize, Integer productStatus) {
+
+        return null;
     }
 
     // --------------------- private -------------------------------

@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpSession;
+import java.util.List;
 
 /**
  * Theme:
@@ -51,9 +52,15 @@ public class ProductManageController {
         return productService.setProductStatus(productId, status);
     }
 
-    @GetMapping("/product_details")
+    @GetMapping("/details")
     public ServerResponse<ProductVO> getProductDetatil(@RequestParam Integer productId) {
         return productService.getProductDetail(productId);
+    }
+
+    @PostMapping("/list")
+    public ServerResponse<List<ProductVO>> getProductList(@RequestParam(defaultValue = "0") Integer pageNum,
+            @RequestParam(defaultValue = "10") Integer pageSize, @RequestParam(defaultValue = "0") Integer productStatus) {
+        return null;
     }
 
 

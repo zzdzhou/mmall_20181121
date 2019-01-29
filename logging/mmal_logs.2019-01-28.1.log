@@ -3011,3 +3011,1029 @@ java.lang.StackOverflowError: null
 2019-01-28 07:57:48.709 INFO [http-nio-8080-exec-3] FrameworkServlet.java #initServletBean():494 --- FrameworkServlet 'dispatcherServlet': initialization started
 2019-01-28 07:57:48.744 INFO [http-nio-8080-exec-3] FrameworkServlet.java #initServletBean():513 --- FrameworkServlet 'dispatcherServlet': initialization completed in 35 ms
 2019-01-28 07:57:52.504 INFO [http-nio-8080-exec-4] UserController.java #login():43 --- http session timeout: 1800
+2019-01-28 20:34:33.093 INFO [main] StartupInfoLogger.java #logStarting():50 --- Starting MmallApp on DESKTOP-J5BAIP9 with PID 3480 (C:\Users\zzd16\Desktop\mmall_20181121\target\classes started by Zhengde.ZHOU in C:\Users\zzd16\Desktop\mmall_20181121)
+2019-01-28 20:34:33.103 INFO [main] SpringApplication.java #logStartupProfileInfo():656 --- The following profiles are active: local
+2019-01-28 20:34:33.165 INFO [main] AbstractApplicationContext.java #prepareRefresh():589 --- Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@48d5f34e: startup date [Mon Jan 28 20:34:33 CST 2019]; root of context hierarchy
+2019-01-28 20:34:34.717 INFO [main] PostProcessorRegistrationDelegate$BeanPostProcessorChecker.java #postProcessAfterInitialization():328 --- Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$fe96174b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-28 20:34:35.202 INFO [main] TomcatWebServer.java #initialize():91 --- Tomcat initialized with port(s): 8080 (http)
+2019-01-28 20:34:35.221 INFO [main] DirectJDKLog.java #log():180 --- Initializing ProtocolHandler ["http-nio-8080"]
+2019-01-28 20:34:35.237 INFO [main] DirectJDKLog.java #log():180 --- Starting service [Tomcat]
+2019-01-28 20:34:35.238 INFO [main] DirectJDKLog.java #log():180 --- Starting Servlet Engine: Apache Tomcat/8.5.28
+2019-01-28 20:34:35.245 INFO [localhost-startStop-1] DirectJDKLog.java #log():180 --- The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Software\Java\jdk1.8.0_151\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Docker\Docker\Resources\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\ProgramData\Oracle\Java\javapath;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Software\Git\cmd;C:\Program Files\MySQL\MySQL Utilities 1.6\;"C:\Software\Java\jdk1.8.0_151\bin;";C:\Software\unzip\apache-maven-3.3.9\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Software\nodejs\;C:\Software\nodejs\;C:\Software\PuTTY\;C:\Users\zzd16\AppData\Local\Microsoft\WindowsApps;C:\Users\zzd16\AppData\Roaming\npm;C:\Users\zzd16\AppData\Local\GitHubDesktop\bin;.]
+2019-01-28 20:34:35.477 INFO [localhost-startStop-1] DirectJDKLog.java #log():180 --- Initializing Spring embedded WebApplicationContext
+2019-01-28 20:34:35.478 INFO [localhost-startStop-1] ServletWebServerApplicationContext.java #prepareWebApplicationContext():285 --- Root WebApplicationContext: initialization completed in 2316 ms
+2019-01-28 20:34:35.761 INFO [localhost-startStop-1] ServletRegistrationBean.java #addRegistration():185 --- Servlet dispatcherServlet mapped to [/]
+2019-01-28 20:34:35.775 INFO [localhost-startStop-1] AbstractFilterRegistrationBean.java #configure():243 --- Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-01-28 20:34:35.776 INFO [localhost-startStop-1] AbstractFilterRegistrationBean.java #configure():243 --- Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-01-28 20:34:35.776 INFO [localhost-startStop-1] AbstractFilterRegistrationBean.java #configure():243 --- Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-01-28 20:34:35.776 INFO [localhost-startStop-1] AbstractFilterRegistrationBean.java #configure():243 --- Mapping filter: 'requestContextFilter' to: [/*]
+2019-01-28 20:34:35.988 INFO [main] HikariDataSource.java #getConnection():110 --- HikariPool-1 - Starting...
+2019-01-28 20:34:36.227 INFO [main] HikariDataSource.java #getConnection():123 --- HikariPool-1 - Start completed.
+2019-01-28 20:34:36.302 INFO [main] LocalContainerEntityManagerFactoryBean.java #createNativeEntityManagerFactory():361 --- Building JPA container EntityManagerFactory for persistence unit 'default'
+2019-01-28 20:34:36.318 INFO [main] LogHelper.java #logPersistenceUnitInformation():31 --- HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-01-28 20:34:36.460 INFO [main] Version.java #logVersion():45 --- HHH000412: Hibernate Core {5.2.14.Final}
+2019-01-28 20:34:36.464 INFO [main] Environment.java #<clinit>():213 --- HHH000206: hibernate.properties not found
+2019-01-28 20:34:36.559 INFO [main] JavaReflectionManager.java #<clinit>():66 --- HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2019-01-28 20:34:36.754 INFO [main] Dialect.java #<init>():157 --- HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-01-28 20:34:37.639 INFO [main] AbstractEntityManagerFactoryBean.java #buildNativeEntityManagerFactory():394 --- Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-01-28 20:34:38.221 INFO [main] QueryTranslatorFactoryInitiator.java #initiateService():47 --- HHH000397: Using ASTQueryTranslatorFactory
+2019-01-28 20:34:38.819 INFO [main] RequestMappingHandlerAdapter.java #initControllerAdviceCache():567 --- Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@48d5f34e: startup date [Mon Jan 28 20:34:33 CST 2019]; root of context hierarchy
+2019-01-28 20:34:38.864 WARN [main] JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.java #openEntityManagerInViewInterceptor():235 --- spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-01-28 20:34:38.913 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/admin/category/get_all_child_categories],methods=[POST]}" onto public jack.project.mmall.common.ServerResponse<java.util.Set<java.lang.Integer>> jack.project.mmall.controller.backend.CategoryAdminController.getCategoryIdAndAllChildCategoryIds(javax.servlet.http.HttpSession,java.lang.Integer)
+2019-01-28 20:34:38.914 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/admin/category/update],methods=[GET]}" onto public jack.project.mmall.common.ServerResponse<jack.project.mmall.entity.Category> jack.project.mmall.controller.backend.CategoryAdminController.updateCategoryName(javax.servlet.http.HttpSession,java.lang.Integer,java.lang.String)
+2019-01-28 20:34:38.915 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/admin/category/get_child_category],methods=[GET]}" onto public jack.project.mmall.common.ServerResponse<java.util.List<jack.project.mmall.entity.Category>> jack.project.mmall.controller.backend.CategoryAdminController.getChildrenCategories(javax.servlet.http.HttpSession,java.lang.Integer)
+2019-01-28 20:34:38.915 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/admin/category/add],methods=[GET]}" onto public jack.project.mmall.common.ServerResponse<jack.project.mmall.entity.Category> jack.project.mmall.controller.backend.CategoryAdminController.addCategory(java.lang.String,java.lang.Integer,javax.servlet.http.HttpSession)
+2019-01-28 20:34:38.916 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/admin/product/product_details],methods=[GET]}" onto public jack.project.mmall.common.ServerResponse<jack.project.mmall.vo.ProductVO> jack.project.mmall.controller.backend.ProductManageController.getProductDetatil(java.lang.Integer)
+2019-01-28 20:34:38.916 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/admin/product/save_update],methods=[POST]}" onto public jack.project.mmall.common.ServerResponse<jack.project.mmall.vo.ProductVO> jack.project.mmall.controller.backend.ProductManageController.saveOrUpdateProduct(javax.servlet.http.HttpSession,jack.project.mmall.vo.ProductVO,java.lang.Boolean)
+2019-01-28 20:34:38.917 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/admin/product/status],methods=[GET]}" onto public jack.project.mmall.common.ServerResponse<jack.project.mmall.vo.ProductVO> jack.project.mmall.controller.backend.ProductManageController.setProductStatus(javax.servlet.http.HttpSession,java.lang.Integer,java.lang.Integer)
+2019-01-28 20:34:38.920 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/user/register],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public jack.project.mmall.common.ServerResponse<java.lang.Integer> jack.project.mmall.controller.portal.UserController.register(jack.project.mmall.entity.User)
+2019-01-28 20:34:38.921 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/user/getUserInfo],methods=[GET],consumes=[application/json],produces=[application/json]}" onto public jack.project.mmall.common.ServerResponse<jack.project.mmall.entity.User> jack.project.mmall.controller.portal.UserController.getUserInfo(javax.servlet.http.HttpSession)
+2019-01-28 20:34:38.921 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/user/forgetPassword/reset],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public jack.project.mmall.common.ServerResponse<java.lang.String> jack.project.mmall.controller.portal.UserController.resetPasswordForget(java.util.Map<java.lang.String, java.lang.String>)
+2019-01-28 20:34:38.921 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/user/updateUser],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public jack.project.mmall.common.ServerResponse<jack.project.mmall.entity.User> jack.project.mmall.controller.portal.UserController.updateUser(javax.servlet.http.HttpSession,jack.project.mmall.entity.User)
+2019-01-28 20:34:38.922 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/user/resetPassword],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public jack.project.mmall.common.ServerResponse<java.lang.String> jack.project.mmall.controller.portal.UserController.resetPassword(javax.servlet.http.HttpSession,java.util.Map<java.lang.String, java.lang.String>)
+2019-01-28 20:34:38.922 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/user/forgetPassword/answer],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public jack.project.mmall.common.ServerResponse<java.lang.String> jack.project.mmall.controller.portal.UserController.checkAnswer(java.util.Map<java.lang.String, java.lang.String>)
+2019-01-28 20:34:38.922 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/user/isValid],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public jack.project.mmall.common.ServerResponse<java.lang.Boolean> jack.project.mmall.controller.portal.UserController.checkValid(java.util.Map<java.lang.String, java.lang.String>)
+2019-01-28 20:34:38.923 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/user/getUserDetails],methods=[GET],consumes=[application/json],produces=[application/json]}" onto public jack.project.mmall.common.ServerResponse<jack.project.mmall.entity.User> jack.project.mmall.controller.portal.UserController.getUserDetails(javax.servlet.http.HttpSession)
+2019-01-28 20:34:38.923 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/user/login],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public jack.project.mmall.common.ServerResponse<jack.project.mmall.entity.User> jack.project.mmall.controller.portal.UserController.login(java.util.Map<java.lang.String, java.lang.String>,javax.servlet.http.HttpSession)
+2019-01-28 20:34:38.924 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/user/logout],methods=[GET],consumes=[application/json],produces=[application/json]}" onto public jack.project.mmall.common.ServerResponse<java.lang.String> jack.project.mmall.controller.portal.UserController.logout(javax.servlet.http.HttpServletRequest)
+2019-01-28 20:34:38.924 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/user/forgetPassword/question],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public jack.project.mmall.common.ServerResponse<java.lang.String> jack.project.mmall.controller.portal.UserController.getQuestion(java.util.Map<java.lang.String, java.lang.String>)
+2019-01-28 20:34:38.926 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-01-28 20:34:38.927 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-01-28 20:34:38.982 INFO [main] AbstractUrlHandlerMapping.java #registerHandler():373 --- Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-28 20:34:38.983 INFO [main] AbstractUrlHandlerMapping.java #registerHandler():373 --- Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-28 20:34:39.046 INFO [main] AbstractUrlHandlerMapping.java #registerHandler():373 --- Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-28 20:34:39.476 INFO [main] MBeanExporter.java #afterSingletonsInstantiated():434 --- Registering beans for JMX exposure on startup
+2019-01-28 20:34:39.477 INFO [main] MBeanExporter.java #autodetect():896 --- Bean with name 'dataSource' has been autodetected for JMX exposure
+2019-01-28 20:34:39.483 INFO [main] MBeanExporter.java #registerBeanInstance():669 --- Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2019-01-28 20:34:39.493 INFO [main] DirectJDKLog.java #log():180 --- Starting ProtocolHandler ["http-nio-8080"]
+2019-01-28 20:34:39.508 INFO [main] DirectJDKLog.java #log():180 --- Using a shared selector for servlet write/read
+2019-01-28 20:34:39.527 INFO [main] TomcatWebServer.java #start():205 --- Tomcat started on port(s): 8080 (http) with context path ''
+2019-01-28 20:34:39.530 INFO [main] StartupInfoLogger.java #logStarted():59 --- Started MmallApp in 7.033 seconds (JVM running for 10.292)
+2019-01-28 20:37:35.800 INFO [http-nio-8080-exec-3] DirectJDKLog.java #log():180 --- Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-01-28 20:37:35.801 INFO [http-nio-8080-exec-3] FrameworkServlet.java #initServletBean():494 --- FrameworkServlet 'dispatcherServlet': initialization started
+2019-01-28 20:37:35.831 INFO [http-nio-8080-exec-3] FrameworkServlet.java #initServletBean():513 --- FrameworkServlet 'dispatcherServlet': initialization completed in 30 ms
+2019-01-28 20:37:40.731 INFO [http-nio-8080-exec-4] UserController.java #login():43 --- http session timeout: 1800
+2019-01-28 20:37:43.359 ERROR [http-nio-8080-exec-2] DirectJDKLog.java #log():182 --- Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.util.NoSuchElementException: No value present] with root cause
+java.util.NoSuchElementException: No value present
+	at java.util.Optional.get(Optional.java:135) ~[?:1.8.0_151]
+	at jack.project.mmall.service.impl.ProductServiceImpl.saveOrUpdateProduct(ProductServiceImpl.java:68) ~[classes/:?]
+	at jack.project.mmall.controller.backend.ProductManageController.saveOrUpdateProduct(ProductManageController.java:42) ~[classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_151]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_151]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_151]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_151]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:209) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:870) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:776) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:991) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:978) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:881) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:855) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) ~[tomcat-embed-websocket-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:496) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:790) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_151]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_151]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_151]
+2019-01-28 20:40:23.695 WARN [HikariPool-1 housekeeper] HikariPool$HouseKeeper.java #run():756 --- HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m37s353ms632µs600ns).
+2019-01-28 20:40:37.423 ERROR [http-nio-8080-exec-6] DirectJDKLog.java #log():182 --- Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.util.NoSuchElementException: No value present] with root cause
+java.util.NoSuchElementException: No value present
+	at java.util.Optional.get(Optional.java:135) ~[?:1.8.0_151]
+	at jack.project.mmall.service.impl.ProductServiceImpl.saveOrUpdateProduct(ProductServiceImpl.java:68) ~[classes/:?]
+	at jack.project.mmall.controller.backend.ProductManageController.saveOrUpdateProduct(ProductManageController.java:42) ~[classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_151]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_151]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_151]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_151]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:209) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:870) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:776) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:991) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:978) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:881) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:855) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) ~[tomcat-embed-websocket-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:496) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:790) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_151]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_151]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_151]
+2019-01-28 20:40:43.308 ERROR [http-nio-8080-exec-9] DirectJDKLog.java #log():182 --- Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.util.NoSuchElementException: No value present] with root cause
+java.util.NoSuchElementException: No value present
+	at java.util.Optional.get(Optional.java:135) ~[?:1.8.0_151]
+	at jack.project.mmall.service.impl.ProductServiceImpl.saveOrUpdateProduct(ProductServiceImpl.java:68) ~[classes/:?]
+	at jack.project.mmall.controller.backend.ProductManageController.saveOrUpdateProduct(ProductManageController.java:42) ~[classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_151]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_151]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_151]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_151]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:209) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:870) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:776) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:991) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:978) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:881) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:855) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) ~[tomcat-embed-websocket-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:496) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:790) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_151]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_151]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_151]
+2019-01-28 20:41:01.369 ERROR [http-nio-8080-exec-10] DirectJDKLog.java #log():182 --- Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.util.NoSuchElementException: No value present] with root cause
+java.util.NoSuchElementException: No value present
+	at java.util.Optional.get(Optional.java:135) ~[?:1.8.0_151]
+	at jack.project.mmall.service.impl.ProductServiceImpl.saveOrUpdateProduct(ProductServiceImpl.java:68) ~[classes/:?]
+	at jack.project.mmall.controller.backend.ProductManageController.saveOrUpdateProduct(ProductManageController.java:42) ~[classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_151]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_151]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_151]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_151]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:209) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:870) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:776) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:991) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:978) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:881) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:855) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) ~[tomcat-embed-websocket-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:496) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:790) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_151]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_151]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_151]
+2019-01-28 20:41:11.852 ERROR [http-nio-8080-exec-3] DirectJDKLog.java #log():182 --- Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.util.NoSuchElementException: No value present] with root cause
+java.util.NoSuchElementException: No value present
+	at java.util.Optional.get(Optional.java:135) ~[?:1.8.0_151]
+	at jack.project.mmall.service.impl.ProductServiceImpl.saveOrUpdateProduct(ProductServiceImpl.java:68) ~[classes/:?]
+	at jack.project.mmall.controller.backend.ProductManageController.saveOrUpdateProduct(ProductManageController.java:42) ~[classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_151]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_151]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_151]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_151]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:209) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:870) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:776) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:991) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:978) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:881) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:855) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) ~[tomcat-embed-websocket-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:496) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:790) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_151]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_151]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_151]
+2019-01-28 20:41:24.238 ERROR [http-nio-8080-exec-2] DirectJDKLog.java #log():182 --- Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.util.NoSuchElementException: No value present] with root cause
+java.util.NoSuchElementException: No value present
+	at java.util.Optional.get(Optional.java:135) ~[?:1.8.0_151]
+	at jack.project.mmall.service.impl.ProductServiceImpl.saveOrUpdateProduct(ProductServiceImpl.java:68) ~[classes/:?]
+	at jack.project.mmall.controller.backend.ProductManageController.saveOrUpdateProduct(ProductManageController.java:42) ~[classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_151]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_151]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_151]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_151]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:209) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:870) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:776) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:991) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:978) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:881) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:855) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) ~[tomcat-embed-websocket-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:496) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:790) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_151]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_151]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_151]
+2019-01-28 20:44:16.262 WARN [HikariPool-1 housekeeper] HikariPool$HouseKeeper.java #run():756 --- HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m52s564ms721µs300ns).
+2019-01-28 20:44:16.264 ERROR [http-nio-8080-exec-6] DirectJDKLog.java #log():182 --- Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.util.NoSuchElementException: No value present] with root cause
+java.util.NoSuchElementException: No value present
+	at java.util.Optional.get(Optional.java:135) ~[?:1.8.0_151]
+	at jack.project.mmall.service.impl.ProductServiceImpl.saveOrUpdateProduct(ProductServiceImpl.java:68) ~[classes/:?]
+	at jack.project.mmall.controller.backend.ProductManageController.saveOrUpdateProduct(ProductManageController.java:42) ~[classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_151]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_151]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_151]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_151]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:209) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:870) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:776) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:991) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:978) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:881) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:855) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) ~[tomcat-embed-websocket-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:496) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:790) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_151]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_151]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_151]
+2019-01-28 20:44:21.568 INFO [main] StartupInfoLogger.java #logStarting():50 --- Starting MmallApp on DESKTOP-J5BAIP9 with PID 20304 (C:\Users\zzd16\Desktop\mmall_20181121\target\classes started by Zhengde.ZHOU in C:\Users\zzd16\Desktop\mmall_20181121)
+2019-01-28 20:44:21.583 INFO [main] SpringApplication.java #logStartupProfileInfo():656 --- The following profiles are active: local
+2019-01-28 20:44:21.654 INFO [main] AbstractApplicationContext.java #prepareRefresh():589 --- Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@183e8023: startup date [Mon Jan 28 20:44:21 CST 2019]; root of context hierarchy
+2019-01-28 20:44:23.074 INFO [main] PostProcessorRegistrationDelegate$BeanPostProcessorChecker.java #postProcessAfterInitialization():328 --- Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ff31573f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-28 20:44:23.439 INFO [main] TomcatWebServer.java #initialize():91 --- Tomcat initialized with port(s): 8080 (http)
+2019-01-28 20:44:23.453 INFO [main] DirectJDKLog.java #log():180 --- Initializing ProtocolHandler ["http-nio-8080"]
+2019-01-28 20:44:23.464 INFO [main] DirectJDKLog.java #log():180 --- Starting service [Tomcat]
+2019-01-28 20:44:23.465 INFO [main] DirectJDKLog.java #log():180 --- Starting Servlet Engine: Apache Tomcat/8.5.28
+2019-01-28 20:44:23.471 INFO [localhost-startStop-1] DirectJDKLog.java #log():180 --- The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Software\Java\jdk1.8.0_151\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Docker\Docker\Resources\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\ProgramData\Oracle\Java\javapath;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Software\Git\cmd;C:\Program Files\MySQL\MySQL Utilities 1.6\;"C:\Software\Java\jdk1.8.0_151\bin;";C:\Software\unzip\apache-maven-3.3.9\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Software\nodejs\;C:\Software\nodejs\;C:\Software\PuTTY\;C:\Users\zzd16\AppData\Local\Microsoft\WindowsApps;C:\Users\zzd16\AppData\Roaming\npm;C:\Users\zzd16\AppData\Local\GitHubDesktop\bin;.]
+2019-01-28 20:44:23.632 INFO [localhost-startStop-1] DirectJDKLog.java #log():180 --- Initializing Spring embedded WebApplicationContext
+2019-01-28 20:44:23.632 INFO [localhost-startStop-1] ServletWebServerApplicationContext.java #prepareWebApplicationContext():285 --- Root WebApplicationContext: initialization completed in 1982 ms
+2019-01-28 20:44:23.822 INFO [localhost-startStop-1] ServletRegistrationBean.java #addRegistration():185 --- Servlet dispatcherServlet mapped to [/]
+2019-01-28 20:44:23.828 INFO [localhost-startStop-1] AbstractFilterRegistrationBean.java #configure():243 --- Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-01-28 20:44:23.829 INFO [localhost-startStop-1] AbstractFilterRegistrationBean.java #configure():243 --- Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-01-28 20:44:23.829 INFO [localhost-startStop-1] AbstractFilterRegistrationBean.java #configure():243 --- Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-01-28 20:44:23.829 INFO [localhost-startStop-1] AbstractFilterRegistrationBean.java #configure():243 --- Mapping filter: 'requestContextFilter' to: [/*]
+2019-01-28 20:44:23.991 INFO [main] HikariDataSource.java #getConnection():110 --- HikariPool-1 - Starting...
+2019-01-28 20:44:24.212 INFO [main] HikariDataSource.java #getConnection():123 --- HikariPool-1 - Start completed.
+2019-01-28 20:44:24.281 INFO [main] LocalContainerEntityManagerFactoryBean.java #createNativeEntityManagerFactory():361 --- Building JPA container EntityManagerFactory for persistence unit 'default'
+2019-01-28 20:44:24.293 INFO [main] LogHelper.java #logPersistenceUnitInformation():31 --- HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-01-28 20:44:24.440 INFO [main] Version.java #logVersion():45 --- HHH000412: Hibernate Core {5.2.14.Final}
+2019-01-28 20:44:24.443 INFO [main] Environment.java #<clinit>():213 --- HHH000206: hibernate.properties not found
+2019-01-28 20:44:24.496 INFO [main] JavaReflectionManager.java #<clinit>():66 --- HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2019-01-28 20:44:24.699 INFO [main] Dialect.java #<init>():157 --- HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-01-28 20:44:25.429 INFO [main] AbstractEntityManagerFactoryBean.java #buildNativeEntityManagerFactory():394 --- Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-01-28 20:44:25.874 INFO [main] QueryTranslatorFactoryInitiator.java #initiateService():47 --- HHH000397: Using ASTQueryTranslatorFactory
+2019-01-28 20:44:26.445 INFO [main] RequestMappingHandlerAdapter.java #initControllerAdviceCache():567 --- Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@183e8023: startup date [Mon Jan 28 20:44:21 CST 2019]; root of context hierarchy
+2019-01-28 20:44:26.488 WARN [main] JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.java #openEntityManagerInViewInterceptor():235 --- spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-01-28 20:44:26.532 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/admin/category/get_child_category],methods=[GET]}" onto public jack.project.mmall.common.ServerResponse<java.util.List<jack.project.mmall.entity.Category>> jack.project.mmall.controller.backend.CategoryAdminController.getChildrenCategories(javax.servlet.http.HttpSession,java.lang.Integer)
+2019-01-28 20:44:26.533 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/admin/category/update],methods=[GET]}" onto public jack.project.mmall.common.ServerResponse<jack.project.mmall.entity.Category> jack.project.mmall.controller.backend.CategoryAdminController.updateCategoryName(javax.servlet.http.HttpSession,java.lang.Integer,java.lang.String)
+2019-01-28 20:44:26.534 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/admin/category/add],methods=[GET]}" onto public jack.project.mmall.common.ServerResponse<jack.project.mmall.entity.Category> jack.project.mmall.controller.backend.CategoryAdminController.addCategory(java.lang.String,java.lang.Integer,javax.servlet.http.HttpSession)
+2019-01-28 20:44:26.534 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/admin/category/get_all_child_categories],methods=[POST]}" onto public jack.project.mmall.common.ServerResponse<java.util.Set<java.lang.Integer>> jack.project.mmall.controller.backend.CategoryAdminController.getCategoryIdAndAllChildCategoryIds(javax.servlet.http.HttpSession,java.lang.Integer)
+2019-01-28 20:44:26.535 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/admin/product/save_update],methods=[POST]}" onto public jack.project.mmall.common.ServerResponse<jack.project.mmall.vo.ProductVO> jack.project.mmall.controller.backend.ProductManageController.saveOrUpdateProduct(javax.servlet.http.HttpSession,jack.project.mmall.vo.ProductVO,java.lang.Boolean)
+2019-01-28 20:44:26.536 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/admin/product/product_details],methods=[GET]}" onto public jack.project.mmall.common.ServerResponse<jack.project.mmall.vo.ProductVO> jack.project.mmall.controller.backend.ProductManageController.getProductDetatil(java.lang.Integer)
+2019-01-28 20:44:26.536 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/admin/product/status],methods=[GET]}" onto public jack.project.mmall.common.ServerResponse<jack.project.mmall.vo.ProductVO> jack.project.mmall.controller.backend.ProductManageController.setProductStatus(javax.servlet.http.HttpSession,java.lang.Integer,java.lang.Integer)
+2019-01-28 20:44:26.540 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/user/register],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public jack.project.mmall.common.ServerResponse<java.lang.Integer> jack.project.mmall.controller.portal.UserController.register(jack.project.mmall.entity.User)
+2019-01-28 20:44:26.541 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/user/getUserInfo],methods=[GET],consumes=[application/json],produces=[application/json]}" onto public jack.project.mmall.common.ServerResponse<jack.project.mmall.entity.User> jack.project.mmall.controller.portal.UserController.getUserInfo(javax.servlet.http.HttpSession)
+2019-01-28 20:44:26.541 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/user/forgetPassword/reset],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public jack.project.mmall.common.ServerResponse<java.lang.String> jack.project.mmall.controller.portal.UserController.resetPasswordForget(java.util.Map<java.lang.String, java.lang.String>)
+2019-01-28 20:44:26.541 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/user/forgetPassword/question],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public jack.project.mmall.common.ServerResponse<java.lang.String> jack.project.mmall.controller.portal.UserController.getQuestion(java.util.Map<java.lang.String, java.lang.String>)
+2019-01-28 20:44:26.542 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/user/resetPassword],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public jack.project.mmall.common.ServerResponse<java.lang.String> jack.project.mmall.controller.portal.UserController.resetPassword(javax.servlet.http.HttpSession,java.util.Map<java.lang.String, java.lang.String>)
+2019-01-28 20:44:26.542 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/user/getUserDetails],methods=[GET],consumes=[application/json],produces=[application/json]}" onto public jack.project.mmall.common.ServerResponse<jack.project.mmall.entity.User> jack.project.mmall.controller.portal.UserController.getUserDetails(javax.servlet.http.HttpSession)
+2019-01-28 20:44:26.543 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/user/isValid],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public jack.project.mmall.common.ServerResponse<java.lang.Boolean> jack.project.mmall.controller.portal.UserController.checkValid(java.util.Map<java.lang.String, java.lang.String>)
+2019-01-28 20:44:26.543 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/user/updateUser],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public jack.project.mmall.common.ServerResponse<jack.project.mmall.entity.User> jack.project.mmall.controller.portal.UserController.updateUser(javax.servlet.http.HttpSession,jack.project.mmall.entity.User)
+2019-01-28 20:44:26.543 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/user/login],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public jack.project.mmall.common.ServerResponse<jack.project.mmall.entity.User> jack.project.mmall.controller.portal.UserController.login(java.util.Map<java.lang.String, java.lang.String>,javax.servlet.http.HttpSession)
+2019-01-28 20:44:26.544 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/user/forgetPassword/answer],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public jack.project.mmall.common.ServerResponse<java.lang.String> jack.project.mmall.controller.portal.UserController.checkAnswer(java.util.Map<java.lang.String, java.lang.String>)
+2019-01-28 20:44:26.544 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/user/logout],methods=[GET],consumes=[application/json],produces=[application/json]}" onto public jack.project.mmall.common.ServerResponse<java.lang.String> jack.project.mmall.controller.portal.UserController.logout(javax.servlet.http.HttpServletRequest)
+2019-01-28 20:44:26.548 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-01-28 20:44:26.549 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-01-28 20:44:26.604 INFO [main] AbstractUrlHandlerMapping.java #registerHandler():373 --- Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-28 20:44:26.604 INFO [main] AbstractUrlHandlerMapping.java #registerHandler():373 --- Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-28 20:44:26.678 INFO [main] AbstractUrlHandlerMapping.java #registerHandler():373 --- Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-28 20:44:27.131 INFO [main] MBeanExporter.java #afterSingletonsInstantiated():434 --- Registering beans for JMX exposure on startup
+2019-01-28 20:44:27.133 INFO [main] MBeanExporter.java #autodetect():896 --- Bean with name 'dataSource' has been autodetected for JMX exposure
+2019-01-28 20:44:27.139 INFO [main] MBeanExporter.java #registerBeanInstance():669 --- Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2019-01-28 20:44:27.150 INFO [main] DirectJDKLog.java #log():180 --- Starting ProtocolHandler ["http-nio-8080"]
+2019-01-28 20:44:27.169 INFO [main] DirectJDKLog.java #log():180 --- Using a shared selector for servlet write/read
+2019-01-28 20:44:27.192 INFO [main] TomcatWebServer.java #start():205 --- Tomcat started on port(s): 8080 (http) with context path ''
+2019-01-28 20:44:27.196 INFO [main] StartupInfoLogger.java #logStarted():59 --- Started MmallApp in 6.204 seconds (JVM running for 8.084)
+2019-01-28 20:44:54.215 INFO [http-nio-8080-exec-1] DirectJDKLog.java #log():180 --- Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-01-28 20:44:54.216 INFO [http-nio-8080-exec-1] FrameworkServlet.java #initServletBean():494 --- FrameworkServlet 'dispatcherServlet': initialization started
+2019-01-28 20:44:54.254 INFO [http-nio-8080-exec-1] FrameworkServlet.java #initServletBean():513 --- FrameworkServlet 'dispatcherServlet': initialization completed in 38 ms
+2019-01-28 20:45:00.658 INFO [http-nio-8080-exec-3] UserController.java #login():43 --- http session timeout: 1800
+2019-01-28 20:45:04.793 WARN [http-nio-8080-exec-4] SqlExceptionHelper.java #logExceptions():129 --- SQL Error: 1048, SQLState: 23000
+2019-01-28 20:45:04.793 ERROR [http-nio-8080-exec-4] SqlExceptionHelper.java #logExceptions():131 --- Column 'category_id' cannot be null
+2019-01-28 20:45:04.796 INFO [http-nio-8080-exec-4] AbstractBatchImpl.java #release():193 --- HHH000010: On release of batch it still contained JDBC statements
+2019-01-28 20:45:04.802 ERROR [http-nio-8080-exec-4] ExceptionMapperStandardImpl.java #mapManagedFlushFailure():39 --- HHH000346: Error during managed flush [org.hibernate.exception.ConstraintViolationException: could not execute statement]
+2019-01-28 20:45:04.820 ERROR [http-nio-8080-exec-4] DirectJDKLog.java #log():182 --- Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [null]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement] with root cause
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'category_id' cannot be null
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_151]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_151]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_151]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[?:1.8.0_151]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425) ~[mysql-connector-java-5.1.45.jar:5.1.45]
+	at com.mysql.jdbc.Util.getInstance(Util.java:408) ~[mysql-connector-java-5.1.45.jar:5.1.45]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:936) ~[mysql-connector-java-5.1.45.jar:5.1.45]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3973) ~[mysql-connector-java-5.1.45.jar:5.1.45]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3909) ~[mysql-connector-java-5.1.45.jar:5.1.45]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2527) ~[mysql-connector-java-5.1.45.jar:5.1.45]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2680) ~[mysql-connector-java-5.1.45.jar:5.1.45]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2484) ~[mysql-connector-java-5.1.45.jar:5.1.45]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1858) ~[mysql-connector-java-5.1.45.jar:5.1.45]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2079) ~[mysql-connector-java-5.1.45.jar:5.1.45]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2013) ~[mysql-connector-java-5.1.45.jar:5.1.45]
+	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5104) ~[mysql-connector-java-5.1.45.jar:5.1.45]
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1998) ~[mysql-connector-java-5.1.45.jar:5.1.45]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61) ~[HikariCP-2.7.8.jar:?]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java) ~[HikariCP-2.7.8.jar:?]
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:175) ~[hibernate-core-5.2.14.Final.jar:5.2.14.Final]
+	at org.hibernate.engine.jdbc.batch.internal.NonBatchingBatch.addToBatch(NonBatchingBatch.java:45) ~[hibernate-core-5.2.14.Final.jar:5.2.14.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.update(AbstractEntityPersister.java:3198) ~[hibernate-core-5.2.14.Final.jar:5.2.14.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.updateOrInsert(AbstractEntityPersister.java:3077) ~[hibernate-core-5.2.14.Final.jar:5.2.14.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.update(AbstractEntityPersister.java:3457) ~[hibernate-core-5.2.14.Final.jar:5.2.14.Final]
+	at org.hibernate.action.internal.EntityUpdateAction.execute(EntityUpdateAction.java:145) ~[hibernate-core-5.2.14.Final.jar:5.2.14.Final]
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:599) ~[hibernate-core-5.2.14.Final.jar:5.2.14.Final]
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:473) ~[hibernate-core-5.2.14.Final.jar:5.2.14.Final]
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:337) ~[hibernate-core-5.2.14.Final.jar:5.2.14.Final]
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:39) ~[hibernate-core-5.2.14.Final.jar:5.2.14.Final]
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1436) ~[hibernate-core-5.2.14.Final.jar:5.2.14.Final]
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:493) ~[hibernate-core-5.2.14.Final.jar:5.2.14.Final]
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:3206) ~[hibernate-core-5.2.14.Final.jar:5.2.14.Final]
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2412) ~[hibernate-core-5.2.14.Final.jar:5.2.14.Final]
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:473) ~[hibernate-core-5.2.14.Final.jar:5.2.14.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:156) ~[hibernate-core-5.2.14.Final.jar:5.2.14.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.access$100(JdbcResourceLocalTransactionCoordinatorImpl.java:38) ~[hibernate-core-5.2.14.Final.jar:5.2.14.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:231) ~[hibernate-core-5.2.14.Final.jar:5.2.14.Final]
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:68) ~[hibernate-core-5.2.14.Final.jar:5.2.14.Final]
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:536) ~[spring-orm-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:746) ~[spring-tx-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:714) ~[spring-tx-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:532) ~[spring-tx-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:304) ~[spring-tx-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98) ~[spring-tx-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:185) ~[spring-aop-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139) ~[spring-tx-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:185) ~[spring-aop-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:135) ~[spring-data-jpa-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:185) ~[spring-aop-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92) ~[spring-aop-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:185) ~[spring-aop-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.data.repository.core.support.SurroundingTransactionDetectorMethodInterceptor.invoke(SurroundingTransactionDetectorMethodInterceptor.java:61) ~[spring-data-commons-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:185) ~[spring-aop-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212) ~[spring-aop-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at com.sun.proxy.$Proxy118.save(Unknown Source) ~[?:?]
+	at jack.project.mmall.service.impl.ProductServiceImpl.saveOrUpdateProduct(ProductServiceImpl.java:83) ~[classes/:?]
+	at jack.project.mmall.controller.backend.ProductManageController.saveOrUpdateProduct(ProductManageController.java:42) ~[classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_151]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_151]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_151]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_151]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:209) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:870) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:776) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:991) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:978) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:881) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:855) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) ~[tomcat-embed-websocket-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:496) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:790) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_151]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_151]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_151]
+2019-01-28 20:51:38.105 INFO [main] StartupInfoLogger.java #logStarting():50 --- Starting MmallApp on DESKTOP-J5BAIP9 with PID 1468 (C:\Users\zzd16\Desktop\mmall_20181121\target\classes started by Zhengde.ZHOU in C:\Users\zzd16\Desktop\mmall_20181121)
+2019-01-28 20:51:38.131 INFO [main] SpringApplication.java #logStartupProfileInfo():656 --- The following profiles are active: local
+2019-01-28 20:51:38.197 INFO [main] AbstractApplicationContext.java #prepareRefresh():589 --- Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@23fb172e: startup date [Mon Jan 28 20:51:38 CST 2019]; root of context hierarchy
+2019-01-28 20:51:39.345 INFO [main] PostProcessorRegistrationDelegate$BeanPostProcessorChecker.java #postProcessAfterInitialization():328 --- Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a6d72867] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-28 20:51:39.699 INFO [main] TomcatWebServer.java #initialize():91 --- Tomcat initialized with port(s): 8080 (http)
+2019-01-28 20:51:39.712 INFO [main] DirectJDKLog.java #log():180 --- Initializing ProtocolHandler ["http-nio-8080"]
+2019-01-28 20:51:39.723 INFO [main] DirectJDKLog.java #log():180 --- Starting service [Tomcat]
+2019-01-28 20:51:39.724 INFO [main] DirectJDKLog.java #log():180 --- Starting Servlet Engine: Apache Tomcat/8.5.28
+2019-01-28 20:51:39.730 INFO [localhost-startStop-1] DirectJDKLog.java #log():180 --- The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Software\Java\jdk1.8.0_151\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Docker\Docker\Resources\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\ProgramData\Oracle\Java\javapath;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Software\Git\cmd;C:\Program Files\MySQL\MySQL Utilities 1.6\;"C:\Software\Java\jdk1.8.0_151\bin;";C:\Software\unzip\apache-maven-3.3.9\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Software\nodejs\;C:\Software\nodejs\;C:\Software\PuTTY\;C:\Users\zzd16\AppData\Local\Microsoft\WindowsApps;C:\Users\zzd16\AppData\Roaming\npm;C:\Users\zzd16\AppData\Local\GitHubDesktop\bin;.]
+2019-01-28 20:51:39.897 INFO [localhost-startStop-1] DirectJDKLog.java #log():180 --- Initializing Spring embedded WebApplicationContext
+2019-01-28 20:51:39.897 INFO [localhost-startStop-1] ServletWebServerApplicationContext.java #prepareWebApplicationContext():285 --- Root WebApplicationContext: initialization completed in 1703 ms
+2019-01-28 20:51:40.085 INFO [localhost-startStop-1] ServletRegistrationBean.java #addRegistration():185 --- Servlet dispatcherServlet mapped to [/]
+2019-01-28 20:51:40.091 INFO [localhost-startStop-1] AbstractFilterRegistrationBean.java #configure():243 --- Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-01-28 20:51:40.091 INFO [localhost-startStop-1] AbstractFilterRegistrationBean.java #configure():243 --- Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-01-28 20:51:40.092 INFO [localhost-startStop-1] AbstractFilterRegistrationBean.java #configure():243 --- Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-01-28 20:51:40.092 INFO [localhost-startStop-1] AbstractFilterRegistrationBean.java #configure():243 --- Mapping filter: 'requestContextFilter' to: [/*]
+2019-01-28 20:51:40.253 INFO [main] HikariDataSource.java #getConnection():110 --- HikariPool-1 - Starting...
+2019-01-28 20:51:40.496 INFO [main] HikariDataSource.java #getConnection():123 --- HikariPool-1 - Start completed.
+2019-01-28 20:51:40.572 INFO [main] LocalContainerEntityManagerFactoryBean.java #createNativeEntityManagerFactory():361 --- Building JPA container EntityManagerFactory for persistence unit 'default'
+2019-01-28 20:51:40.585 INFO [main] LogHelper.java #logPersistenceUnitInformation():31 --- HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-01-28 20:51:40.691 INFO [main] Version.java #logVersion():45 --- HHH000412: Hibernate Core {5.2.14.Final}
+2019-01-28 20:51:40.693 INFO [main] Environment.java #<clinit>():213 --- HHH000206: hibernate.properties not found
+2019-01-28 20:51:40.745 INFO [main] JavaReflectionManager.java #<clinit>():66 --- HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2019-01-28 20:51:40.952 INFO [main] Dialect.java #<init>():157 --- HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-01-28 20:51:41.794 INFO [main] AbstractEntityManagerFactoryBean.java #buildNativeEntityManagerFactory():394 --- Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-01-28 20:51:42.262 INFO [main] QueryTranslatorFactoryInitiator.java #initiateService():47 --- HHH000397: Using ASTQueryTranslatorFactory
+2019-01-28 20:51:43.244 INFO [main] RequestMappingHandlerAdapter.java #initControllerAdviceCache():567 --- Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@23fb172e: startup date [Mon Jan 28 20:51:38 CST 2019]; root of context hierarchy
+2019-01-28 20:51:43.312 WARN [main] JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.java #openEntityManagerInViewInterceptor():235 --- spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-01-28 20:51:43.392 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/admin/category/add],methods=[GET]}" onto public jack.project.mmall.common.ServerResponse<jack.project.mmall.entity.Category> jack.project.mmall.controller.backend.CategoryAdminController.addCategory(java.lang.String,java.lang.Integer,javax.servlet.http.HttpSession)
+2019-01-28 20:51:43.394 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/admin/category/update],methods=[GET]}" onto public jack.project.mmall.common.ServerResponse<jack.project.mmall.entity.Category> jack.project.mmall.controller.backend.CategoryAdminController.updateCategoryName(javax.servlet.http.HttpSession,java.lang.Integer,java.lang.String)
+2019-01-28 20:51:43.394 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/admin/category/get_child_category],methods=[GET]}" onto public jack.project.mmall.common.ServerResponse<java.util.List<jack.project.mmall.entity.Category>> jack.project.mmall.controller.backend.CategoryAdminController.getChildrenCategories(javax.servlet.http.HttpSession,java.lang.Integer)
+2019-01-28 20:51:43.395 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/admin/category/get_all_child_categories],methods=[POST]}" onto public jack.project.mmall.common.ServerResponse<java.util.Set<java.lang.Integer>> jack.project.mmall.controller.backend.CategoryAdminController.getCategoryIdAndAllChildCategoryIds(javax.servlet.http.HttpSession,java.lang.Integer)
+2019-01-28 20:51:43.396 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/admin/product/status],methods=[GET]}" onto public jack.project.mmall.common.ServerResponse<jack.project.mmall.vo.ProductVO> jack.project.mmall.controller.backend.ProductManageController.setProductStatus(javax.servlet.http.HttpSession,java.lang.Integer,java.lang.Integer)
+2019-01-28 20:51:43.397 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/admin/product/product_details],methods=[GET]}" onto public jack.project.mmall.common.ServerResponse<jack.project.mmall.vo.ProductVO> jack.project.mmall.controller.backend.ProductManageController.getProductDetatil(java.lang.Integer)
+2019-01-28 20:51:43.397 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/admin/product/save_update],methods=[POST]}" onto public jack.project.mmall.common.ServerResponse<jack.project.mmall.vo.ProductVO> jack.project.mmall.controller.backend.ProductManageController.saveOrUpdateProduct(javax.servlet.http.HttpSession,jack.project.mmall.vo.ProductVO,java.lang.Boolean)
+2019-01-28 20:51:43.403 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/user/register],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public jack.project.mmall.common.ServerResponse<java.lang.Integer> jack.project.mmall.controller.portal.UserController.register(jack.project.mmall.entity.User)
+2019-01-28 20:51:43.404 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/user/getUserInfo],methods=[GET],consumes=[application/json],produces=[application/json]}" onto public jack.project.mmall.common.ServerResponse<jack.project.mmall.entity.User> jack.project.mmall.controller.portal.UserController.getUserInfo(javax.servlet.http.HttpSession)
+2019-01-28 20:51:43.404 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/user/getUserDetails],methods=[GET],consumes=[application/json],produces=[application/json]}" onto public jack.project.mmall.common.ServerResponse<jack.project.mmall.entity.User> jack.project.mmall.controller.portal.UserController.getUserDetails(javax.servlet.http.HttpSession)
+2019-01-28 20:51:43.405 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/user/resetPassword],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public jack.project.mmall.common.ServerResponse<java.lang.String> jack.project.mmall.controller.portal.UserController.resetPassword(javax.servlet.http.HttpSession,java.util.Map<java.lang.String, java.lang.String>)
+2019-01-28 20:51:43.405 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/user/login],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public jack.project.mmall.common.ServerResponse<jack.project.mmall.entity.User> jack.project.mmall.controller.portal.UserController.login(java.util.Map<java.lang.String, java.lang.String>,javax.servlet.http.HttpSession)
+2019-01-28 20:51:43.405 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/user/forgetPassword/question],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public jack.project.mmall.common.ServerResponse<java.lang.String> jack.project.mmall.controller.portal.UserController.getQuestion(java.util.Map<java.lang.String, java.lang.String>)
+2019-01-28 20:51:43.406 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/user/forgetPassword/answer],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public jack.project.mmall.common.ServerResponse<java.lang.String> jack.project.mmall.controller.portal.UserController.checkAnswer(java.util.Map<java.lang.String, java.lang.String>)
+2019-01-28 20:51:43.406 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/user/updateUser],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public jack.project.mmall.common.ServerResponse<jack.project.mmall.entity.User> jack.project.mmall.controller.portal.UserController.updateUser(javax.servlet.http.HttpSession,jack.project.mmall.entity.User)
+2019-01-28 20:51:43.407 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/user/isValid],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public jack.project.mmall.common.ServerResponse<java.lang.Boolean> jack.project.mmall.controller.portal.UserController.checkValid(java.util.Map<java.lang.String, java.lang.String>)
+2019-01-28 20:51:43.408 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/user/logout],methods=[GET],consumes=[application/json],produces=[application/json]}" onto public jack.project.mmall.common.ServerResponse<java.lang.String> jack.project.mmall.controller.portal.UserController.logout(javax.servlet.http.HttpServletRequest)
+2019-01-28 20:51:43.409 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/user/forgetPassword/reset],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public jack.project.mmall.common.ServerResponse<java.lang.String> jack.project.mmall.controller.portal.UserController.resetPasswordForget(java.util.Map<java.lang.String, java.lang.String>)
+2019-01-28 20:51:43.413 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-01-28 20:51:43.414 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-01-28 20:51:43.496 INFO [main] AbstractUrlHandlerMapping.java #registerHandler():373 --- Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-28 20:51:43.496 INFO [main] AbstractUrlHandlerMapping.java #registerHandler():373 --- Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-28 20:51:43.573 INFO [main] AbstractUrlHandlerMapping.java #registerHandler():373 --- Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-28 20:51:44.024 INFO [main] MBeanExporter.java #afterSingletonsInstantiated():434 --- Registering beans for JMX exposure on startup
+2019-01-28 20:51:44.025 INFO [main] MBeanExporter.java #autodetect():896 --- Bean with name 'dataSource' has been autodetected for JMX exposure
+2019-01-28 20:51:44.032 INFO [main] MBeanExporter.java #registerBeanInstance():669 --- Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2019-01-28 20:51:44.042 INFO [main] DirectJDKLog.java #log():180 --- Starting ProtocolHandler ["http-nio-8080"]
+2019-01-28 20:51:44.057 INFO [main] DirectJDKLog.java #log():180 --- Using a shared selector for servlet write/read
+2019-01-28 20:51:44.077 INFO [main] TomcatWebServer.java #start():205 --- Tomcat started on port(s): 8080 (http) with context path ''
+2019-01-28 20:51:44.080 INFO [main] StartupInfoLogger.java #logStarted():59 --- Started MmallApp in 6.368 seconds (JVM running for 8.346)
+2019-01-28 20:51:58.539 INFO [main] StartupInfoLogger.java #logStarting():50 --- Starting MmallApp on DESKTOP-J5BAIP9 with PID 4084 (C:\Users\zzd16\Desktop\mmall_20181121\target\classes started by Zhengde.ZHOU in C:\Users\zzd16\Desktop\mmall_20181121)
+2019-01-28 20:51:58.548 INFO [main] SpringApplication.java #logStartupProfileInfo():656 --- The following profiles are active: local
+2019-01-28 20:51:58.592 INFO [main] AbstractApplicationContext.java #prepareRefresh():589 --- Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@c5dc4a2: startup date [Mon Jan 28 20:51:58 CST 2019]; root of context hierarchy
+2019-01-28 20:51:59.879 INFO [main] PostProcessorRegistrationDelegate$BeanPostProcessorChecker.java #postProcessAfterInitialization():328 --- Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2c5a8eec] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-28 20:52:00.238 INFO [main] TomcatWebServer.java #initialize():91 --- Tomcat initialized with port(s): 8080 (http)
+2019-01-28 20:52:00.252 INFO [main] DirectJDKLog.java #log():180 --- Initializing ProtocolHandler ["http-nio-8080"]
+2019-01-28 20:52:00.264 INFO [main] DirectJDKLog.java #log():180 --- Starting service [Tomcat]
+2019-01-28 20:52:00.265 INFO [main] DirectJDKLog.java #log():180 --- Starting Servlet Engine: Apache Tomcat/8.5.28
+2019-01-28 20:52:00.271 INFO [localhost-startStop-1] DirectJDKLog.java #log():180 --- The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Software\Java\jdk1.8.0_151\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Docker\Docker\Resources\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\ProgramData\Oracle\Java\javapath;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Software\Git\cmd;C:\Program Files\MySQL\MySQL Utilities 1.6\;"C:\Software\Java\jdk1.8.0_151\bin;";C:\Software\unzip\apache-maven-3.3.9\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Software\nodejs\;C:\Software\nodejs\;C:\Software\PuTTY\;C:\Users\zzd16\AppData\Local\Microsoft\WindowsApps;C:\Users\zzd16\AppData\Roaming\npm;C:\Users\zzd16\AppData\Local\GitHubDesktop\bin;.]
+2019-01-28 20:52:00.438 INFO [localhost-startStop-1] DirectJDKLog.java #log():180 --- Initializing Spring embedded WebApplicationContext
+2019-01-28 20:52:00.438 INFO [localhost-startStop-1] ServletWebServerApplicationContext.java #prepareWebApplicationContext():285 --- Root WebApplicationContext: initialization completed in 1849 ms
+2019-01-28 20:52:00.634 INFO [localhost-startStop-1] ServletRegistrationBean.java #addRegistration():185 --- Servlet dispatcherServlet mapped to [/]
+2019-01-28 20:52:00.640 INFO [localhost-startStop-1] AbstractFilterRegistrationBean.java #configure():243 --- Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-01-28 20:52:00.640 INFO [localhost-startStop-1] AbstractFilterRegistrationBean.java #configure():243 --- Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-01-28 20:52:00.640 INFO [localhost-startStop-1] AbstractFilterRegistrationBean.java #configure():243 --- Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-01-28 20:52:00.641 INFO [localhost-startStop-1] AbstractFilterRegistrationBean.java #configure():243 --- Mapping filter: 'requestContextFilter' to: [/*]
+2019-01-28 20:52:00.877 INFO [main] HikariDataSource.java #getConnection():110 --- HikariPool-1 - Starting...
+2019-01-28 20:52:01.168 INFO [main] HikariDataSource.java #getConnection():123 --- HikariPool-1 - Start completed.
+2019-01-28 20:52:01.283 INFO [main] LocalContainerEntityManagerFactoryBean.java #createNativeEntityManagerFactory():361 --- Building JPA container EntityManagerFactory for persistence unit 'default'
+2019-01-28 20:52:01.306 INFO [main] LogHelper.java #logPersistenceUnitInformation():31 --- HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-01-28 20:52:01.452 INFO [main] Version.java #logVersion():45 --- HHH000412: Hibernate Core {5.2.14.Final}
+2019-01-28 20:52:01.457 INFO [main] Environment.java #<clinit>():213 --- HHH000206: hibernate.properties not found
+2019-01-28 20:52:01.535 INFO [main] JavaReflectionManager.java #<clinit>():66 --- HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2019-01-28 20:52:01.717 INFO [main] Dialect.java #<init>():157 --- HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-01-28 20:52:02.454 INFO [main] AbstractEntityManagerFactoryBean.java #buildNativeEntityManagerFactory():394 --- Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-01-28 20:52:02.923 INFO [main] QueryTranslatorFactoryInitiator.java #initiateService():47 --- HHH000397: Using ASTQueryTranslatorFactory
+2019-01-28 20:52:03.527 INFO [main] RequestMappingHandlerAdapter.java #initControllerAdviceCache():567 --- Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@c5dc4a2: startup date [Mon Jan 28 20:51:58 CST 2019]; root of context hierarchy
+2019-01-28 20:52:03.574 WARN [main] JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.java #openEntityManagerInViewInterceptor():235 --- spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-01-28 20:52:03.620 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/admin/category/add],methods=[GET]}" onto public jack.project.mmall.common.ServerResponse<jack.project.mmall.entity.Category> jack.project.mmall.controller.backend.CategoryAdminController.addCategory(java.lang.String,java.lang.Integer,javax.servlet.http.HttpSession)
+2019-01-28 20:52:03.621 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/admin/category/update],methods=[GET]}" onto public jack.project.mmall.common.ServerResponse<jack.project.mmall.entity.Category> jack.project.mmall.controller.backend.CategoryAdminController.updateCategoryName(javax.servlet.http.HttpSession,java.lang.Integer,java.lang.String)
+2019-01-28 20:52:03.621 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/admin/category/get_child_category],methods=[GET]}" onto public jack.project.mmall.common.ServerResponse<java.util.List<jack.project.mmall.entity.Category>> jack.project.mmall.controller.backend.CategoryAdminController.getChildrenCategories(javax.servlet.http.HttpSession,java.lang.Integer)
+2019-01-28 20:52:03.622 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/admin/category/get_all_child_categories],methods=[POST]}" onto public jack.project.mmall.common.ServerResponse<java.util.Set<java.lang.Integer>> jack.project.mmall.controller.backend.CategoryAdminController.getCategoryIdAndAllChildCategoryIds(javax.servlet.http.HttpSession,java.lang.Integer)
+2019-01-28 20:52:03.623 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/admin/product/save_update],methods=[POST]}" onto public jack.project.mmall.common.ServerResponse<jack.project.mmall.vo.ProductVO> jack.project.mmall.controller.backend.ProductManageController.saveOrUpdateProduct(javax.servlet.http.HttpSession,jack.project.mmall.vo.ProductVO,java.lang.Boolean)
+2019-01-28 20:52:03.623 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/admin/product/product_details],methods=[GET]}" onto public jack.project.mmall.common.ServerResponse<jack.project.mmall.vo.ProductVO> jack.project.mmall.controller.backend.ProductManageController.getProductDetatil(java.lang.Integer)
+2019-01-28 20:52:03.624 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/admin/product/status],methods=[GET]}" onto public jack.project.mmall.common.ServerResponse<jack.project.mmall.vo.ProductVO> jack.project.mmall.controller.backend.ProductManageController.setProductStatus(javax.servlet.http.HttpSession,java.lang.Integer,java.lang.Integer)
+2019-01-28 20:52:03.627 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/user/register],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public jack.project.mmall.common.ServerResponse<java.lang.Integer> jack.project.mmall.controller.portal.UserController.register(jack.project.mmall.entity.User)
+2019-01-28 20:52:03.628 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/user/getUserInfo],methods=[GET],consumes=[application/json],produces=[application/json]}" onto public jack.project.mmall.common.ServerResponse<jack.project.mmall.entity.User> jack.project.mmall.controller.portal.UserController.getUserInfo(javax.servlet.http.HttpSession)
+2019-01-28 20:52:03.628 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/user/forgetPassword/question],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public jack.project.mmall.common.ServerResponse<java.lang.String> jack.project.mmall.controller.portal.UserController.getQuestion(java.util.Map<java.lang.String, java.lang.String>)
+2019-01-28 20:52:03.629 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/user/forgetPassword/reset],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public jack.project.mmall.common.ServerResponse<java.lang.String> jack.project.mmall.controller.portal.UserController.resetPasswordForget(java.util.Map<java.lang.String, java.lang.String>)
+2019-01-28 20:52:03.629 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/user/isValid],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public jack.project.mmall.common.ServerResponse<java.lang.Boolean> jack.project.mmall.controller.portal.UserController.checkValid(java.util.Map<java.lang.String, java.lang.String>)
+2019-01-28 20:52:03.629 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/user/getUserDetails],methods=[GET],consumes=[application/json],produces=[application/json]}" onto public jack.project.mmall.common.ServerResponse<jack.project.mmall.entity.User> jack.project.mmall.controller.portal.UserController.getUserDetails(javax.servlet.http.HttpSession)
+2019-01-28 20:52:03.630 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/user/login],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public jack.project.mmall.common.ServerResponse<jack.project.mmall.entity.User> jack.project.mmall.controller.portal.UserController.login(java.util.Map<java.lang.String, java.lang.String>,javax.servlet.http.HttpSession)
+2019-01-28 20:52:03.630 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/user/logout],methods=[GET],consumes=[application/json],produces=[application/json]}" onto public jack.project.mmall.common.ServerResponse<java.lang.String> jack.project.mmall.controller.portal.UserController.logout(javax.servlet.http.HttpServletRequest)
+2019-01-28 20:52:03.630 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/user/resetPassword],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public jack.project.mmall.common.ServerResponse<java.lang.String> jack.project.mmall.controller.portal.UserController.resetPassword(javax.servlet.http.HttpSession,java.util.Map<java.lang.String, java.lang.String>)
+2019-01-28 20:52:03.631 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/user/updateUser],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public jack.project.mmall.common.ServerResponse<jack.project.mmall.entity.User> jack.project.mmall.controller.portal.UserController.updateUser(javax.servlet.http.HttpSession,jack.project.mmall.entity.User)
+2019-01-28 20:52:03.631 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/user/forgetPassword/answer],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public jack.project.mmall.common.ServerResponse<java.lang.String> jack.project.mmall.controller.portal.UserController.checkAnswer(java.util.Map<java.lang.String, java.lang.String>)
+2019-01-28 20:52:03.635 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-01-28 20:52:03.636 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-01-28 20:52:03.693 INFO [main] AbstractUrlHandlerMapping.java #registerHandler():373 --- Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-28 20:52:03.693 INFO [main] AbstractUrlHandlerMapping.java #registerHandler():373 --- Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-28 20:52:03.753 INFO [main] AbstractUrlHandlerMapping.java #registerHandler():373 --- Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-28 20:52:04.145 INFO [main] MBeanExporter.java #afterSingletonsInstantiated():434 --- Registering beans for JMX exposure on startup
+2019-01-28 20:52:04.146 INFO [main] MBeanExporter.java #autodetect():896 --- Bean with name 'dataSource' has been autodetected for JMX exposure
+2019-01-28 20:52:04.152 INFO [main] MBeanExporter.java #registerBeanInstance():669 --- Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2019-01-28 20:52:04.162 INFO [main] DirectJDKLog.java #log():180 --- Starting ProtocolHandler ["http-nio-8080"]
+2019-01-28 20:52:04.177 INFO [main] DirectJDKLog.java #log():180 --- Using a shared selector for servlet write/read
+2019-01-28 20:52:04.196 INFO [main] TomcatWebServer.java #start():205 --- Tomcat started on port(s): 8080 (http) with context path ''
+2019-01-28 20:52:04.199 INFO [main] StartupInfoLogger.java #logStarted():59 --- Started MmallApp in 6.022 seconds (JVM running for 7.826)
+2019-01-28 20:52:08.911 INFO [http-nio-8080-exec-1] DirectJDKLog.java #log():180 --- Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-01-28 20:52:08.912 INFO [http-nio-8080-exec-1] FrameworkServlet.java #initServletBean():494 --- FrameworkServlet 'dispatcherServlet': initialization started
+2019-01-28 20:52:08.942 INFO [http-nio-8080-exec-1] FrameworkServlet.java #initServletBean():513 --- FrameworkServlet 'dispatcherServlet': initialization completed in 29 ms
+2019-01-28 20:52:12.452 INFO [http-nio-8080-exec-3] UserController.java #login():43 --- http session timeout: 1800
+2019-01-28 20:52:49.585 WARN [http-nio-8080-exec-5] SqlExceptionHelper.java #logExceptions():129 --- SQL Error: 1048, SQLState: 23000
+2019-01-28 20:52:49.586 ERROR [http-nio-8080-exec-5] SqlExceptionHelper.java #logExceptions():131 --- Column 'category_id' cannot be null
+2019-01-28 20:52:49.589 INFO [http-nio-8080-exec-5] AbstractBatchImpl.java #release():193 --- HHH000010: On release of batch it still contained JDBC statements
+2019-01-28 20:52:49.594 ERROR [http-nio-8080-exec-5] ExceptionMapperStandardImpl.java #mapManagedFlushFailure():39 --- HHH000346: Error during managed flush [org.hibernate.exception.ConstraintViolationException: could not execute statement]
+2019-01-28 20:52:49.615 ERROR [http-nio-8080-exec-5] DirectJDKLog.java #log():182 --- Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [null]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement] with root cause
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'category_id' cannot be null
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_151]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_151]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_151]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[?:1.8.0_151]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425) ~[mysql-connector-java-5.1.45.jar:5.1.45]
+	at com.mysql.jdbc.Util.getInstance(Util.java:408) ~[mysql-connector-java-5.1.45.jar:5.1.45]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:936) ~[mysql-connector-java-5.1.45.jar:5.1.45]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3973) ~[mysql-connector-java-5.1.45.jar:5.1.45]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3909) ~[mysql-connector-java-5.1.45.jar:5.1.45]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2527) ~[mysql-connector-java-5.1.45.jar:5.1.45]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2680) ~[mysql-connector-java-5.1.45.jar:5.1.45]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2484) ~[mysql-connector-java-5.1.45.jar:5.1.45]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1858) ~[mysql-connector-java-5.1.45.jar:5.1.45]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2079) ~[mysql-connector-java-5.1.45.jar:5.1.45]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2013) ~[mysql-connector-java-5.1.45.jar:5.1.45]
+	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5104) ~[mysql-connector-java-5.1.45.jar:5.1.45]
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1998) ~[mysql-connector-java-5.1.45.jar:5.1.45]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61) ~[HikariCP-2.7.8.jar:?]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java) ~[HikariCP-2.7.8.jar:?]
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:175) ~[hibernate-core-5.2.14.Final.jar:5.2.14.Final]
+	at org.hibernate.engine.jdbc.batch.internal.NonBatchingBatch.addToBatch(NonBatchingBatch.java:45) ~[hibernate-core-5.2.14.Final.jar:5.2.14.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3013) ~[hibernate-core-5.2.14.Final.jar:5.2.14.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3513) ~[hibernate-core-5.2.14.Final.jar:5.2.14.Final]
+	at org.hibernate.action.internal.EntityInsertAction.execute(EntityInsertAction.java:89) ~[hibernate-core-5.2.14.Final.jar:5.2.14.Final]
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:599) ~[hibernate-core-5.2.14.Final.jar:5.2.14.Final]
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:473) ~[hibernate-core-5.2.14.Final.jar:5.2.14.Final]
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:337) ~[hibernate-core-5.2.14.Final.jar:5.2.14.Final]
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:39) ~[hibernate-core-5.2.14.Final.jar:5.2.14.Final]
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1436) ~[hibernate-core-5.2.14.Final.jar:5.2.14.Final]
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:493) ~[hibernate-core-5.2.14.Final.jar:5.2.14.Final]
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:3206) ~[hibernate-core-5.2.14.Final.jar:5.2.14.Final]
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2412) ~[hibernate-core-5.2.14.Final.jar:5.2.14.Final]
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:473) ~[hibernate-core-5.2.14.Final.jar:5.2.14.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:156) ~[hibernate-core-5.2.14.Final.jar:5.2.14.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.access$100(JdbcResourceLocalTransactionCoordinatorImpl.java:38) ~[hibernate-core-5.2.14.Final.jar:5.2.14.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:231) ~[hibernate-core-5.2.14.Final.jar:5.2.14.Final]
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:68) ~[hibernate-core-5.2.14.Final.jar:5.2.14.Final]
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:536) ~[spring-orm-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:746) ~[spring-tx-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:714) ~[spring-tx-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:532) ~[spring-tx-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:304) ~[spring-tx-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98) ~[spring-tx-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:185) ~[spring-aop-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139) ~[spring-tx-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:185) ~[spring-aop-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:135) ~[spring-data-jpa-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:185) ~[spring-aop-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92) ~[spring-aop-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:185) ~[spring-aop-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.data.repository.core.support.SurroundingTransactionDetectorMethodInterceptor.invoke(SurroundingTransactionDetectorMethodInterceptor.java:61) ~[spring-data-commons-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:185) ~[spring-aop-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212) ~[spring-aop-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at com.sun.proxy.$Proxy118.save(Unknown Source) ~[?:?]
+	at jack.project.mmall.service.impl.ProductServiceImpl.saveOrUpdateProduct(ProductServiceImpl.java:81) ~[classes/:?]
+	at jack.project.mmall.controller.backend.ProductManageController.saveOrUpdateProduct(ProductManageController.java:42) ~[classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_151]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_151]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_151]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_151]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:209) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:870) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:776) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:991) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:978) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:881) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:855) ~[spring-webmvc-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) ~[tomcat-embed-websocket-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:496) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:790) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_151]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_151]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.28.jar:8.5.28]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_151]
+2019-01-28 20:55:04.075 INFO [main] StartupInfoLogger.java #logStarting():50 --- Starting MmallApp on DESKTOP-J5BAIP9 with PID 8472 (C:\Users\zzd16\Desktop\mmall_20181121\target\classes started by Zhengde.ZHOU in C:\Users\zzd16\Desktop\mmall_20181121)
+2019-01-28 20:55:04.085 INFO [main] SpringApplication.java #logStartupProfileInfo():656 --- The following profiles are active: local
+2019-01-28 20:55:04.132 INFO [main] AbstractApplicationContext.java #prepareRefresh():589 --- Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4fce136b: startup date [Mon Jan 28 20:55:04 CST 2019]; root of context hierarchy
+2019-01-28 20:55:05.308 INFO [main] PostProcessorRegistrationDelegate$BeanPostProcessorChecker.java #postProcessAfterInitialization():328 --- Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ec1d6b89] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-28 20:55:05.883 INFO [main] TomcatWebServer.java #initialize():91 --- Tomcat initialized with port(s): 8080 (http)
+2019-01-28 20:55:05.900 INFO [main] DirectJDKLog.java #log():180 --- Initializing ProtocolHandler ["http-nio-8080"]
+2019-01-28 20:55:05.911 INFO [main] DirectJDKLog.java #log():180 --- Starting service [Tomcat]
+2019-01-28 20:55:05.912 INFO [main] DirectJDKLog.java #log():180 --- Starting Servlet Engine: Apache Tomcat/8.5.28
+2019-01-28 20:55:05.918 INFO [localhost-startStop-1] DirectJDKLog.java #log():180 --- The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Software\Java\jdk1.8.0_151\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Docker\Docker\Resources\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\ProgramData\Oracle\Java\javapath;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Software\Git\cmd;C:\Program Files\MySQL\MySQL Utilities 1.6\;"C:\Software\Java\jdk1.8.0_151\bin;";C:\Software\unzip\apache-maven-3.3.9\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Software\nodejs\;C:\Software\nodejs\;C:\Software\PuTTY\;C:\Users\zzd16\AppData\Local\Microsoft\WindowsApps;C:\Users\zzd16\AppData\Roaming\npm;C:\Users\zzd16\AppData\Local\GitHubDesktop\bin;.]
+2019-01-28 20:55:06.079 INFO [localhost-startStop-1] DirectJDKLog.java #log():180 --- Initializing Spring embedded WebApplicationContext
+2019-01-28 20:55:06.079 INFO [localhost-startStop-1] ServletWebServerApplicationContext.java #prepareWebApplicationContext():285 --- Root WebApplicationContext: initialization completed in 1951 ms
+2019-01-28 20:55:06.264 INFO [localhost-startStop-1] ServletRegistrationBean.java #addRegistration():185 --- Servlet dispatcherServlet mapped to [/]
+2019-01-28 20:55:06.271 INFO [localhost-startStop-1] AbstractFilterRegistrationBean.java #configure():243 --- Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-01-28 20:55:06.272 INFO [localhost-startStop-1] AbstractFilterRegistrationBean.java #configure():243 --- Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-01-28 20:55:06.272 INFO [localhost-startStop-1] AbstractFilterRegistrationBean.java #configure():243 --- Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-01-28 20:55:06.272 INFO [localhost-startStop-1] AbstractFilterRegistrationBean.java #configure():243 --- Mapping filter: 'requestContextFilter' to: [/*]
+2019-01-28 20:55:06.456 INFO [main] HikariDataSource.java #getConnection():110 --- HikariPool-1 - Starting...
+2019-01-28 20:55:06.701 INFO [main] HikariDataSource.java #getConnection():123 --- HikariPool-1 - Start completed.
+2019-01-28 20:55:06.772 INFO [main] LocalContainerEntityManagerFactoryBean.java #createNativeEntityManagerFactory():361 --- Building JPA container EntityManagerFactory for persistence unit 'default'
+2019-01-28 20:55:06.786 INFO [main] LogHelper.java #logPersistenceUnitInformation():31 --- HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-01-28 20:55:06.886 INFO [main] Version.java #logVersion():45 --- HHH000412: Hibernate Core {5.2.14.Final}
+2019-01-28 20:55:06.888 INFO [main] Environment.java #<clinit>():213 --- HHH000206: hibernate.properties not found
+2019-01-28 20:55:06.968 INFO [main] JavaReflectionManager.java #<clinit>():66 --- HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2019-01-28 20:55:07.220 INFO [main] Dialect.java #<init>():157 --- HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-01-28 20:55:08.098 INFO [main] AbstractEntityManagerFactoryBean.java #buildNativeEntityManagerFactory():394 --- Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-01-28 20:55:08.549 INFO [main] QueryTranslatorFactoryInitiator.java #initiateService():47 --- HHH000397: Using ASTQueryTranslatorFactory
+2019-01-28 20:55:09.114 INFO [main] RequestMappingHandlerAdapter.java #initControllerAdviceCache():567 --- Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4fce136b: startup date [Mon Jan 28 20:55:04 CST 2019]; root of context hierarchy
+2019-01-28 20:55:09.155 WARN [main] JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.java #openEntityManagerInViewInterceptor():235 --- spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-01-28 20:55:09.200 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/admin/category/add],methods=[GET]}" onto public jack.project.mmall.common.ServerResponse<jack.project.mmall.entity.Category> jack.project.mmall.controller.backend.CategoryAdminController.addCategory(java.lang.String,java.lang.Integer,javax.servlet.http.HttpSession)
+2019-01-28 20:55:09.202 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/admin/category/get_child_category],methods=[GET]}" onto public jack.project.mmall.common.ServerResponse<java.util.List<jack.project.mmall.entity.Category>> jack.project.mmall.controller.backend.CategoryAdminController.getChildrenCategories(javax.servlet.http.HttpSession,java.lang.Integer)
+2019-01-28 20:55:09.202 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/admin/category/update],methods=[GET]}" onto public jack.project.mmall.common.ServerResponse<jack.project.mmall.entity.Category> jack.project.mmall.controller.backend.CategoryAdminController.updateCategoryName(javax.servlet.http.HttpSession,java.lang.Integer,java.lang.String)
+2019-01-28 20:55:09.202 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/admin/category/get_all_child_categories],methods=[POST]}" onto public jack.project.mmall.common.ServerResponse<java.util.Set<java.lang.Integer>> jack.project.mmall.controller.backend.CategoryAdminController.getCategoryIdAndAllChildCategoryIds(javax.servlet.http.HttpSession,java.lang.Integer)
+2019-01-28 20:55:09.203 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/admin/product/status],methods=[GET]}" onto public jack.project.mmall.common.ServerResponse<jack.project.mmall.vo.ProductVO> jack.project.mmall.controller.backend.ProductManageController.setProductStatus(javax.servlet.http.HttpSession,java.lang.Integer,java.lang.Integer)
+2019-01-28 20:55:09.204 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/admin/product/save_update],methods=[POST]}" onto public jack.project.mmall.common.ServerResponse<jack.project.mmall.vo.ProductVO> jack.project.mmall.controller.backend.ProductManageController.saveOrUpdateProduct(javax.servlet.http.HttpSession,jack.project.mmall.vo.ProductVO,java.lang.Boolean)
+2019-01-28 20:55:09.204 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/admin/product/product_details],methods=[GET]}" onto public jack.project.mmall.common.ServerResponse<jack.project.mmall.vo.ProductVO> jack.project.mmall.controller.backend.ProductManageController.getProductDetatil(java.lang.Integer)
+2019-01-28 20:55:09.208 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/user/register],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public jack.project.mmall.common.ServerResponse<java.lang.Integer> jack.project.mmall.controller.portal.UserController.register(jack.project.mmall.entity.User)
+2019-01-28 20:55:09.209 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/user/getUserInfo],methods=[GET],consumes=[application/json],produces=[application/json]}" onto public jack.project.mmall.common.ServerResponse<jack.project.mmall.entity.User> jack.project.mmall.controller.portal.UserController.getUserInfo(javax.servlet.http.HttpSession)
+2019-01-28 20:55:09.209 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/user/login],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public jack.project.mmall.common.ServerResponse<jack.project.mmall.entity.User> jack.project.mmall.controller.portal.UserController.login(java.util.Map<java.lang.String, java.lang.String>,javax.servlet.http.HttpSession)
+2019-01-28 20:55:09.209 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/user/logout],methods=[GET],consumes=[application/json],produces=[application/json]}" onto public jack.project.mmall.common.ServerResponse<java.lang.String> jack.project.mmall.controller.portal.UserController.logout(javax.servlet.http.HttpServletRequest)
+2019-01-28 20:55:09.210 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/user/forgetPassword/question],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public jack.project.mmall.common.ServerResponse<java.lang.String> jack.project.mmall.controller.portal.UserController.getQuestion(java.util.Map<java.lang.String, java.lang.String>)
+2019-01-28 20:55:09.210 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/user/updateUser],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public jack.project.mmall.common.ServerResponse<jack.project.mmall.entity.User> jack.project.mmall.controller.portal.UserController.updateUser(javax.servlet.http.HttpSession,jack.project.mmall.entity.User)
+2019-01-28 20:55:09.211 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/user/getUserDetails],methods=[GET],consumes=[application/json],produces=[application/json]}" onto public jack.project.mmall.common.ServerResponse<jack.project.mmall.entity.User> jack.project.mmall.controller.portal.UserController.getUserDetails(javax.servlet.http.HttpSession)
+2019-01-28 20:55:09.211 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/user/forgetPassword/answer],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public jack.project.mmall.common.ServerResponse<java.lang.String> jack.project.mmall.controller.portal.UserController.checkAnswer(java.util.Map<java.lang.String, java.lang.String>)
+2019-01-28 20:55:09.212 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/user/isValid],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public jack.project.mmall.common.ServerResponse<java.lang.Boolean> jack.project.mmall.controller.portal.UserController.checkValid(java.util.Map<java.lang.String, java.lang.String>)
+2019-01-28 20:55:09.212 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/user/resetPassword],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public jack.project.mmall.common.ServerResponse<java.lang.String> jack.project.mmall.controller.portal.UserController.resetPassword(javax.servlet.http.HttpSession,java.util.Map<java.lang.String, java.lang.String>)
+2019-01-28 20:55:09.213 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/user/forgetPassword/reset],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public jack.project.mmall.common.ServerResponse<java.lang.String> jack.project.mmall.controller.portal.UserController.resetPasswordForget(java.util.Map<java.lang.String, java.lang.String>)
+2019-01-28 20:55:09.215 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-01-28 20:55:09.216 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-01-28 20:55:09.271 INFO [main] AbstractUrlHandlerMapping.java #registerHandler():373 --- Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-28 20:55:09.271 INFO [main] AbstractUrlHandlerMapping.java #registerHandler():373 --- Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-28 20:55:09.328 INFO [main] AbstractUrlHandlerMapping.java #registerHandler():373 --- Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-28 20:55:09.707 INFO [main] MBeanExporter.java #afterSingletonsInstantiated():434 --- Registering beans for JMX exposure on startup
+2019-01-28 20:55:09.708 INFO [main] MBeanExporter.java #autodetect():896 --- Bean with name 'dataSource' has been autodetected for JMX exposure
+2019-01-28 20:55:09.713 INFO [main] MBeanExporter.java #registerBeanInstance():669 --- Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2019-01-28 20:55:09.725 INFO [main] DirectJDKLog.java #log():180 --- Starting ProtocolHandler ["http-nio-8080"]
+2019-01-28 20:55:09.740 INFO [main] DirectJDKLog.java #log():180 --- Using a shared selector for servlet write/read
+2019-01-28 20:55:09.759 INFO [main] TomcatWebServer.java #start():205 --- Tomcat started on port(s): 8080 (http) with context path ''
+2019-01-28 20:55:09.762 INFO [main] StartupInfoLogger.java #logStarted():59 --- Started MmallApp in 6.059 seconds (JVM running for 7.887)
+2019-01-28 20:56:33.141 INFO [main] StartupInfoLogger.java #logStarting():50 --- Starting MmallApp on DESKTOP-J5BAIP9 with PID 9208 (C:\Users\zzd16\Desktop\mmall_20181121\target\classes started by Zhengde.ZHOU in C:\Users\zzd16\Desktop\mmall_20181121)
+2019-01-28 20:56:33.150 INFO [main] SpringApplication.java #logStartupProfileInfo():656 --- The following profiles are active: local
+2019-01-28 20:56:33.229 INFO [main] AbstractApplicationContext.java #prepareRefresh():589 --- Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@24d09c1: startup date [Mon Jan 28 20:56:33 CST 2019]; root of context hierarchy
+2019-01-28 20:56:34.667 INFO [main] PostProcessorRegistrationDelegate$BeanPostProcessorChecker.java #postProcessAfterInitialization():328 --- Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a4585ff9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-28 20:56:35.108 INFO [main] TomcatWebServer.java #initialize():91 --- Tomcat initialized with port(s): 8080 (http)
+2019-01-28 20:56:35.123 INFO [main] DirectJDKLog.java #log():180 --- Initializing ProtocolHandler ["http-nio-8080"]
+2019-01-28 20:56:35.135 INFO [main] DirectJDKLog.java #log():180 --- Starting service [Tomcat]
+2019-01-28 20:56:35.135 INFO [main] DirectJDKLog.java #log():180 --- Starting Servlet Engine: Apache Tomcat/8.5.28
+2019-01-28 20:56:35.141 INFO [localhost-startStop-1] DirectJDKLog.java #log():180 --- The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Software\Java\jdk1.8.0_151\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Docker\Docker\Resources\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\ProgramData\Oracle\Java\javapath;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Software\Git\cmd;C:\Program Files\MySQL\MySQL Utilities 1.6\;"C:\Software\Java\jdk1.8.0_151\bin;";C:\Software\unzip\apache-maven-3.3.9\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Software\nodejs\;C:\Software\nodejs\;C:\Software\PuTTY\;C:\Users\zzd16\AppData\Local\Microsoft\WindowsApps;C:\Users\zzd16\AppData\Roaming\npm;C:\Users\zzd16\AppData\Local\GitHubDesktop\bin;.]
+2019-01-28 20:56:35.333 INFO [localhost-startStop-1] DirectJDKLog.java #log():180 --- Initializing Spring embedded WebApplicationContext
+2019-01-28 20:56:35.333 INFO [localhost-startStop-1] ServletWebServerApplicationContext.java #prepareWebApplicationContext():285 --- Root WebApplicationContext: initialization completed in 2108 ms
+2019-01-28 20:56:35.512 INFO [localhost-startStop-1] ServletRegistrationBean.java #addRegistration():185 --- Servlet dispatcherServlet mapped to [/]
+2019-01-28 20:56:35.518 INFO [localhost-startStop-1] AbstractFilterRegistrationBean.java #configure():243 --- Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-01-28 20:56:35.519 INFO [localhost-startStop-1] AbstractFilterRegistrationBean.java #configure():243 --- Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-01-28 20:56:35.519 INFO [localhost-startStop-1] AbstractFilterRegistrationBean.java #configure():243 --- Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-01-28 20:56:35.519 INFO [localhost-startStop-1] AbstractFilterRegistrationBean.java #configure():243 --- Mapping filter: 'requestContextFilter' to: [/*]
+2019-01-28 20:56:35.713 INFO [main] HikariDataSource.java #getConnection():110 --- HikariPool-1 - Starting...
+2019-01-28 20:56:35.948 INFO [main] HikariDataSource.java #getConnection():123 --- HikariPool-1 - Start completed.
+2019-01-28 20:56:36.017 INFO [main] LocalContainerEntityManagerFactoryBean.java #createNativeEntityManagerFactory():361 --- Building JPA container EntityManagerFactory for persistence unit 'default'
+2019-01-28 20:56:36.030 INFO [main] LogHelper.java #logPersistenceUnitInformation():31 --- HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-01-28 20:56:36.144 INFO [main] Version.java #logVersion():45 --- HHH000412: Hibernate Core {5.2.14.Final}
+2019-01-28 20:56:36.146 INFO [main] Environment.java #<clinit>():213 --- HHH000206: hibernate.properties not found
+2019-01-28 20:56:36.213 INFO [main] JavaReflectionManager.java #<clinit>():66 --- HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2019-01-28 20:56:36.417 INFO [main] Dialect.java #<init>():157 --- HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-01-28 20:56:37.155 INFO [main] AbstractEntityManagerFactoryBean.java #buildNativeEntityManagerFactory():394 --- Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-01-28 20:56:37.738 INFO [main] QueryTranslatorFactoryInitiator.java #initiateService():47 --- HHH000397: Using ASTQueryTranslatorFactory
+2019-01-28 20:56:38.464 INFO [main] RequestMappingHandlerAdapter.java #initControllerAdviceCache():567 --- Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@24d09c1: startup date [Mon Jan 28 20:56:33 CST 2019]; root of context hierarchy
+2019-01-28 20:56:38.508 WARN [main] JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.java #openEntityManagerInViewInterceptor():235 --- spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-01-28 20:56:38.555 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/admin/category/get_child_category],methods=[GET]}" onto public jack.project.mmall.common.ServerResponse<java.util.List<jack.project.mmall.entity.Category>> jack.project.mmall.controller.backend.CategoryAdminController.getChildrenCategories(javax.servlet.http.HttpSession,java.lang.Integer)
+2019-01-28 20:56:38.556 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/admin/category/update],methods=[GET]}" onto public jack.project.mmall.common.ServerResponse<jack.project.mmall.entity.Category> jack.project.mmall.controller.backend.CategoryAdminController.updateCategoryName(javax.servlet.http.HttpSession,java.lang.Integer,java.lang.String)
+2019-01-28 20:56:38.556 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/admin/category/add],methods=[GET]}" onto public jack.project.mmall.common.ServerResponse<jack.project.mmall.entity.Category> jack.project.mmall.controller.backend.CategoryAdminController.addCategory(java.lang.String,java.lang.Integer,javax.servlet.http.HttpSession)
+2019-01-28 20:56:38.557 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/admin/category/get_all_child_categories],methods=[POST]}" onto public jack.project.mmall.common.ServerResponse<java.util.Set<java.lang.Integer>> jack.project.mmall.controller.backend.CategoryAdminController.getCategoryIdAndAllChildCategoryIds(javax.servlet.http.HttpSession,java.lang.Integer)
+2019-01-28 20:56:38.558 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/admin/product/save_update],methods=[POST]}" onto public jack.project.mmall.common.ServerResponse<jack.project.mmall.vo.ProductVO> jack.project.mmall.controller.backend.ProductManageController.saveOrUpdateProduct(javax.servlet.http.HttpSession,jack.project.mmall.vo.ProductVO,java.lang.Boolean)
+2019-01-28 20:56:38.558 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/admin/product/product_details],methods=[GET]}" onto public jack.project.mmall.common.ServerResponse<jack.project.mmall.vo.ProductVO> jack.project.mmall.controller.backend.ProductManageController.getProductDetatil(java.lang.Integer)
+2019-01-28 20:56:38.558 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/admin/product/status],methods=[GET]}" onto public jack.project.mmall.common.ServerResponse<jack.project.mmall.vo.ProductVO> jack.project.mmall.controller.backend.ProductManageController.setProductStatus(javax.servlet.http.HttpSession,java.lang.Integer,java.lang.Integer)
+2019-01-28 20:56:38.562 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/user/register],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public jack.project.mmall.common.ServerResponse<java.lang.Integer> jack.project.mmall.controller.portal.UserController.register(jack.project.mmall.entity.User)
+2019-01-28 20:56:38.563 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/user/getUserInfo],methods=[GET],consumes=[application/json],produces=[application/json]}" onto public jack.project.mmall.common.ServerResponse<jack.project.mmall.entity.User> jack.project.mmall.controller.portal.UserController.getUserInfo(javax.servlet.http.HttpSession)
+2019-01-28 20:56:38.563 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/user/forgetPassword/reset],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public jack.project.mmall.common.ServerResponse<java.lang.String> jack.project.mmall.controller.portal.UserController.resetPasswordForget(java.util.Map<java.lang.String, java.lang.String>)
+2019-01-28 20:56:38.563 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/user/resetPassword],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public jack.project.mmall.common.ServerResponse<java.lang.String> jack.project.mmall.controller.portal.UserController.resetPassword(javax.servlet.http.HttpSession,java.util.Map<java.lang.String, java.lang.String>)
+2019-01-28 20:56:38.564 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/user/login],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public jack.project.mmall.common.ServerResponse<jack.project.mmall.entity.User> jack.project.mmall.controller.portal.UserController.login(java.util.Map<java.lang.String, java.lang.String>,javax.servlet.http.HttpSession)
+2019-01-28 20:56:38.564 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/user/isValid],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public jack.project.mmall.common.ServerResponse<java.lang.Boolean> jack.project.mmall.controller.portal.UserController.checkValid(java.util.Map<java.lang.String, java.lang.String>)
+2019-01-28 20:56:38.564 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/user/getUserDetails],methods=[GET],consumes=[application/json],produces=[application/json]}" onto public jack.project.mmall.common.ServerResponse<jack.project.mmall.entity.User> jack.project.mmall.controller.portal.UserController.getUserDetails(javax.servlet.http.HttpSession)
+2019-01-28 20:56:38.565 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/user/forgetPassword/question],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public jack.project.mmall.common.ServerResponse<java.lang.String> jack.project.mmall.controller.portal.UserController.getQuestion(java.util.Map<java.lang.String, java.lang.String>)
+2019-01-28 20:56:38.565 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/user/forgetPassword/answer],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public jack.project.mmall.common.ServerResponse<java.lang.String> jack.project.mmall.controller.portal.UserController.checkAnswer(java.util.Map<java.lang.String, java.lang.String>)
+2019-01-28 20:56:38.566 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/user/logout],methods=[GET],consumes=[application/json],produces=[application/json]}" onto public jack.project.mmall.common.ServerResponse<java.lang.String> jack.project.mmall.controller.portal.UserController.logout(javax.servlet.http.HttpServletRequest)
+2019-01-28 20:56:38.567 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/user/updateUser],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public jack.project.mmall.common.ServerResponse<jack.project.mmall.entity.User> jack.project.mmall.controller.portal.UserController.updateUser(javax.servlet.http.HttpSession,jack.project.mmall.entity.User)
+2019-01-28 20:56:38.569 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-01-28 20:56:38.570 INFO [main] AbstractHandlerMethodMapping$MappingRegistry.java #register():548 --- Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-01-28 20:56:38.628 INFO [main] AbstractUrlHandlerMapping.java #registerHandler():373 --- Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-28 20:56:38.628 INFO [main] AbstractUrlHandlerMapping.java #registerHandler():373 --- Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-28 20:56:38.700 INFO [main] AbstractUrlHandlerMapping.java #registerHandler():373 --- Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-28 20:56:39.213 INFO [main] MBeanExporter.java #afterSingletonsInstantiated():434 --- Registering beans for JMX exposure on startup
+2019-01-28 20:56:39.217 INFO [main] MBeanExporter.java #autodetect():896 --- Bean with name 'dataSource' has been autodetected for JMX exposure
+2019-01-28 20:56:39.230 INFO [main] MBeanExporter.java #registerBeanInstance():669 --- Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2019-01-28 20:56:39.259 INFO [main] DirectJDKLog.java #log():180 --- Starting ProtocolHandler ["http-nio-8080"]
+2019-01-28 20:56:39.304 INFO [main] DirectJDKLog.java #log():180 --- Using a shared selector for servlet write/read
+2019-01-28 20:56:39.348 INFO [main] TomcatWebServer.java #start():205 --- Tomcat started on port(s): 8080 (http) with context path ''
+2019-01-28 20:56:39.353 INFO [main] StartupInfoLogger.java #logStarted():59 --- Started MmallApp in 6.607 seconds (JVM running for 8.466)
+2019-01-28 20:56:41.968 INFO [http-nio-8080-exec-2] DirectJDKLog.java #log():180 --- Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-01-28 20:56:41.969 INFO [http-nio-8080-exec-2] FrameworkServlet.java #initServletBean():494 --- FrameworkServlet 'dispatcherServlet': initialization started
+2019-01-28 20:56:41.999 INFO [http-nio-8080-exec-2] FrameworkServlet.java #initServletBean():513 --- FrameworkServlet 'dispatcherServlet': initialization completed in 30 ms
+2019-01-28 20:56:45.832 INFO [http-nio-8080-exec-3] UserController.java #login():43 --- http session timeout: 1800
+2019-01-28 21:33:31.472 WARN [HikariPool-1 housekeeper] HikariPool$HouseKeeper.java #run():756 --- HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=14m41s965ms754µs).
+2019-01-29 07:11:41.027 WARN [HikariPool-1 housekeeper] HikariPool$HouseKeeper.java #run():756 --- HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=7h58m43s145ms148µs800ns).

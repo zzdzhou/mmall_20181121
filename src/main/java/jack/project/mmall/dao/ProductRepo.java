@@ -1,8 +1,10 @@
 package jack.project.mmall.dao;
 
 import jack.project.mmall.entity.Product;
+import org.springframework.data.domain.Sort;
 import org.springframework.data.repository.Repository;
 
+import java.util.List;
 import java.util.Optional;
 
 /**
@@ -18,5 +20,7 @@ public interface ProductRepo extends Repository<Product, Integer> {
     Optional<Product> getById(Integer id);
 
     Product save(Product product);
+
+    List<Product> findAll(Sort sort);
 
 }
