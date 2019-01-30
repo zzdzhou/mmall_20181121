@@ -1,6 +1,8 @@
 package jack.project.mmall.dao;
 
 import jack.project.mmall.entity.Product;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.repository.Repository;
 
@@ -21,6 +23,6 @@ public interface ProductRepo extends Repository<Product, Integer> {
 
     Product save(Product product);
 
-    List<Product> findAll(Sort sort);
+    Page<Product> findAll(Pageable pageable);
 
 }

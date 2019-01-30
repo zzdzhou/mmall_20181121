@@ -8,14 +8,20 @@ import jack.project.mmall.entity.Category;
 import jack.project.mmall.entity.Product;
 import jack.project.mmall.service.IProductService;
 import jack.project.mmall.util.BeanUtils;
+import jack.project.mmall.vo.ProductListVO;
 import jack.project.mmall.vo.ProductVO;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.BeanClassLoaderAware;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 /**
@@ -118,9 +124,13 @@ public class ProductServiceImpl implements IProductService {
         return ServerResponse.createBySuccess(productVO);
     }
 
-    public ServerResponse getProductList(Integer pageNum, Integer pageSize, Integer productStatus) {
-
-        return null;
+    public ServerResponse<List<ProductListVO>> getProductList(Integer pageNum, Integer pageSize, Integer productStatus) {
+        List<ProductListVO> list = new ArrayList<>();
+        Page<Product> productPage = productRepo.findAll(PageRequest.of(pageNum, pageSize, new Sort(Sort.Direction.ASC, "id")));
+        for (Product item : productPage.getContent()) {
+            list.add(getProductListVOFromProduct(item));
+        }
+        return ServerResponse.createBySuccess(list);
     }
 
     // --------------------- private -------------------------------
@@ -134,4 +144,11 @@ public class ProductServiceImpl implements IProductService {
         productVO.setParentCategoryId(product.getCategory().getParentId());
         return productVO;
     }
+
+    private ProductListVO getProductListVOFromProduct(Product product) {
+        ProductListVO productListVO = new ProductListVO();
+        org.springframework.beans.BeanUtils.copyProperties(product, productListVO);
+        return productListVO;
+    }
+
 }
