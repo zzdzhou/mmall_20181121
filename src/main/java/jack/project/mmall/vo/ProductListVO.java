@@ -20,6 +20,8 @@ public class ProductListVO {
     private BigDecimal price;
     private int status;
 
+    private String imageHost;
+
     public ProductListVO() {
 
     }
@@ -80,4 +82,11 @@ public class ProductListVO {
         this.status = status;
     }
 
+    public String getImageHost() {
+        return imageHost;
+    }
+
+    public void setImageHost(String imageHost) {
+        this.imageHost = imageHost;
+    }
 }

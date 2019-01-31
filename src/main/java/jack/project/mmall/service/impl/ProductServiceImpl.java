@@ -8,13 +8,13 @@ import jack.project.mmall.entity.Category;
 import jack.project.mmall.entity.Product;
 import jack.project.mmall.service.IProductService;
 import jack.project.mmall.util.BeanUtils;
+import jack.project.mmall.vo.Page;
 import jack.project.mmall.vo.ProductListVO;
 import jack.project.mmall.vo.ProductVO;
 import org.apache.commons.lang3.StringUtils;
-import org.springframework.beans.factory.BeanClassLoaderAware;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.data.domain.Page;
+
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
@@ -23,6 +23,7 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.function.Function;
 
 /**
  * Theme:
@@ -124,13 +125,10 @@ public class ProductServiceImpl implements IProductService {
         return ServerResponse.createBySuccess(productVO);
     }
 
-    public ServerResponse<List<ProductListVO>> getProductList(Integer pageNum, Integer pageSize, Integer productStatus) {
-        List<ProductListVO> list = new ArrayList<>();
-        Page<Product> productPage = productRepo.findAll(PageRequest.of(pageNum, pageSize, new Sort(Sort.Direction.ASC, "id")));
-        for (Product item : productPage.getContent()) {
-            list.add(getProductListVOFromProduct(item));
-        }
-        return ServerResponse.createBySuccess(list);
+    public ServerResponse<Page<ProductListVO>> getProductList(Integer pageNum, Integer pageSize, Integer productStatus) {
+        org.springframework.data.domain.Page<Product> productPage = productRepo.findAll(
+                PageRequest.of(pageNum, pageSize, new Sort(Sort.Direction.ASC, "id")));
+        return ServerResponse.createBySuccess(getPage(productPage, this::getProductListVOFromProduct/*(Product t, ProductServiceImpl p) -> p.getProductListVOFromProduct(t)*/));
     }
 
     // --------------------- private -------------------------------
@@ -148,7 +146,23 @@ public class ProductServiceImpl implements IProductService {
     private ProductListVO getProductListVOFromProduct(Product product) {
         ProductListVO productListVO = new ProductListVO();
         org.springframework.beans.BeanUtils.copyProperties(product, productListVO);
+        productListVO.setImageHost(this.imageHost);
         return productListVO;
+    }
+
+    private static <T, R> Page<R> getPage(org.springframework.data.domain.Page<T> jpaPage, Function<T, R> map) {
+        Page<R> page = new Page<>();
+        List<R> list = new ArrayList<>();
+        for (T item : jpaPage.getContent()) {
+            list.add(map.apply(item));
+        }
+        page.setContent(list);
+        page.setPageNum(jpaPage.getNumber());
+        page.setPageSize(jpaPage.getSize());
+        page.setTotalPages(jpaPage.getTotalPages());
+        page.setTotalElements(jpaPage.getTotalElements());
+        page.setNumberOfElements(jpaPage.getNumberOfElements());
+        return page;
     }
 
 }
