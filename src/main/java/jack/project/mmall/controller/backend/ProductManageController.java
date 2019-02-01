@@ -4,6 +4,8 @@ import jack.project.mmall.common.ServerResponse;
 import jack.project.mmall.entity.Product;
 import jack.project.mmall.service.IProductService;
 import jack.project.mmall.service.IUserService;
+import jack.project.mmall.vo.Page;
+import jack.project.mmall.vo.ProductListVO;
 import jack.project.mmall.vo.ProductVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -58,9 +60,9 @@ public class ProductManageController {
     }
 
     @PostMapping("/list")
-    public ServerResponse<List<ProductVO>> getProductList(@RequestParam(defaultValue = "0") Integer pageNum,
-            @RequestParam(defaultValue = "10") Integer pageSize, @RequestParam(defaultValue = "0") Integer productStatus) {
-        return null;
+    public ServerResponse<Page<ProductListVO>> getProductList(@RequestParam(defaultValue = "0") Integer pageNum,
+                                                              @RequestParam(defaultValue = "10") Integer pageSize) {
+        return productService.getProductList(pageNum, pageSize);
     }
 
 

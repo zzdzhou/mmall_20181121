@@ -2,6 +2,8 @@ package jack.project.mmall.service;
 
 import jack.project.mmall.common.ServerResponse;
 import jack.project.mmall.entity.Product;
+import jack.project.mmall.vo.Page;
+import jack.project.mmall.vo.ProductListVO;
 import jack.project.mmall.vo.ProductVO;
 
 /**
@@ -19,5 +21,7 @@ public interface IProductService {
     ServerResponse<ProductVO> setProductStatus(Integer productId, Integer status);
 
     ServerResponse<ProductVO> getProductDetail(Integer productId);
+
+    ServerResponse<Page<ProductListVO>> getProductList(Integer pageNum, Integer pageSize);
 
 }

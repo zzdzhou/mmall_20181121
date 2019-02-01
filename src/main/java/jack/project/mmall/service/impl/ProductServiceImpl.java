@@ -125,10 +125,10 @@ public class ProductServiceImpl implements IProductService {
         return ServerResponse.createBySuccess(productVO);
     }
 
-    public ServerResponse<Page<ProductListVO>> getProductList(Integer pageNum, Integer pageSize, Integer productStatus) {
+    public ServerResponse<Page<ProductListVO>> getProductList(Integer pageNum, Integer pageSize) {
         org.springframework.data.domain.Page<Product> productPage = productRepo.findAll(
                 PageRequest.of(pageNum, pageSize, new Sort(Sort.Direction.ASC, "id")));
-        return ServerResponse.createBySuccess(getPage(productPage, this::getProductListVOFromProduct/*(Product t, ProductServiceImpl p) -> p.getProductListVOFromProduct(t)*/));
+        return ServerResponse.createBySuccess(getPage(productPage, this::getProductListVOFromProduct));
     }
 
     // --------------------- private -------------------------------
