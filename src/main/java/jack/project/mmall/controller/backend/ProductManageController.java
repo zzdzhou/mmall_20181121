@@ -59,12 +59,10 @@ public class ProductManageController {
         return productService.getProductDetail(productId);
     }
 
-    @PostMapping("/list")
+    @GetMapping("/list")
     public ServerResponse<Page<ProductListVO>> getProductList(@RequestParam(defaultValue = "0") Integer pageNum,
                                                               @RequestParam(defaultValue = "10") Integer pageSize) {
         return productService.getProductList(pageNum, pageSize);
     }
-
-
 
 }

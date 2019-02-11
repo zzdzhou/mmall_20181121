@@ -5,6 +5,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.repository.Repository;
+import org.springframework.data.repository.query.QueryByExampleExecutor;
 
 import java.util.List;
 import java.util.Optional;
@@ -17,7 +18,7 @@ import java.util.Optional;
  * @author Zhengde ZHOU
  * Created on 2019-01-19
  */
-public interface ProductRepo extends Repository<Product, Integer> {
+public interface ProductRepo extends Repository<Product, Integer>, QueryByExampleExecutor<Product> {
 
     Optional<Product> getById(Integer id);
 
@@ -26,3 +27,4 @@ public interface ProductRepo extends Repository<Product, Integer> {
     Page<Product> findAll(Pageable pageable);
 
 }
+

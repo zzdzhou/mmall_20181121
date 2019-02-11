@@ -131,6 +131,11 @@ public class ProductServiceImpl implements IProductService {
         return ServerResponse.createBySuccess(getPage(productPage, this::getProductListVOFromProduct));
     }
 
+    public ServerResponse<Page<ProductListVO>> searchProduct(Integer productId, String productName, Integer pageNum, Integer pageSize) {
+
+    	return null;
+    }
+
     // --------------------- private -------------------------------
 
     private ProductVO assembleProductVOFromProduct(Product product) {
@@ -146,12 +151,14 @@ public class ProductServiceImpl implements IProductService {
     private ProductListVO getProductListVOFromProduct(Product product) {
         ProductListVO productListVO = new ProductListVO();
         org.springframework.beans.BeanUtils.copyProperties(product, productListVO);
+        productListVO.setCategoryId(product.getCategory().getId());
         productListVO.setImageHost(this.imageHost);
         return productListVO;
     }
 
     private static <T, R> Page<R> getPage(org.springframework.data.domain.Page<T> jpaPage, Function<T, R> map) {
         Page<R> page = new Page<>();
+
         List<R> list = new ArrayList<>();
         for (T item : jpaPage.getContent()) {
             list.add(map.apply(item));
